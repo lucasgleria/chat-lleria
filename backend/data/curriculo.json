@@ -1,0 +1,516 @@
+{
+  "name": "Lucas Gomes Leria",
+  "title": "IT Technician - Database Student",
+  "summary": "Professional with strong interest in Data Science and Data Analysis, with a background in Database Management, complemented by experience as an IT Technician. With a solid foundation in Python and SQL, I am ready to develop and implement Machine Learning models, explore Artificial Intelligence (AI) solutions, and optimize data pipelines and ETL processes aimed at driving strategic decision-making. My proactivity, combined with a continuous pursuit of challenges and focus on execution, ensures constant learning and the delivery of measurable contributions to innovation and the success of data-driven teams.",
+
+  "contact": {
+    "email": "lucasleria17@gmail.com",
+    "phone": "+55 11 94573-5280",
+    "location": "São Paulo, Brazil",
+    "github": "https://github.com/lucasgleria",
+    "linkedin": "https://www.linkedin.com/in/lucasleria"
+  },
+
+  "skills": {
+    "data_analysis_bi": [
+      "SQL (Sqlite3, MySQL, PostgreSQL, MongoDB, Neo4j)",
+      "Python (Numpy, Pandas, Matplotlib, Seaborn, Scikit-learn)",
+      "Data Science, ETL / Data Pipelines",
+      "Power BI",
+      "Data Visualization and Analytics"
+    ],
+    "ai_ml": [
+      "ML Algorithms (Regression, Classification)",
+      "Deep Learning (TensorFlow, Keras, PyTorch, EasyOCR, Tesseract, Mediapipe)",
+      "NLP (Natural Language Processing)",
+      "Computer Vision",
+      "MLOps (Docker)",
+      "Neural Networks (LSTM, EfficientNet-B0)",
+      "Triplet Loss and Embeddings",
+      "Biometric Evaluation (ROC Curve, EER)",
+      "Image Similarity Search",
+      "Large Language Models (Google Gemini API)",
+      "Chatbot Development",
+      "AI Integration and API Management"
+    ],
+    "programming_languages": [
+      "Python", 
+      "HTML", 
+      "CSS", 
+      "JavaScript", 
+      "Java", 
+      "PHP", 
+      "R", 
+      "Markdown",
+      "TypeScript"
+    ],
+    "version_control": [
+      "Git", 
+      "GitHub", 
+      "Node.js",
+      "Collaborative Development"
+    ],
+    "web_frameworks": [
+      "Django", 
+      "Flask", 
+      "FastAPI", 
+      "jQuery", 
+      "Bootstrap", 
+      "Tailwind", 
+      "Handlebars",
+      "Express.js",
+      "React"
+    ],
+    "databases": [
+      "SQLite3",
+      "MySQL", 
+      "PostgreSQL", 
+      "MongoDB", 
+      "Neo4j",
+      "Database Design and Management"
+    ],
+    "devops_cloud": [
+      "Docker",
+      "Docker Compose",
+      "Prometheus",
+      "Grafana",
+      "Railway",
+      "Vercel",
+      "Container Orchestration"
+    ],
+    "game_development": [
+      "Pygame",
+      "2D Game Development",
+      "Collision Detection",
+      "Game Physics",
+      "Interactive Applications"
+    ],
+    "desktop_applications": [
+      "Tkinter",
+      "PyQt6",
+      "PysimpleGUI",
+      "Java Swing",
+      "GUI Development",
+      "Desktop Applications"
+    ],
+    "methodologies_concepts": [
+      "SCRUM", 
+      "CRUD", 
+      "MVC", 
+      "UML", 
+      "SOLID",
+      "Object-Oriented Programming",
+      "Microservices Architecture",
+      "API Gateway",
+      "REST APIs",
+      "Data Structures and Algorithms",
+      "Role-based Systems",
+      "Conversational AI Design"
+    ],
+    "design_tools": [
+      "Figma", 
+      "Canva",
+      "UI/UX Design",
+      "Responsive Design"
+    ],
+    "crm_tools": [
+      "HubSpot", 
+      "Rubeus"
+    ],
+    "monitoring_analytics": [
+      "Prometheus",
+      "Grafana",
+      "System Monitoring",
+      "Performance Metrics",
+      "Data Visualization"
+    ],
+    "api_integration": [
+      "Google Gemini API",
+      "Axios",
+      "HTTP Client Management",
+      "API Authentication",
+      "Webhook Integration"
+    ]
+  },
+
+  "soft_skills": [
+    "Empathy",
+    "Proactivity",
+    "Creativity and Innovation",
+    "Complex Problem Solving",
+    "Teamwork and Collaboration",
+    "Time Management and Prioritization",
+    "Technical Leadership",
+    "Project Management",
+    "Cross-functional Collaboration",
+    "Continuous Learning",
+    "Adaptability to New Technologies",
+    "Problem Analysis and Solution Design"
+  ],
+
+  "languages": [
+    {
+      "language": "Portuguese",
+      "proficiency": "Native",
+      "level": "100%"
+    },
+    {
+      "language": "English",
+      "proficiency": "C1 CEFR Level",
+      "level": "97%"
+    },
+    {
+      "language": "Latin American Spanish",
+      "proficiency": "No academic training",
+      "level": "45%"
+    }
+  ],
+
+  "academic_background": [
+    {
+      "school": "UNESA",
+      "location": "São Paulo, Brazil",
+      "degree": "Database Management Degree",
+      "year": "2023-2025",
+      "status": "Completed",
+      "focus": "Database Management and Data Analysis"
+    },
+    {
+      "school": "ENIAC",
+      "location": "São Paulo, Brazil",
+      "degree": "High School Integrated with IT Technician",
+      "year": "2020-2022",
+      "status": "Completed",
+      "focus": "Information Technology"
+    },
+    {
+      "school": "Escola Marconi",
+      "location": "São Paulo, Brazil",
+      "degree": "Elementary School I and II",
+      "year": "Before 2020",
+      "status": "Completed"
+    }
+  ],
+
+  "professional_experience": [
+    {
+      "role": "Client Management",
+      "organization": "CLA",
+      "duration": "March 2023 - Present",
+      "status": "Current",
+      "description": "Responsible for client and document management, working in various functions.",
+      "responsibilities": [
+        "Client and document management",
+        "Working in various administrative functions"
+      ]
+    },
+    {
+      "role": "CRM Analysis Internship",
+      "organization": "OverStack",
+      "duration": "August 2022 - February 2023",
+      "status": "Completed",
+      "description": "Management and maintenance of Hubspot and Rubeus CRMs.",
+      "responsibilities": [
+        "Management and maintenance of Hubspot and Rubeus CRMs"
+      ]
+    },
+    {
+      "role": "Front-End Development Internship",
+      "organization": "OverStack",
+      "duration": "August 2022 - February 2023",
+      "status": "Completed",
+      "description": "Development, nurturing and maintenance of Landing Pages.",
+      "responsibilities": [
+        "Development, nurturing and maintenance of Landing Pages"
+      ]
+    },
+    {
+      "role": "Marketing Copywriter Professional Practice",
+      "organization": "ENIAC - ENIAC Audiovisual Center (NAVE)",
+      "duration": "February 2021 - December 2021",
+      "status": "Completed",
+      "description": "Writing marketing texts for Landing Pages.",
+      "responsibilities": [
+        "Writing marketing texts for Landing Pages"
+      ]
+    },
+    {
+      "role": "Professional Practice",
+      "organization": "ENIAC",
+      "duration": "January 2020 - January 2021",
+      "status": "Completed",
+      "description": "Experience with Html5 and Css markup language and participation in people management activities.",
+      "responsibilities": [
+        "Experience with Html5 and Css markup language",
+        "Participation in people management activities"
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "LibraVoice - Extension Laboratory in Agile Methodologies and SCRUM with LSTM",
+      "technologies": ["Python", "TensorFlow", "Mediapipe", "Numpy", "OpenCV"],
+      "description": "Software for sign language recognition and translation to natural language.",
+      "highlights": [
+        "Functional and accessible software to assist PWD communication",
+        "LSTM integration for natural language processing",
+        "Application of agile methodologies and SCRUM in development"
+      ],
+      "link": "https://github.com/lucasgleria/LibraVoice/tree/main"
+    },
+    {
+      "name": "lleria-medinizer - Academic collaboration for IFSP-GRU R.A.G.E. with Computer Vision",
+      "technologies": ["Python", "EasyOCR", "Tesseract", "OpenCV", "NLTK", "Sqlite3", "PysimpleGUI"],
+      "description": "CRUD GUI focused on pharmaceutical area, with LSTM integration.",
+      "highlights": [
+        "The final delivery of the functional program benefited the team resulting in maximum grade approval",
+        "Computer vision integration for pharmaceutical document processing",
+        "The owner of PysimpleGUI technology favorited the repository"
+      ],
+      "link": "https://github.com/lucasgleria/lleria-mednizer"
+    },
+    {
+      "name": "OverChat - Web Development Module Final Project",
+      "technologies": ["HTML", "CSS", "JavaScript", "Vercel", "Prisma"],
+      "description": "X social network replica application focused on business communication.",
+      "highlights": [
+        "Functional business social network",
+        "Complete frontend and backend development",
+        "Deploy on Vercel with database integration"
+      ],
+      "link": "https://github.com/lucasgleria/over-chat"
+    },
+    {
+      "name": "Linktrell - Linktree-style Application",
+      "technologies": ["JavaScript", "Node.js", "Express"],
+      "description": "Developed in JavaScript with Node.js, with emphasis on Data Analysis and Visualization.",
+      "highlights": [
+        "Personal project focused on improving data analysis skills",
+        "Full-stack development with Node.js",
+        "Focus on data visualization and analysis"
+      ],
+      "link": "https://github.com/lucasgleria/Linktrell"
+    },
+    {
+      "name": "Microservices Structure - Docker and Python Microservices Architecture",
+      "technologies": ["Python", "TypeScript", "React", "Docker", "FastAPI", "MongoDB", "Redis", "Prometheus", "Grafana"],
+      "description": "Base structure for microservices development with Docker and Python, frontend integration with Node.js and React. Support for data analysis and monitoring.",
+      "highlights": [
+        "Complete microservices architecture with API Gateway for request routing",
+        "Integration of Prometheus for metrics collection and Grafana for data visualization and analysis",
+        "Multi-language service communication (Python and TypeScript)",
+        "Docker containerization and orchestration with comprehensive monitoring",
+        "Authentication service, calculator service, and timer service implementation"
+      ],
+      "link": "https://github.com/lucasgleria/microservices-structure"
+    },
+    {
+      "name": "Signature Recognizer - Neural Network Signature Verification System",
+      "technologies": ["Python", "PyTorch", "TensorFlow", "EfficientNet-B0", "Triplet Loss", "Google Colab", "CEDAR Dataset"],
+      "description": "Implementation of a signature similarity verification system using neural networks and Triplet Loss, focused on embeddings, biometric evaluation and the CEDAR dataset.",
+      "highlights": [
+        "Deep learning model training with EfficientNet-B0 and Triplet Loss for signature verification",
+        "Processing and analysis of the challenging CEDAR dataset with genuine and forged signatures",
+        "Implementation of biometric evaluation metrics including ROC Curve and Equal Error Rate (EER)",
+        "Embedding generation and signature verification based on Euclidean distance",
+        "Complete pipeline from data preprocessing to model evaluation in Google Colab environment"
+      ],
+      "link": "https://github.com/lucasgleria/signature-recognizer"
+    },
+    {
+      "name": "URL Shortener - Desktop Link Shortening Application",
+      "technologies": ["Python", "PyQt6", "Flask", "MongoDB", "PyMongo", "Validators"],
+      "description": "A simple and efficient desktop application for shortening URLs, with history and data persistence in MongoDB, and a Flask redirect server.",
+      "highlights": [
+        "Desktop GUI application using PyQt6 with intuitive interface for URL shortening",
+        "MongoDB integration for data persistence and link history management",
+        "Flask web server for handling URL redirections from shortened links",
+        "URL validation and robust backend logic for link generation and management",
+        "Complete solution combining desktop application with web server functionality"
+      ],
+      "link": "https://github.com/lucasgleria/encurtador-simples"
+    },
+    {
+      "name": "Virtual Agenda - Task Management System",
+      "technologies": ["Python", "Tkinter", "SQLite", "tkcalendar", "plyer", "matplotlib"],
+      "description": "Complete task, event and scheduling management system developed in Python with Tkinter GUI. Advanced notification features, statistical dashboard and priority management.",
+      "highlights": [
+        "Complete MVC architecture implementation with separation of concerns",
+        "Advanced task management with 4 priority levels and status tracking",
+        "Recurring events system with automatic task generation for 90 days",
+        "Real-time statistical dashboard with interactive charts and productivity metrics",
+        "System notifications, backup functionality and data export capabilities"
+      ],
+      "link": "https://github.com/lucasgleria/agenda-virtual"
+    },
+    {
+      "name": "BlogApp - Full-Stack Blog Application",
+      "technologies": ["Node.js", "Express.js", "MongoDB", "Handlebars.js", "Bootstrap", "Railway"],
+      "description": "Complete web application simulating a blog system with viewing and management functionalities for posts and categories. Developed with Node.js, Express and MongoDB, deployed on Railway.",
+      "highlights": [
+        "Full-stack development with Node.js backend and Handlebars.js templating",
+        "User authentication and authorization system with admin panel",
+        "MongoDB integration for data persistence and content management",
+        "Responsive design with Bootstrap for optimal user experience",
+        "Complete CRUD operations for posts and categories with admin interface"
+      ],
+      "link": "https://github.com/lucasgleria/blogapp"
+    },
+    {
+      "name": "Java Inventory Management System",
+      "technologies": ["Java", "Swing", "JDBC", "MySQL", "Google Sheets API", "Maven", "Multithreading"],
+      "description": "Java application for inventory management with CLI and GUI versions. Academic extension project demonstrating Object-Oriented Programming principles and SOLID architecture.",
+      "highlights": [
+        "Implementation of 5 essential pillars: multithreading, inheritance, exception handling, interfaces and JDBC integration",
+        "Dual interface approach: CLI for educational purposes and GUI for practical use",
+        "Google Sheets API integration for automatic data import and synchronization",
+        "SOLID architecture principles with robust exception handling and data validation",
+        "Academic project that reduced manual management time by 80% for local business"
+      ],
+      "link": "https://github.com/lucasgleria/projeto-de-extensao"
+    },
+    {
+      "name": "FinancialApp - Digital Banking Application",
+      "technologies": ["Python", "Django", "SQLite3", "HTML5", "CSS3", "Git", "GitHub"],
+      "description": "Digital banking application in website format for portfolio demonstration. Features include account management, expense tracking, financial planning and transaction history.",
+      "highlights": [
+        "Complete financial management system with account and expense tracking",
+        "Dynamic dashboard with expense categories and financial planning tools",
+        "Transaction history with filtering capabilities by account, category and period",
+        "Bill management system with due date tracking and payment status",
+        "Responsive web design with modern UI/UX for financial applications"
+      ],
+      "link": "https://github.com/lucasgleria/financialapp"
+    },
+    {
+      "name": "Musicaller.ia - Music Course Website",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "Node.js", "Git", "GitHub", "Railway"],
+      "description": "Music course website application developed in collaboration with Matheus Ramos Silva. Features include course display, events, contact forms and user authentication.",
+      "highlights": [
+        "Collaborative development project with modern web technologies",
+        "Responsive design with carousel display for courses and events",
+        "User authentication system with signup and login functionality",
+        "Contact form integration and material request system",
+        "Deployed on Railway platform with full route accessibility"
+      ],
+      "link": "https://github.com/lucasgleria/musicaller-ia"
+    },
+    {
+      "name": "FlappyZap - WhatsApp-themed Flappy Bird Game",
+      "technologies": ["Python", "Pygame"],
+      "description": "A Flappy Bird parody game using WhatsApp logo, developed as an educational project to demonstrate pygame library usage for simple game creation in Python.",
+      "highlights": [
+        "Complete 2D game implementation with collision detection and scoring system",
+        "WhatsApp-themed design with humor and entertainment value",
+        "Simple controls using spacebar for jumping and enter for restart",
+        "Educational project demonstrating game development concepts",
+        "Minimalist design inspired by original Flappy Bird style"
+      ],
+      "link": "https://github.com/lucasgleria/FlappyZap"
+    },
+    {
+      "name": "Seamese Networks Algorithm - Image Similarity Search System",
+      "technologies": ["Python", "PyTorch", "EfficientNet-B0", "Triplet Loss", "Google Colab", "MNIST Dataset"],
+      "description": "Implementation of an image similarity search system using neural networks and Triplet Loss, focused on embeddings and visual analysis on the MNIST dataset.",
+      "highlights": [
+        "Deep learning model training with EfficientNet-B0 and Triplet Loss for image similarity",
+        "Processing and analysis of MNIST dataset for digit recognition and similarity search",
+        "Implementation of embedding generation and similarity search using Euclidean distance",
+        "Complete pipeline from data preprocessing to model evaluation in Google Colab",
+        "Educational project demonstrating fundamental concepts of computer vision and deep learning"
+      ],
+      "link": "https://github.com/lucasgleria/seamese-network-algorithm"
+    },
+    {
+      "name": "Structures'nAlgorithms - Data Structures and Algorithms Collection",
+      "technologies": ["Python", "Educational Content"],
+      "description": "Collection of practical challenges focused on fundamental data structures and algorithms for beginner developers.",
+      "highlights": [
+        "Comprehensive educational resource covering essential computer science concepts",
+        "Implementation of search algorithms (linear and binary search)",
+        "Data structures implementation (stacks, queues, linked lists)",
+        "Sorting algorithms with different complexity levels (bubble, selection, insertion, merge, quick sort)",
+        "Progressive learning approach with practical examples and solutions"
+      ],
+      "link": "https://github.com/lucasgleria/Structures-nAlgorithms"
+    },
+    {
+      "name": "chat-lleria - Intelligent Chatbot with Gemini API and Role System",
+      "technologies": ["Python", "Flask", "React", "Google Gemini API", "Tailwind CSS", "Axios", "JSON", "REST APIs"],
+      "description": "AI-powered chatbot using Google Gemini 1.5 Flash API with a sophisticated role system for personalized resume interactions. Features 4 different user profiles (Recruiter, Developer, Client, Student) with customized responses.",
+      "highlights": [
+        "Advanced AI integration with Google Gemini 1.5 Flash API for intelligent conversations",
+        "Sophisticated role system with 4 personalized interaction profiles (Recruiter, Developer, Client, Student)",
+        "Full-stack development with Flask backend and React frontend with modern UI/UX",
+        "Real-time chat interface with conversation history and context management",
+        "Responsive design with smooth animations and multi-screen user flow",
+        "RESTful API architecture with role-based prompt customization and validation"
+      ],
+      "link": "https://github.com/lucasgleria/Gemini-ChatBot"
+    }
+  ],
+
+  "certifications": [
+    {
+      "name": "The complete database and SQL course, without mysteries",
+      "issuer": "Udemy - Professor Felipe Mafra",
+      "year": "2025",
+      "status": "In Progress",
+      "duration": "58h",
+      "description": "Complete database and SQL course without mysteries.",
+      "certification_code": "Coming soon"
+    },
+    {
+      "name": "Data Science",
+      "issuer": "DIO - Powered by Ifood",
+      "year": "2023",
+      "status": "Completed",
+      "duration": "80h",
+      "description": "Complete Data Science course focusing on data analysis and machine learning.",
+      "certification_code": "AFDC8DC6"
+    },
+    {
+      "name": "Cloud Computing",
+      "issuer": "KaSolution - Powered by AWS",
+      "year": "2023",
+      "status": "Completed",
+      "duration": "4h",
+      "description": "Introductory cloud computing course focusing on AWS.",
+      "certification_code": "03750-67718"
+    }
+  ],
+
+  "what_im_looking_for": "I am actively seeking opportunities to apply and expand my skills in Data Science, Machine Learning, Full-Stack Development and Software Engineering. With a strong foundation in Python, Java, JavaScript and modern web technologies, I am passionate about contributing to projects that involve complex problem solving, innovative AI applications, microservices architecture and development of robust, scalable systems. My experience spans from desktop applications to cloud-native solutions, demonstrating versatility across different technology stacks. I am particularly interested in roles that combine data analysis, AI/ML implementation and software development, with a focus on creating impactful solutions that drive business value and technological innovation.",
+
+  "additional_info": {
+    "interests": [
+      "Data Science and Machine Learning",
+      "Full-Stack Development",
+      "AI solution development",
+      "Microservices and Cloud Architecture",
+      "Game Development and Interactive Applications",
+      "Educational Technology and Knowledge Sharing",
+      "Open-source contributions",
+      "Continuous learning of new technologies"
+    ],
+    "goals": [
+      "Become a specialist in Data Science and Machine Learning",
+      "Lead innovative technology projects",
+      "Develop scalable software solutions",
+      "Contribute to impactful technology projects",
+      "Develop innovative AI solutions for real problems",
+      "Share knowledge with the developer community",
+      "Grow professionally in data-driven and technology-focused environments"
+    ],
+    "project_categories": [
+      "AI/ML Projects (5 projects)",
+      "Web Development (7 projects)",
+      "Desktop Applications (3 projects)",
+      "Game Development (1 project)",
+      "Educational Content (1 project)",
+      "Microservices Architecture (1 project)",
+      "Chatbot & Conversational AI (1 project)"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "student",
+  "name": "Student/Beginner",
+  "description": "Focused on academic background and growth potential",
+  "icon": "🎓",
+  "color": "#F59E0B",
+  "focus_areas": [
+    "academic_background",
+    "certifications",
+    "academic_projects",
+    "growth_potential",
+    "learning_interests"
+  ],
+  "tone": "motivational",
+  "prompt_modifiers": {
+    "prefix": "You are talking to a student. Focus on:",
+    "emphasis": [
+      "Academic background and education",
+      "Certifications and completed courses",
+      "Academic and learning projects",
+      "Growth and development potential",
+      "Learning interests",
+      "Motivation and dedication to studies",
+      "Skills in development",
+      "Educational goals"
+    ],
+    "avoid": [
+      "Excessive focus on advanced professional experience",
+      "Very complex technical details",
+      "Pressure for immediate results",
+      "Comparisons with experienced professionals"
+    ]
+  },
+  "example_questions": [
+    "What is Lucas's academic background?",
+    "What certifications does he have?",
+    "How does he learn new technologies?",
+    "What are his study goals?",
+    "What academic projects has he developed?",
+    "How does he stay up to date?",
+    "What are his areas of interest?"
+  ]
+} 

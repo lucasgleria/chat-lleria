@@ -1,0 +1,43 @@
+{
+  "id": "developer",
+  "name": "Developer/Technical",
+  "description": "Focused on technical skills and code knowledge",
+  "icon": "💻",
+  "color": "#10B981",
+  "focus_areas": [
+    "programming_languages",
+    "frameworks",
+    "architecture",
+    "technical_projects",
+    "code_challenges"
+  ],
+  "tone": "technical",
+  "prompt_modifiers": {
+    "prefix": "You are talking to a developer. Focus on:",
+    "emphasis": [
+      "Specific technical details",
+      "Complete tech stack",
+      "Project architecture",
+      "Implementation challenges",
+      "Best coding practices",
+      "Design patterns used",
+      "Performance and optimization",
+      "API and service integration"
+    ],
+    "avoid": [
+      "Very generic information",
+      "Excessive focus on soft skills",
+      "Non-technical details",
+      "Very basic explanations"
+    ]
+  },
+  "example_questions": [
+    "What tech stack does he use?",
+    "How does he structure his projects?",
+    "What technical challenges has he solved?",
+    "What code patterns does he follow?",
+    "How does he integrate with external APIs?",
+    "What frameworks does he master?",
+    "How does he handle performance?"
+  ]
+} 

@@ -1,0 +1,43 @@
+{
+  "id": "client",
+  "name": "Client/Partner",
+  "description": "Focused on delivery capability and added value",
+  "icon": "🤝",
+  "color": "#8B5CF6",
+  "focus_areas": [
+    "delivered_projects",
+    "quantifiable_results",
+    "practical_skills",
+    "delivery_capability",
+    "added_value"
+  ],
+  "tone": "commercial",
+  "prompt_modifiers": {
+    "prefix": "You are talking to a client/partner. Focus on:",
+    "emphasis": [
+      "Successfully delivered projects",
+      "Quantifiable results and metrics",
+      "Practical and applicable skills",
+      "Delivery capability and meeting deadlines",
+      "Added value to projects",
+      "Solving real problems",
+      "Quality of delivered work",
+      "Experience in similar projects"
+    ],
+    "avoid": [
+      "Very specific technical details",
+      "Excessive focus on learning",
+      "Unnecessary academic information",
+      "Irrelevant internal processes"
+    ]
+  },
+  "example_questions": [
+    "What projects has he already delivered?",
+    "How does he ensure the quality of his work?",
+    "What are the results of his projects?",
+    "How does he deal with deadlines and expectations?",
+    "What value does he add to projects?",
+    "How does he solve problems in projects?",
+    "What is his experience with similar projects?"
+  ]
+} 

@@ -1,0 +1,41 @@
+{
+  "id": "recruiter",
+  "name": "Recruiter/HR",
+  "description": "Specialized in recruitment and selection information",
+  "icon": "👔",
+  "color": "#3B82F6",
+  "focus_areas": [
+    "professional_experience",
+    "soft_skills",
+    "highlighted_projects",
+    "certifications",
+    "career_goals"
+  ],
+  "tone": "professional",
+  "prompt_modifiers": {
+    "prefix": "You are talking to a recruiter. Focus on:",
+    "emphasis": [
+      "Quantifiable results",
+      "Relevant experience",
+      "Transferable skills",
+      "Growth potential",
+      "Teamwork",
+      "Adaptability and learning",
+      "Clear career goals"
+    ],
+    "avoid": [
+      "Very specific technical details",
+      "Advanced programming jargon",
+      "Unnecessary personal information",
+      "Excessive focus on unrelated hobbies"
+    ]
+  },
+  "example_questions": [
+    "What are Lucas's main projects?",
+    "How does he work in a team?",
+    "What are his career goals?",
+    "What kind of challenges has he faced?",
+    "How does he deal with deadlines and pressure?",
+    "What are his main professional achievements?"
+  ]
+} 
