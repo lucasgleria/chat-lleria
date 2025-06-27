@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* You can add this to your main CSS file, e.g., index.css or App.css */
+.typing-animation {
+  display: inline-flex; /* Use inline-flex to keep dots on one line */
+  align-items: center;
+  margin-left: 5px; /* Adjust spacing as needed */
+}
+
+.typing-animation span {
+  display: inline-block;
+  width: 6px; /* Size of the dots */
+  height: 6px; /* Size of the dots */
+  background-color: #555; /* Color of the dots */
+  border-radius: 50%;
+  margin: 0 2px; /* Spacing between dots */
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.typing-animation span:nth-child(1) {
+  animation-delay: -0.32s; /* Stagger the animation start */
+}
+.typing-animation span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+.typing-animation span:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* Animações personalizadas para os componentes */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes borderRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceYZ {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.05);
+  }
+}
+
+/* Classes utilitárias para animações */
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-bounceYZ {
+  animation: bounceYZ 2s ease-in-out infinite;
+}
+
+/* Utilitário para truncar texto com reticências */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Melhorias de scroll */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Melhorias de foco para acessibilidade */
+.focus-visible:focus {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+}
+
+/* Transições suaves para todos os elementos interativos */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
