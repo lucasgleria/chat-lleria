@@ -226,15 +226,16 @@ Contribuições são bem-vindas! Siga estas etapas:
 
 MIT License - Veja [LICENSE](LICENSE) para detalhes.
 
-## 📞 Contato & Evidências
+## 📞 Contato
 
 - **Autor**: [Lucas Leria](https://github.com/lucasgleria)  
 - **LinkedIn**: [Lucas Leria](https://www.linkedin.com/in/lucasleria/)  
-- **Autor**: [Hamza](https://github.com/your-username)  
-- **LinkedIn**: [Hamza](https://www.linkedin.com/in/seu-linkedin/)  
+- **Colaborador**: [Hamza Nouman](https://github.com/HamzaNouman)  
+- **LinkedIn do colaborador**: [Hamza Nouman](https://www.linkedin.com/in/hamzanouman)  
 
 ## 🔍 Recursos Adicionais
 
+- [Repositório de colaborador](https://github.com/HamzaNouman/Gemini-ChatBot) - Trabalho colaborativo de desenvolvimento
 - [Google Gemini API](https://ai.google.dev/) - Documentação oficial
 - [React](https://react.dev/) - Documentação oficial
 - [Flask](https://flask.palletsprojects.com/) - Documentação oficial
