@@ -81,8 +81,8 @@ O **Chat lleria** é um projeto que implementa um chatbot inteligente utilizando
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/your-username/Gemini-ChatBot.git
-cd Gemini-ChatBot
+git clone https://github.com/lucasgleria/chat-lleria.git
+cd chat-lleria
 ```
 
 2. Configure o Backend:
