@@ -1,0 +1,27 @@
+{
+  "academic_background": [
+    {
+      "school": "UNESA",
+      "location": "São Paulo, Brazil",
+      "degree": "Database Management Degree",
+      "year": "2023-2025",
+      "status": "Completed",
+      "focus": "Database Management and Data Analysis"
+    },
+    {
+      "school": "ENIAC",
+      "location": "São Paulo, Brazil",
+      "degree": "High School Integrated with IT Technician",
+      "year": "2020-2022",
+      "status": "Completed",
+      "focus": "Information Technology"
+    },
+    {
+      "school": "Escola Marconi",
+      "location": "São Paulo, Brazil",
+      "degree": "Elementary School I and II",
+      "year": "Before 2020",
+      "status": "Completed"
+    }
+  ]
+} 

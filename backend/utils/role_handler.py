@@ -222,4 +222,38 @@ class RoleHandler:
         
         # Retornar apenas campos de resumo
         summary_fields = ['id', 'name', 'description', 'icon', 'color', 'focus_areas', 'tone']
-        return {field: role_config.get(field) for field in summary_fields if field in role_config} 
+        return {field: role_config.get(field) for field in summary_fields if field in role_config}
+    
+    def identify_relevant_fields(self, question: str, role_id: str) -> list:
+        """
+        Analisa a pergunta do usuário e a role para identificar os campos relevantes do currículo.
+        Retorna uma lista de chaves do JSON que devem ser buscadas.
+        """
+        # Mapeamento simples por palavras-chave e role
+        keywords_map = {
+            'academic_background': ['formação', 'formacao', 'academic', 'educação', 'education', 'graduação', 'graduacao', 'universidade', 'college', 'school', 'curso', 'diploma'],
+            'professional_experience': ['experiência', 'experiencia', 'trabalho', 'emprego', 'cargo', 'empresa', 'profissional', 'job', 'work', 'role', 'position', 'company'],
+            'projects': ['projeto', 'project', 'portfolio', 'case', 'desenvolvimento', 'aplicação', 'app', 'sistema'],
+            'skills': ['habilidade', 'skill', 'competência', 'competencia', 'tecnologia', 'tecnologias', 'stack', 'linguagem', 'framework', 'ferramenta'],
+            'certifications': ['certificado', 'certificação', 'certification', 'course', 'curso', 'licença', 'licenca'],
+            'soft_skills': ['soft skill', 'comportamental', 'liderança', 'lideranca', 'comunicação', 'comunicacao', 'trabalho em equipe', 'teamwork', 'colaboração', 'collaboration'],
+            'intelligent_responses': ['conquista', 'achievement', 'impacto', 'impact', 'resolução', 'solução', 'problem', 'solution', 'aprendizado', 'learning', 'adaptação', 'adaptability', 'progressão', 'progression', 'evolução', 'growth', 'mentoria', 'mentorship']
+        }
+        # Prioridade por role
+        role_priority = {
+            'recruiter': ['professional_experience', 'soft_skills', 'certifications', 'intelligent_responses', 'academic_background'],
+            'developer': ['skills', 'projects', 'intelligent_responses', 'professional_experience'],
+            'client': ['projects', 'intelligent_responses', 'professional_experience'],
+            'student': ['academic_background', 'intelligent_responses', 'projects', 'skills']
+        }
+        found_fields = set()
+        q_lower = question.lower()
+        # Busca por palavras-chave
+        for field, keywords in keywords_map.items():
+            for kw in keywords:
+                if kw in q_lower:
+                    found_fields.add(field)
+        # Se não encontrou nada, usa prioridade da role
+        if not found_fields and role_id in role_priority:
+            found_fields.update(role_priority[role_id])
+        return list(found_fields) 

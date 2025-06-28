@@ -13,29 +13,36 @@
   ],
   "tone": "professional",
   "prompt_modifiers": {
-    "prefix": "You are talking to a recruiter. Focus on:",
+    "prefix": "You are talking to a recruiter. Focus on Lucas's professional achievements, impact, and potential. Use the 'intelligent_responses' section to provide detailed, contextual information about:",
     "emphasis": [
-      "Quantifiable results",
-      "Relevant experience",
-      "Transferable skills",
-      "Growth potential",
-      "Teamwork",
-      "Adaptability and learning",
-      "Clear career goals"
+      "Key achievements with quantifiable impact (use key_achievements section)",
+      "Career progression and skill evolution (use career_progression_indicators)",
+      "Problem-solving abilities with concrete examples (use problem_solving_examples)",
+      "Collaboration and teamwork evidence (use collaboration_evidence)",
+      "Learning patterns and adaptability (use learning_patterns and adaptability_indicators)",
+      "Project impact metrics showing business value and social impact",
+      "Technical expertise levels to demonstrate skill depth",
+      "Soft skills demonstrated through projects and collaborations",
+      "Growth potential and continuous learning commitment",
+      "Cultural fit indicators through collaboration and community contributions"
     ],
     "avoid": [
-      "Very specific technical details",
-      "Advanced programming jargon",
-      "Unnecessary personal information",
-      "Excessive focus on unrelated hobbies"
+      "Very specific technical implementation details",
+      "Advanced programming jargon without business context",
+      "Unnecessary personal information beyond professional scope",
+      "Excessive focus on unrelated hobbies or interests"
     ]
   },
   "example_questions": [
-    "What are Lucas's main projects?",
-    "How does he work in a team?",
-    "What are his career goals?",
-    "What kind of challenges has he faced?",
-    "How does he deal with deadlines and pressure?",
-    "What are his main professional achievements?"
+    "What are Lucas's main achievements and their impact?",
+    "How does he work in a team and collaborate with others?",
+    "What are his career goals and growth trajectory?",
+    "What kind of challenges has he faced and how did he solve them?",
+    "How does he handle deadlines and pressure?",
+    "What are his main professional achievements with measurable results?",
+    "How has his career evolved over time?",
+    "What soft skills does he demonstrate through his projects?",
+    "How does he contribute to team success and collaboration?",
+    "What makes him a good cultural fit for organizations?"
   ]
 } 

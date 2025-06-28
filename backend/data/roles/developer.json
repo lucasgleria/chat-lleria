@@ -1,43 +1,48 @@
 {
   "id": "developer",
   "name": "Developer/Technical",
-  "description": "Focused on technical skills and code knowledge",
+  "description": "Focused on technical skills and project architecture",
   "icon": "💻",
   "color": "#10B981",
   "focus_areas": [
     "programming_languages",
-    "frameworks",
-    "architecture",
-    "technical_projects",
-    "code_challenges"
+    "frameworks_technologies",
+    "project_architecture",
+    "technical_implementations",
+    "code_quality"
   ],
   "tone": "technical",
   "prompt_modifiers": {
-    "prefix": "You are talking to a developer. Focus on:",
+    "prefix": "You are talking to a technical developer. Focus on Lucas's technical expertise, architecture decisions, and implementation details. Use the 'intelligent_responses' section to provide detailed technical information about:",
     "emphasis": [
-      "Specific technical details",
-      "Complete tech stack",
-      "Project architecture",
-      "Implementation challenges",
-      "Best coding practices",
-      "Design patterns used",
-      "Performance and optimization",
-      "API and service integration"
+      "Technical expertise levels and skill depth (use technical_expertise_levels)",
+      "Project architecture and technical complexity (use project_impact_metrics)",
+      "Problem-solving with technical solutions (use problem_solving_examples)",
+      "Technology stack versatility and adaptability (use adaptability_indicators)",
+      "Code quality and open source contributions (use collaboration_evidence)",
+      "Advanced technical implementations (AI/ML, Computer Vision, Deep Learning)",
+      "System architecture and scalability considerations",
+      "Performance optimization and best practices",
+      "Innovation in technical solutions and algorithms",
+      "Technical learning patterns and skill acquisition"
     ],
     "avoid": [
-      "Very generic information",
-      "Excessive focus on soft skills",
-      "Non-technical details",
-      "Very basic explanations"
+      "Generic business outcomes without technical context",
+      "Soft skills focus without technical relevance",
+      "Personal information unrelated to technical capabilities",
+      "Vague descriptions without implementation details"
     ]
   },
   "example_questions": [
-    "What tech stack does he use?",
-    "How does he structure his projects?",
-    "What technical challenges has he solved?",
-    "What code patterns does he follow?",
-    "How does he integrate with external APIs?",
-    "What frameworks does he master?",
-    "How does he handle performance?"
+    "What is Lucas's technical expertise level in Python and AI/ML?",
+    "How does he approach system architecture and design?",
+    "What are his most technically complex projects?",
+    "How does he handle technical challenges and problem-solving?",
+    "What technologies and frameworks does he use most effectively?",
+    "How does he ensure code quality and best practices?",
+    "What are his contributions to open source and technical community?",
+    "How does he stay updated with new technologies?",
+    "What are his technical achievements and innovations?",
+    "How does he approach technical learning and skill development?"
   ]
 } 

@@ -1,43 +1,48 @@
 {
   "id": "student",
   "name": "Student/Beginner",
-  "description": "Focused on academic background and growth potential",
+  "description": "Focused on learning journey and growth potential",
   "icon": "🎓",
-  "color": "#F59E0B",
+  "color": "#8B5CF6",
   "focus_areas": [
     "academic_background",
-    "certifications",
-    "academic_projects",
+    "learning_journey",
     "growth_potential",
-    "learning_interests"
+    "educational_projects",
+    "mentorship_value"
   ],
   "tone": "motivational",
   "prompt_modifiers": {
-    "prefix": "You are talking to a student. Focus on:",
+    "prefix": "You are talking to a student or beginner developer. Focus on Lucas's learning journey, growth potential, and educational value. Use the 'intelligent_responses' section to provide inspiring and educational information about:",
     "emphasis": [
-      "Academic background and education",
-      "Certifications and completed courses",
-      "Academic and learning projects",
-      "Growth and development potential",
-      "Learning interests",
-      "Motivation and dedication to studies",
-      "Skills in development",
-      "Educational goals"
+      "Career progression and skill evolution over time (use career_progression_indicators)",
+      "Learning patterns and self-directed education (use learning_patterns)",
+      "Adaptability and technology stack versatility (use adaptability_indicators)",
+      "Educational projects and knowledge sharing (use collaboration_evidence)",
+      "Growth potential and continuous learning commitment",
+      "Academic achievements and foundational knowledge",
+      "Mentorship value through educational content creation",
+      "Overcoming challenges and problem-solving journey",
+      "Community contribution and knowledge sharing",
+      "Inspirational examples of skill development and career growth"
     ],
     "avoid": [
-      "Excessive focus on advanced professional experience",
-      "Very complex technical details",
-      "Pressure for immediate results",
-      "Comparisons with experienced professionals"
+      "Overwhelming technical complexity without context",
+      "Excessive focus on advanced achievements without learning path",
+      "Business outcomes without educational value",
+      "Professional jargon without explanation"
     ]
   },
   "example_questions": [
-    "What is Lucas's academic background?",
-    "What certifications does he have?",
-    "How does he learn new technologies?",
-    "What are his study goals?",
-    "What academic projects has he developed?",
-    "How does he stay up to date?",
-    "What are his areas of interest?"
+    "How did Lucas start his learning journey in programming?",
+    "What is his advice for beginners in the field?",
+    "How has he grown his skills over time?",
+    "What are good learning resources and approaches?",
+    "How does he stay motivated and continue learning?",
+    "What challenges did he face and how did he overcome them?",
+    "How can beginners approach their first projects?",
+    "What is his learning methodology and study habits?",
+    "How does he balance learning with practical application?",
+    "What advice does he have for career development in tech?"
   ]
 } 

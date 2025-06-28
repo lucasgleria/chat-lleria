@@ -4,6 +4,7 @@ from flask_cors import CORS
 import os
 import json
 from utils.role_handler import RoleHandler
+from utils.curriculo_handler import CurriculoHandler
 
 app = Flask(__name__)
 
@@ -21,6 +22,9 @@ genai.configure(api_key=api_key)
 
 # Inicializar RoleHandler
 role_handler = RoleHandler()
+
+# Inicializar CurriculoHandler
+curriculo_handler = CurriculoHandler()
 
 # --- Here we load and build a system instruction to JSON file ---
 def build_system_instruction(instruction_data: dict) -> str:
@@ -82,6 +86,7 @@ except Exception as e:
 # --- Main Endpoint (POST /chat) ---
 @app.route("/chat", methods=["POST"])
 def chat():
+    answer = None  # Inicializa a variável answer
     # Obtém os dados JSON da requisição do frontend.
     data = request.get_json()
     question = data.get("question", "").strip()
@@ -98,26 +103,12 @@ def chat():
         role = "recruiter"  # Fallback para role padrão
 
     try:
-        # ---  Load the curriculo content---
-        # Tenta carregar o conteúdo do currículo de um arquivo JSON.
-        try:
-            print("DEBUG: Attempting to load curriculo.json...")
-            with open("data/curriculo.json", "r", encoding="utf-8") as f:
-                print("DEBUG: File opened successfully")
-                curriculo_data = json.load(f)
-                print("DEBUG: JSON parsed successfully")
-            curriculo_json_string = json.dumps(curriculo_data, indent=2, ensure_ascii=False)
-            print("DEBUG: JSON converted to string successfully")
-
-        except FileNotFoundError:
-            print("Error: 'data/curriculo.json' not found. Check the path.")
-            return jsonify({"answer": "Sorry, Lucas's résumé is not available at the moment. Please try again later."}), 500
-        except json.JSONDecodeError as e:
-            print(f"Error: 'data/curriculo.json' contains invalid JSON: {e}")
-            return jsonify({"answer": "Sorry, there's a problem with Lucas's résumé data. Please try again later."}), 500
-        except Exception as e:
-            print(f"Error reading or processing 'data/curriculo.json': {e}")
-            return jsonify({"answer": "An issue occurred while loading Lucas's résumé information. Please try again later."}), 500
+        # --- NOVO: Carregar apenas as seções necessárias do currículo ---
+        relevant_fields = role_handler.identify_relevant_fields(question, role)
+        print(f"DEBUG: Campos relevantes identificados para a pergunta: {relevant_fields}")
+        curriculo_data = curriculo_handler.get_multiple(relevant_fields)
+        print(f"DEBUG: Dados factuais extraídos do currículo modular: {list(curriculo_data.keys())}")
+        factual_data = curriculo_data
 
         print("DEBUG: About to generate role prompt...")
         # Gerar prompt personalizado baseado na role
@@ -134,44 +125,45 @@ def chat():
         )
         print("DEBUG: Gemini model initialized successfully")
 
-        # --- Here we prepare the historic (context) for Gemini---
-        gemini_history = []
-
-        if not history: # Se é o início de uma conversa, injeta o currículo como contexto inicial.
-            print("DEBUG: No history, adding curriculum as initial context...")
-            gemini_history.append({
-                "role": "user",
-                "parts": [{"text": f"Here is the detailed résumé information in JSON format. Use this as your primary knowledge base for all responses about Lucas:\n{curriculo_json_string}"}]
-            })
-            # Adiciona a pergunta inicial do usuário ao histórico.
-            gemini_history.append({"role": "user", "parts": [{"text": question}]})
-
-        else: # Se já tem histórico, adiciona as mensagens anteriores ao contexto do Gemini.
-            print("DEBUG: Processing existing history...")
-            for msg in history:
-                # CORREÇÃO AQUI: msg["parts"] já é um array de objetos {text: "..."}.
-                # Precisamos verificar se ele é um array e pegar o conteúdo de texto.
-                if isinstance(msg.get("parts"), list) and msg["parts"]:
-                    # Assume que há pelo menos um objeto com a chave 'text'
-                    content_text = ""
-                    for part in msg["parts"]:
-                        if isinstance(part, dict) and "text" in part:
-                            content_text += part["text"] + " " # Concatena textos se houver múltiplas partes
-                    gemini_history.append({"role": msg["role"], "parts": [{"text": content_text.strip()}]})
+        # --- NOVO: Montar resposta factual ou fallback robusto ---
+        if factual_data:
+            # Monta uma resposta factual clara para o modelo reescrever
+            resumo = []
+            for field, value in factual_data.items():
+                if isinstance(value, list):
+                    if field == 'academic_background':
+                        for formacao in value:
+                            resumo.append(f"- {formacao.get('degree', '')} em {formacao.get('school', '')} ({formacao.get('year', '')})")
+                    elif field == 'projects':
+                        for proj in value[:3]:
+                            resumo.append(f"- Projeto: {proj.get('name', '')} - {proj.get('description', '')}")
+                    else:
+                        resumo.append(f"- {field.replace('_', ' ').capitalize()}: {', '.join(str(x) for x in value[:5])}")
+                elif isinstance(value, dict):
+                    resumo.append(f"- {field.replace('_', ' ').capitalize()}: {', '.join([f'{k}: {v}' for k, v in value.items()])}")
                 else:
-                    # Fallback caso a estrutura seja inesperada (e.g., se for apenas uma string)
-                    gemini_history.append({"role": msg["role"], "parts": [{"text": str(msg.get("parts", ""))}]})
-
-        print("DEBUG: About to start chat session...")
-        # Inicia a sessão de chat com o histórico preparado.
-        chat_session = chat_model.start_chat(history=gemini_history)
-        print("DEBUG: Chat session started successfully")
-
-        print("DEBUG: About to send message to Gemini...")
-        # Envia a pergunta atual para o modelo.
-        response = chat_session.send_message(question)
-        answer = response.text
-        print("DEBUG: Message sent and response received successfully")
+                    resumo.append(f"- {field.replace('_', ' ').capitalize()}: {value}")
+            factual_summary = '\n'.join(resumo)
+            print(f"DEBUG: Resumo factual para o modelo: {factual_summary}")
+            
+            # Gerar resposta usando o Gemini
+            try:
+                response = chat_model.generate_content(
+                    f"Responda à pergunta do usuário usando apenas as informações abaixo, sem inventar nada. Seja claro, objetivo e profissional.\n\nPergunta: {question}\n\nInformações disponíveis:\n{factual_summary}"
+                )
+                answer = response.text
+                print("DEBUG: Resposta do Gemini gerada com sucesso")
+            except Exception as gemini_error:
+                print(f"DEBUG: Erro ao gerar resposta do Gemini: {gemini_error}")
+                # Fallback se o Gemini falhar
+                answer = f"Com base nas informações disponíveis:\n{factual_summary}\n\nResposta à pergunta '{question}': As informações estão disponíveis acima."
+        else:
+            # Fallback: não há informação factual
+            available_fields = list(curriculo_handler.cache.keys()) or [
+                'academic_background', 'professional_experience', 'projects', 'skills', 'certifications', 'soft_skills', 'languages', 'intelligent_responses']
+            sugestao = ', '.join([f for f in available_fields if f not in ['contact', 'name', 'title', 'summary', 'what_im_looking_for', 'additional_info']])
+            answer = f"Não há informações sobre esse tema no currículo de Lucas. Posso te contar sobre: {sugestao.replace('_', ' ')}. Exemplos de perguntas: 'Qual a formação acadêmica?', 'Quais projetos ele já desenvolveu?', 'Quais certificações ele possui?'"
+            print("DEBUG: Fallback acionado - resposta padrão enviada.")
 
     except Exception as e:
         print(f"Unexpected error in /chat endpoint: {e}")
@@ -180,6 +172,8 @@ def chat():
         answer = "An internal error occurred while processing your question. Please try again later."
         return jsonify({"answer": answer}), 500
 
+    if answer is None:
+        answer = "Ocorreu um erro inesperado. Tente novamente."
     # Retorna a resposta do modelo como JSON.
     return jsonify({"answer": answer, "role": role})
 

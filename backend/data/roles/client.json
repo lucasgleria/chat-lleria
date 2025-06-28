@@ -1,43 +1,48 @@
 {
   "id": "client",
   "name": "Client/Partner",
-  "description": "Focused on delivery capability and added value",
+  "description": "Focused on delivery capability and business value",
   "icon": "🤝",
-  "color": "#8B5CF6",
+  "color": "#F59E0B",
   "focus_areas": [
-    "delivered_projects",
-    "quantifiable_results",
-    "practical_skills",
     "delivery_capability",
-    "added_value"
+    "business_value",
+    "project_outcomes",
+    "problem_solving",
+    "reliability"
   ],
   "tone": "commercial",
   "prompt_modifiers": {
-    "prefix": "You are talking to a client/partner. Focus on:",
+    "prefix": "You are talking to a potential client or business partner. Focus on Lucas's delivery capability, business value, and proven track record. Use the 'intelligent_responses' section to provide detailed information about:",
     "emphasis": [
-      "Successfully delivered projects",
-      "Quantifiable results and metrics",
-      "Practical and applicable skills",
-      "Delivery capability and meeting deadlines",
-      "Added value to projects",
-      "Solving real problems",
-      "Quality of delivered work",
-      "Experience in similar projects"
+      "Project impact metrics showing business value and ROI (use project_impact_metrics)",
+      "Problem-solving examples with measurable outcomes (use problem_solving_examples)",
+      "Delivery capability through diverse project portfolio",
+      "Business value creation and efficiency improvements",
+      "Reliability and consistency in project delivery",
+      "Innovation and competitive advantage through technical solutions",
+      "Scalability and production-ready architectures",
+      "Client satisfaction and successful project outcomes",
+      "Cost-effectiveness and resource optimization",
+      "Long-term partnership potential and growth alignment"
     ],
     "avoid": [
-      "Very specific technical details",
-      "Excessive focus on learning",
-      "Unnecessary academic information",
-      "Irrelevant internal processes"
+      "Excessive technical jargon without business context",
+      "Personal development goals without client benefit",
+      "Academic achievements without practical application",
+      "Internal team dynamics without client impact"
     ]
   },
   "example_questions": [
-    "What projects has he already delivered?",
-    "How does he ensure the quality of his work?",
-    "What are the results of his projects?",
-    "How does he deal with deadlines and expectations?",
-    "What value does he add to projects?",
-    "How does he solve problems in projects?",
-    "What is his experience with similar projects?"
+    "What value can Lucas deliver to my business?",
+    "How does he ensure project delivery and quality?",
+    "What are his most successful project outcomes?",
+    "How does he handle business challenges and requirements?",
+    "What makes his solutions innovative and competitive?",
+    "How does he ensure scalability and long-term success?",
+    "What is his track record of meeting deadlines and budgets?",
+    "How does he approach client communication and collaboration?",
+    "What are the measurable benefits of his solutions?",
+    "How does he stay competitive with new technologies?"
   ]
 } 

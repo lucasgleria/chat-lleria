@@ -1,0 +1,123 @@
+{
+  "skills": {
+    "data_analysis_bi": [
+      "SQL (Sqlite3, MySQL, PostgreSQL, MongoDB, Neo4j)",
+      "Python (Numpy, Pandas, Matplotlib, Seaborn, Scikit-learn)",
+      "Data Science, ETL / Data Pipelines",
+      "Power BI",
+      "Data Visualization and Analytics"
+    ],
+    "ai_ml": [
+      "ML Algorithms (Regression, Classification)",
+      "Deep Learning (TensorFlow, Keras, PyTorch, EasyOCR, Tesseract, Mediapipe)",
+      "NLP (Natural Language Processing)",
+      "Computer Vision",
+      "MLOps (Docker)",
+      "Neural Networks (LSTM, EfficientNet-B0)",
+      "Triplet Loss and Embeddings",
+      "Biometric Evaluation (ROC Curve, EER)",
+      "Image Similarity Search",
+      "Large Language Models (Google Gemini API)",
+      "Chatbot Development",
+      "AI Integration and API Management"
+    ],
+    "programming_languages": [
+      "Python", 
+      "HTML", 
+      "CSS", 
+      "JavaScript", 
+      "Java", 
+      "PHP", 
+      "R", 
+      "Markdown",
+      "TypeScript"
+    ],
+    "version_control": [
+      "Git", 
+      "GitHub", 
+      "Node.js",
+      "Collaborative Development"
+    ],
+    "web_frameworks": [
+      "Django", 
+      "Flask", 
+      "FastAPI", 
+      "jQuery", 
+      "Bootstrap", 
+      "Tailwind", 
+      "Handlebars",
+      "Express.js",
+      "React"
+    ],
+    "databases": [
+      "SQLite3",
+      "MySQL", 
+      "PostgreSQL", 
+      "MongoDB", 
+      "Neo4j",
+      "Database Design and Management"
+    ],
+    "devops_cloud": [
+      "Docker",
+      "Docker Compose",
+      "Prometheus",
+      "Grafana",
+      "Railway",
+      "Vercel",
+      "Container Orchestration"
+    ],
+    "game_development": [
+      "Pygame",
+      "2D Game Development",
+      "Collision Detection",
+      "Game Physics",
+      "Interactive Applications"
+    ],
+    "desktop_applications": [
+      "Tkinter",
+      "PyQt6",
+      "PysimpleGUI",
+      "Java Swing",
+      "GUI Development",
+      "Desktop Applications"
+    ],
+    "methodologies_concepts": [
+      "SCRUM", 
+      "CRUD", 
+      "MVC", 
+      "UML", 
+      "SOLID",
+      "Object-Oriented Programming",
+      "Microservices Architecture",
+      "API Gateway",
+      "REST APIs",
+      "Data Structures and Algorithms",
+      "Role-based Systems",
+      "Conversational AI Design"
+    ],
+    "design_tools": [
+      "Figma", 
+      "Canva",
+      "UI/UX Design",
+      "Responsive Design"
+    ],
+    "crm_tools": [
+      "HubSpot", 
+      "Rubeus"
+    ],
+    "monitoring_analytics": [
+      "Prometheus",
+      "Grafana",
+      "System Monitoring",
+      "Performance Metrics",
+      "Data Visualization"
+    ],
+    "api_integration": [
+      "Google Gemini API",
+      "Axios",
+      "HTTP Client Management",
+      "API Authentication",
+      "Webhook Integration"
+    ]
+  }
+} 

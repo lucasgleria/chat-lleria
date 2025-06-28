@@ -1,0 +1,31 @@
+{
+  "certifications": [
+    {
+      "name": "The complete database and SQL course, without mysteries",
+      "issuer": "Udemy - Professor Felipe Mafra",
+      "year": "2025",
+      "status": "In Progress",
+      "duration": "58h",
+      "description": "Complete database and SQL course without mysteries.",
+      "certification_code": "Coming soon"
+    },
+    {
+      "name": "Data Science",
+      "issuer": "DIO - Powered by Ifood",
+      "year": "2023",
+      "status": "Completed",
+      "duration": "80h",
+      "description": "Complete Data Science course focusing on data analysis and machine learning.",
+      "certification_code": "AFDC8DC6"
+    },
+    {
+      "name": "Cloud Computing",
+      "issuer": "KaSolution - Powered by AWS",
+      "year": "2023",
+      "status": "Completed",
+      "duration": "4h",
+      "description": "Introductory cloud computing course focusing on AWS.",
+      "certification_code": "03750-67718"
+    }
+  ]
+} 

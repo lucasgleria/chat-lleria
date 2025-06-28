@@ -1,0 +1,56 @@
+{
+  "professional_experience": [
+    {
+      "role": "Client Management",
+      "organization": "CLA",
+      "duration": "March 2023 - Present",
+      "status": "Current",
+      "description": "Responsible for client and document management, working in various functions.",
+      "responsibilities": [
+        "Client and document management",
+        "Working in various administrative functions"
+      ]
+    },
+    {
+      "role": "CRM Analysis Internship",
+      "organization": "OverStack",
+      "duration": "August 2022 - February 2023",
+      "status": "Completed",
+      "description": "Management and maintenance of Hubspot and Rubeus CRMs.",
+      "responsibilities": [
+        "Management and maintenance of Hubspot and Rubeus CRMs"
+      ]
+    },
+    {
+      "role": "Front-End Development Internship",
+      "organization": "OverStack",
+      "duration": "August 2022 - February 2023",
+      "status": "Completed",
+      "description": "Development, nurturing and maintenance of Landing Pages.",
+      "responsibilities": [
+        "Development, nurturing and maintenance of Landing Pages"
+      ]
+    },
+    {
+      "role": "Marketing Copywriter Professional Practice",
+      "organization": "ENIAC - ENIAC Audiovisual Center (NAVE)",
+      "duration": "February 2021 - December 2021",
+      "status": "Completed",
+      "description": "Writing marketing texts for Landing Pages.",
+      "responsibilities": [
+        "Writing marketing texts for Landing Pages"
+      ]
+    },
+    {
+      "role": "Professional Practice",
+      "organization": "ENIAC",
+      "duration": "January 2020 - January 2021",
+      "status": "Completed",
+      "description": "Experience with Html5 and Css markup language and participation in people management activities.",
+      "responsibilities": [
+        "Experience with Html5 and Css markup language",
+        "Participation in people management activities"
+      ]
+    }
+  ]
+} 
