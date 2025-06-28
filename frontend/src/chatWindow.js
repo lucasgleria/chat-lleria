@@ -169,13 +169,13 @@ function ChatWindow({ onBackToRoleSelect }) {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 flex flex-col">
       {/* Header */}
       <div className="bg-white shadow-sm border-b border-gray-200 px-4 py-3">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <button
-              onClick={() => window.location.reload()}
+              onClick={onBackToRoleSelect}
               className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 transition-all duration-200 p-2 rounded-xl hover:bg-gray-100 transform hover:scale-105"
             >
               <img
@@ -202,11 +202,11 @@ function ChatWindow({ onBackToRoleSelect }) {
 
       {/* Main chat container */}
       <div className="flex-1 max-w-4xl mx-auto w-full px-4 py-4">
-        <div className="bg-white rounded-xl shadow-lg border border-gray-200 flex flex-col h-full overflow-hidden">
+        <div className="bg-white rounded-xl shadow-lg border border-gray-200 flex flex-col h-[calc(100vh-200px)] overflow-hidden">
           {/* Role indicator header */}
           {selectedRole && (
             <div 
-              className="px-4 py-3 border-b border-gray-200 flex items-center justify-between transition-all duration-300"
+              className="px-4 py-3 border-b border-gray-200 flex items-center justify-between transition-all duration-300 flex-shrink-0"
               style={{ 
                 background: `linear-gradient(135deg, ${selectedRole.color}08, ${selectedRole.color}15)`,
                 borderBottomColor: `${selectedRole.color}20`
@@ -215,8 +215,8 @@ function ChatWindow({ onBackToRoleSelect }) {
               <div className="flex items-center space-x-3">
                 <span className="text-2xl animate-pulse">{selectedRole.icon}</span>
                 <div>
-                  <h3 className="font-semibold text-gray-900">{selectedRole.name}</h3>
-                  <p className="text-sm text-gray-600">{selectedRole.description}</p>
+                  <h3 className="font-semibold text-gray-900 text-sm md:text-base">{selectedRole.name}</h3>
+                  <p className="text-xs md:text-sm text-gray-600">{selectedRole.description}</p>
                 </div>
               </div>
               <button
@@ -224,7 +224,7 @@ function ChatWindow({ onBackToRoleSelect }) {
                 className="text-gray-500 hover:text-gray-700 transition-all duration-200 p-2 rounded-lg hover:bg-gray-100 transform hover:scale-105"
                 title="Switch profile"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
@@ -232,13 +232,15 @@ function ChatWindow({ onBackToRoleSelect }) {
             </div>
           )}
 
-          {/* Chat messages display area */}
-          <div className="flex-1 p-4 overflow-y-auto space-y-4 scroll-smooth">
+          {/* Chat messages display area - altura fixa */}
+          <div className="flex-1 p-4 overflow-y-auto space-y-4 scroll-smooth min-h-[400px]">
             {messages.length === 0 && (
-              <div className="text-center py-8 text-gray-500">
-                <div className="text-4xl mb-4">👋</div>
-                <h3 className="text-lg font-medium mb-2">Welcome to Chat!</h3>
-                <p className="text-sm">Ask a question about Lucas's resume to get started.</p>
+              <div className="flex items-center justify-center h-full text-gray-500">
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl mb-4">👋</div>
+                  <h3 className="text-base md:text-lg font-medium mb-2">Welcome to Chat!</h3>
+                  <p className="text-xs md:text-sm">Ask a question about Lucas's resume to get started.</p>
+                </div>
               </div>
             )}
             
@@ -269,10 +271,10 @@ function ChatWindow({ onBackToRoleSelect }) {
                         : 'bg-gray-100 text-gray-800 rounded-bl-md'
                     }`}
                   >
-                    <p className="text-sm font-medium mb-1">
+                    <p className="text-xs md:text-sm font-medium mb-1">
                       {msg.sender === 'You' ? 'You' : 'Assistant'}
                     </p>
-                    <p className="text-sm leading-relaxed whitespace-pre-wrap">{msg.text}</p>
+                    <p className="text-xs md:text-sm leading-relaxed whitespace-pre-wrap">{msg.text}</p>
                   </div>
                   <span className="text-xs text-gray-400 mt-1 px-1">
                     {msg.timestamp}
@@ -294,7 +296,7 @@ function ChatWindow({ onBackToRoleSelect }) {
                 </div>
                 <div className="flex flex-col max-w-[85%] md:max-w-[70%]">
                   <div className="p-3 rounded-2xl bg-gray-100 text-gray-800 rounded-bl-md shadow-sm">
-                    <p className="text-sm font-medium mb-2">Assistant</p>
+                    <p className="text-xs md:text-sm font-medium mb-2">Assistant</p>
                     <div className="flex space-x-1">
                       <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
                       <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
@@ -308,12 +310,12 @@ function ChatWindow({ onBackToRoleSelect }) {
           </div>
 
           {/* Message input area */}
-          <div className="p-4 border-t border-gray-200 bg-gray-50">
+          <div className="p-4 border-t border-gray-200 bg-gray-50 flex-shrink-0">
             <div className="flex items-end space-x-3">
               <div className="flex-1 relative">
                 <textarea
                   ref={textareaRef}
-                  className="w-full resize-none p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white shadow-sm"
+                  className="w-full resize-none p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white shadow-sm text-sm md:text-base"
                   rows="1"
                   placeholder="Type your message..."
                   value={message}
@@ -327,7 +329,7 @@ function ChatWindow({ onBackToRoleSelect }) {
               </div>
               
               <button
-                className={`px-6 py-3 rounded-xl font-medium text-white transition-all duration-200 flex items-center space-x-2 shadow-sm transform ${
+                className={`px-4 md:px-6 py-3 rounded-xl font-medium text-white transition-all duration-200 flex items-center space-x-2 shadow-sm transform ${
                   loading || !message.trim()
                     ? 'bg-gray-400 cursor-not-allowed scale-95'
                     : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 hover:shadow-lg active:scale-95'
@@ -338,14 +340,14 @@ function ChatWindow({ onBackToRoleSelect }) {
                 {loading ? (
                   <>
                     <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                    <span className="hidden sm:inline">Sending...</span>
+                    <span className="hidden sm:inline text-sm">Sending...</span>
                   </>
                 ) : (
                   <>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 md:w-5 md:h-5">
                       <path d="M3.478 2.405a.75.75 0 0 0-.926.94l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.543 60.543 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.543 60.543 0 0 0 3.478 2.405Z" />
                     </svg>
-                    <span className="hidden sm:inline">Send</span>
+                    <span className="hidden sm:inline text-sm">Send</span>
                   </>
                 )}
               </button>

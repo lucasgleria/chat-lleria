@@ -117,7 +117,7 @@ const RoleCard = ({ role, isSelected, onSelect, disabled = false }) => {
       {/* Card principal */}
       <div
         className={`
-          relative bg-white rounded-2xl p-6 border-2 transition-all duration-900 ease-out h-full
+          relative bg-white rounded-2xl p-4 md:p-6 border-2 transition-all duration-900 ease-out h-full
           ${isSelected 
             ? 'border-transparent bg-gradient-to-br from-blue-50 to-blue-100' 
             : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
@@ -135,19 +135,19 @@ const RoleCard = ({ role, isSelected, onSelect, disabled = false }) => {
         }}
       >
         {/* Header com ícone e nome */}
-        <div className="flex items-center space-x-3 mb-4">
+        <div className="flex items-center space-x-2 md:space-x-3 mb-3 md:mb-4">
           <div
-            className="text-3xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-3"
+            className="text-2xl md:text-3xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-3"
             style={{ color: role.color }}
           >
             {role.icon}
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-lg font-bold text-gray-900 group-hover:text-gray-700 truncate">
+            <h3 className="text-base md:text-lg font-bold text-gray-900 group-hover:text-gray-700 truncate">
               {role.name}
             </h3>
             <div 
-              className="text-sm font-medium"
+              className="text-xs md:text-sm font-medium"
               style={{ color: role.color }}
             >
               {role.tone}
@@ -157,10 +157,10 @@ const RoleCard = ({ role, isSelected, onSelect, disabled = false }) => {
           {/* Indicador de seleção */}
           {isSelected && (
             <div 
-              className="w-6 h-6 rounded-full flex items-center justify-center animate-pulse"
+              className="w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center animate-pulse"
               style={{ backgroundColor: role.color }}
             >
-              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-3 h-3 md:w-4 md:h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
             </div>
@@ -168,20 +168,20 @@ const RoleCard = ({ role, isSelected, onSelect, disabled = false }) => {
         </div>
 
         {/* Descrição */}
-        <p className="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-3">
+        <p className="text-gray-600 text-xs md:text-sm mb-3 md:mb-4 leading-relaxed line-clamp-3">
           {role.description}
         </p>
 
         {/* Focus Areas */}
-        <div className="mb-4">
+        <div className="mb-3 md:mb-4">
           <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
             Focus Areas
           </h4>
-          <div className="flex flex-wrap gap-1.5">
+          <div className="flex flex-wrap gap-1 md:gap-1.5">
             {role.focus_areas.slice(0, 3).map((area, index) => (
               <span
                 key={index}
-                className="px-2.5 py-1 text-xs rounded-full font-medium transition-all duration-200 hover:scale-105"
+                className="px-2 md:px-2.5 py-1 text-xs rounded-full font-medium transition-all duration-200 hover:scale-105"
                 style={{
                   backgroundColor: `${role.color}20`,
                   color: role.color
@@ -211,9 +211,9 @@ const RoleCard = ({ role, isSelected, onSelect, disabled = false }) => {
           </button>
           
           {/* Tooltip melhorado */}
-          <div className="absolute bottom-full left-0 right-0 mb-3 p-4 bg-gray-900 text-white text-xs rounded-xl opacity-0 invisible group-hover/tooltip:opacity-100 group-hover/tooltip:visible transition-all duration-300 z-10 shadow-2xl">
-            <div className="font-bold mb-3 text-blue-300">💡 Example questions:</div>
-            <ul className="space-y-2">
+          <div className="absolute bottom-full left-0 right-0 mb-3 p-3 md:p-4 bg-gray-900 text-white text-xs rounded-xl opacity-0 invisible group-hover/tooltip:opacity-100 group-hover/tooltip:visible transition-all duration-300 z-10 shadow-2xl">
+            <div className="font-bold mb-2 md:mb-3 text-blue-300">💡 Example questions:</div>
+            <ul className="space-y-1 md:space-y-2">
               {role.example_questions.slice(0, 3).map((question, index) => (
                 <li key={index} className="text-gray-300 leading-relaxed">
                   • {question}
@@ -226,9 +226,9 @@ const RoleCard = ({ role, isSelected, onSelect, disabled = false }) => {
 
         {/* Badge de seleção */}
         {isSelected && (
-          <div className="absolute top-3 right-3">
+          <div className="absolute top-2 md:top-3 right-2 md:right-3">
             <div 
-              className="w-3 h-3 rounded-full animate-ping"
+              className="w-2 h-2 md:w-3 md:h-3 rounded-full animate-ping"
               style={{ backgroundColor: role.color }}
             ></div>
           </div>

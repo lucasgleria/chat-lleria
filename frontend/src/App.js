@@ -38,7 +38,7 @@ function App() {
 
   return (
     <RoleProvider>
-      <div className="App min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="App min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
         {currentScreen === 'welcome' && (
           // Render the OpeningWindow (Welcome screen)
           // Pass handleStartQuestion to it, so its button can change the screen
