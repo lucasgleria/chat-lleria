@@ -5,7 +5,7 @@
 [![Licença](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/Version-7.5.1-green.svg)]()
 [![Status](https://img.shields.io/badge/status-concluído-green.svg)]()
-[![deploy](https://img.shields.io/badge/deploy-inactive-red.svg)]()
+[![deploy](https://img.shields.io/badge/deploy-active-green.svg)]()
 [![Backend CI](https://github.com/lucasgleria/chat-lleria/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/lucasgleria/chat-lleria/actions/workflows/backend-ci.yml)
 [![codecov](https://codecov.io/gh/lucasgleria/chat-lleria/branch/main/graph/badge.svg)](https://codecov.io/gh/lucasgleria/chat-lleria)
 
