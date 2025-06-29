@@ -44,7 +44,7 @@ jobs:
         python -m pytest tests/ --cov=. --cov-report=term-missing --cov-report=html --cov-report=xml --cov-fail-under=80
         
     - name: Upload coverage reports
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: coverage-reports
         path: backend/htmlcov/
