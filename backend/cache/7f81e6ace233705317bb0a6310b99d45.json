@@ -1,0 +1,31 @@
+{
+  "question": "Test question",
+  "role": "recruiter",
+  "relevant_fields": [
+    "soft_skills",
+    "certifications",
+    "intelligent_responses",
+    "professional_experience",
+    "academic_background"
+  ],
+  "answer": "Resposta simulada do Gemini",
+  "factual_data": {
+    "academic_background": {
+      "degree": "Engenharia de Software",
+      "university": "Universidade XYZ",
+      "year": 2023
+    },
+    "skills": {
+      "programming": [
+        "Python",
+        "JavaScript"
+      ],
+      "frameworks": [
+        "Flask",
+        "React"
+      ]
+    }
+  },
+  "created_at": "2025-06-29T19:59:23.126021",
+  "cache_key": "7f81e6ace233705317bb0a6310b99d45"
+}

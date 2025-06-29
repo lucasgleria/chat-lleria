@@ -1,0 +1,27 @@
+{
+  "question": "Qual sua formação acadêmica?",
+  "role": "recruiter",
+  "relevant_fields": [
+    "academic_background"
+  ],
+  "answer": "Resposta simulada do Gemini",
+  "factual_data": {
+    "academic_background": {
+      "degree": "Engenharia de Software",
+      "university": "Universidade XYZ",
+      "year": 2023
+    },
+    "skills": {
+      "programming": [
+        "Python",
+        "JavaScript"
+      ],
+      "frameworks": [
+        "Flask",
+        "React"
+      ]
+    }
+  },
+  "created_at": "2025-06-29T19:59:23.040024",
+  "cache_key": "71123fbfe1596d99fdce2179dc1d6d92"
+}
