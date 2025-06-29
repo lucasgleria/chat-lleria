@@ -2,11 +2,11 @@
   "question": "Pergunta de teste 3",
   "role": "recruiter",
   "relevant_fields": [
-    "soft_skills",
     "certifications",
-    "intelligent_responses",
+    "soft_skills",
+    "academic_background",
     "professional_experience",
-    "academic_background"
+    "intelligent_responses"
   ],
   "answer": "Resposta simulada do Gemini",
   "factual_data": {
@@ -26,6 +26,6 @@
       ]
     }
   },
-  "created_at": "2025-06-29T19:59:23.191020",
+  "created_at": "2025-06-29T20:36:29.944100",
   "cache_key": "5d0429a2d125f76643883751c6ed8d4f"
 }

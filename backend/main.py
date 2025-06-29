@@ -10,6 +10,7 @@ from utils.curriculo_handler import CurriculoHandler
 from utils.cache_handler import CacheHandler
 from utils.logger import logger, log_execution_time
 from utils.rate_limiter import rate_limiter
+import sys
 
 # Carregar variáveis de ambiente do arquivo .env
 load_dotenv()
@@ -19,14 +20,22 @@ app = Flask(__name__)
 # --- Initial configuration ---
 api_key = os.getenv("GEMINI_API_KEY")
 if not api_key:
-    # Levanta um erro se a chave API não for encontrada, impedindo que o app inicie sem ela.
-    raise ValueError("GEMINI_API_KEY not found in environment variables. "
-                     "Ensure it is in the .env file and you are running the script with `python main.py`.")
+    # Em ambiente de teste, não falhar se a chave não estiver presente
+    if os.getenv("TESTING") or "pytest" in sys.modules:
+        api_key = "test_key_for_testing"
+        print("⚠️  Running in test mode - using dummy API key")
+    else:
+        # Levanta um erro se a chave API não for encontrada, impedindo que o app inicie sem ela.
+        raise ValueError("GEMINI_API_KEY not found in environment variables. "
+                         "Ensure it is in the .env file and you are running the script with `python main.py`.")
 
 # Configurações de CORS para permitir requisições do frontend (localhost:3000)
 # resources={r"/*": {"origins": "*"}} permite requisições de qualquer origem.
 CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
-genai.configure(api_key=api_key)
+
+# Só configurar o Gemini se não estivermos em modo de teste
+if not os.getenv("TESTING") and "pytest" not in sys.modules:
+    genai.configure(api_key=api_key)
 
 # Inicializar handlers
 role_handler = RoleHandler()
