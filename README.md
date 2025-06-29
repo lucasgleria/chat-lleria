@@ -7,6 +7,7 @@
 [![Status](https://img.shields.io/badge/status-concluído-green.svg)]()
 [![deploy](https://img.shields.io/badge/deploy-active-green.svg)]()
 [![Backend CI](https://github.com/lucasgleria/chat-lleria/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/lucasgleria/chat-lleria/actions/workflows/backend-ci.yml)
+[![Frontend CI](https://github.com/lucasgleria/chat-lleria/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/lucasgleria/chat-lleria/actions/workflows/frontend-ci.yml)
 [![codecov](https://codecov.io/gh/lucasgleria/chat-lleria/branch/main/graph/badge.svg)](https://codecov.io/gh/lucasgleria/chat-lleria)
 
 ## 📌 Sumário
@@ -243,3 +244,5 @@ MIT License - Veja [LICENSE](LICENSE) para detalhes.
 - [Flask](https://flask.palletsprojects.com/) - Documentação oficial
 - [Tailwind CSS](https://tailwindcss.com/docs) - Documentação oficial
 - [Google AI Studio](https://makersuite.google.com/) - Ferramenta de desenvolvimento 
+
+<!-- trigger workflow -->
