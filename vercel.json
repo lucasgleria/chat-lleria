@@ -20,6 +20,6 @@
     }
   ],
   "env": {
-    "REACT_APP_BACKEND_URL": "@react_app_backend_url"
+    "REACT_APP_BACKEND_URL": "https://chat-lleria.onrender.com"
   }
 } 
