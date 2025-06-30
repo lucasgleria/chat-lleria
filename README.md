@@ -3,8 +3,8 @@
 **Sistema de chatbot inteligente que utiliza a API Google Gemini para fornecer respostas personalizadas sobre currículos profissionais, com sistema de roles para diferentes contextos de interação**
 
 [![Licença](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-2.0.0-green.svg)]()
-[![Status](https://img.shields.io/badge/status-produção-green.svg)]()
+[![Version](https://img.shields.io/badge/Version-9.8.11-green.svg)]()
+[![Status](https://img.shields.io/badge/status-em_desenvolvimento-yellow.svg)]()
 [![Deploy](https://img.shields.io/badge/deploy-active-green.svg)]()
 [![Backend CI](https://github.com/lucasgleria/chat-lleria/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/lucasgleria/chat-lleria/actions/workflows/backend-ci.yml)
 [![Frontend CI](https://github.com/lucasgleria/chat-lleria/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/lucasgleria/chat-lleria/actions/workflows/frontend-ci.yml)
@@ -76,23 +76,23 @@ O **Gemini ChatBot** é um sistema avançado de chatbot inteligente que utiliza 
 ## 🚀 Tecnologias  
 
 ### **Backend**
-- **Python 3.11+** - Linguagem principal
-- **Flask** - Framework web
-- **Google Generative AI** - API Gemini 1.5 Flash
-- **Flask-CORS** - Cross-origin resource sharing
-- **Python-dotenv** - Gerenciamento de variáveis de ambiente
+- **Python 3.11+** 
+- **Flask**
+- **Google Generative AI**
+- **Flask-CORS** 
+- **Python-dotenv** 
 
 ### **Frontend**
-- **React 19.1.0** - Framework JavaScript
-- **Tailwind CSS** - Framework CSS utilitário
-- **Axios** - Cliente HTTP
-- **Context API** - Gerenciamento de estado
+- **React 19.1.0** 
+- **Tailwind CSS** 
+- **Axios** 
+- **Context API**
 
 ### **Infraestrutura**
-- **JSON** - Armazenamento de dados estruturados
-- **Render** - Deploy do backend (gratuito)
-- **Vercel** - Deploy do frontend (gratuito)
-- **GitHub Actions** - CI/CD automatizado
+- **JSON** 
+- **Render** 
+- **Vercel** 
+- **GitHub Actions** 
 
 ## 🏗️ Arquitetura
 
@@ -174,7 +174,6 @@ cd backend
 
 # Instale as dependências Python
 pip install -r requirements.txt
-pip install -r requirements.txt
 
 # Crie arquivo .env
 echo "GEMINI_API_KEY=sua_chave_api_aqui" > .env
@@ -201,11 +200,7 @@ npm install
 ### Desenvolvimento Local
 
 ```bash
-# Terminal 1 - Backend
-cd backend
-python main.py
-
-# Terminal 2 - Frontend
+# Terminal - Frontend (Roda backend também)
 cd frontend
 npm start
 ```
@@ -336,13 +331,6 @@ Contribuições são bem-vindas! Siga estas etapas:
 - Faça commit (`git commit -m 'feat: nova funcionalidade'`)
 - Envie um Pull Request
 
-### **4. Padrões de Código**
-- Siga PEP 8 para estilo Python
-- Use type hints quando possível
-- Documente funções e classes
-- Mantenha a arquitetura modular
-- Adicione testes para novas funcionalidades
-
 ## 📜 Licença  
 
 MIT License - Veja [LICENSE](LICENSE) para detalhes.
@@ -365,7 +353,3 @@ MIT License - Veja [LICENSE](LICENSE) para detalhes.
 - [Flask](https://flask.palletsprojects.com/) - Documentação oficial
 - [Tailwind CSS](https://tailwindcss.com/docs) - Documentação oficial
 - [Google AI Studio](https://makersuite.google.com/) - Ferramenta de desenvolvimento
-
----
-
-**⭐ Se este projeto foi útil para você, considere dar uma estrela no repositório!**
