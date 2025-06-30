@@ -21,10 +21,5 @@
   ],
   "env": {
     "REACT_APP_BACKEND_URL": "@react_app_backend_url"
-  },
-  "functions": {
-    "frontend/package.json": {
-      "maxDuration": 30
-    }
   }
 } 
