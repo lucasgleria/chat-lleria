@@ -49,24 +49,4 @@ jobs:
       with:
         name: frontend-coverage
         path: frontend/coverage/
-        retention-days: 30
-        
-    - name: Notify on failure
-      if: failure()
-      uses: dawidd6/action-send-mail@v3
-      with:
-        server_address: smtp.gmail.com
-        server_port: 587
-        username: ${{ secrets.EMAIL_USER }}
-        password: ${{ secrets.EMAIL_PASS }}
-        subject: "❌ Frontend CI/CD Pipeline Failed - chat-lleria"
-        to: ${{ secrets.EMAIL_TO }}
-        from: ${{ secrets.EMAIL_USER }}
-        body: |
-          O pipeline CI/CD do frontend falhou!
-          
-          Repositório: ${{ github.repository }}
-          Branch: ${{ github.ref }}
-          Commit: ${{ github.sha }}
-          
-          Verifique os logs em: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} 
+        retention-days: 30 
