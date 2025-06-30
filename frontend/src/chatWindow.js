@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { useRole } from './components/RoleContext';
 import { getApiUrl, API_CONFIG } from './config/api';
+import SuggestedQuestions from './components/SuggestedQuestions';
 
 function ChatWindow({ onBackToRoleSelect }) {
   const { selectedRole } = useRole();
@@ -10,6 +11,7 @@ function ChatWindow({ onBackToRoleSelect }) {
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef(null);
   const textareaRef = useRef(null);
+  const [suggestedQuestions, setSuggestedQuestions] = useState([]);
 
   // Effect to scroll to the bottom whenever messages change
   useEffect(() => {
@@ -28,6 +30,27 @@ function ChatWindow({ onBackToRoleSelect }) {
       textareaRef.current.focus();
     }
   }, [loading]);
+
+  // Buscar sugestões sempre que a role mudar ou uma mensagem for enviada
+  useEffect(() => {
+    async function fetchSuggestions() {
+      if (selectedRole) {
+        try {
+          const response = await axios.get(getApiUrl(`/roles/${selectedRole.id}/examples`));
+          if (response.data && Array.isArray(response.data.examples)) {
+            setSuggestedQuestions(response.data.examples.slice(0, 4));
+          } else {
+            setSuggestedQuestions([]);
+          }
+        } catch (err) {
+          setSuggestedQuestions([]);
+        }
+      } else {
+        setSuggestedQuestions([]);
+      }
+    }
+    fetchSuggestions();
+  }, [selectedRole, messages.length]);
 
   // Function to scroll to the bottom of the chat window
   const scrollToBottom = () => {
@@ -166,6 +189,14 @@ function ChatWindow({ onBackToRoleSelect }) {
       if (!loading) {
         handleSendMessage();
       }
+    }
+  };
+
+  // Função para preencher o input ao clicar em uma sugestão
+  const handleSuggestionClick = (suggestion) => {
+    setMessage(suggestion);
+    if (textareaRef.current) {
+      textareaRef.current.focus();
     }
   };
 
@@ -312,6 +343,16 @@ function ChatWindow({ onBackToRoleSelect }) {
 
           {/* Message input area */}
           <div className="p-4 border-t border-gray-200 bg-gray-50 flex-shrink-0">
+            {/* SUGESTÕES DE PERGUNTAS */}
+            {suggestedQuestions.length > 0 && !message && (
+              <div className="mb-3">
+                <SuggestedQuestions 
+                  suggestions={suggestedQuestions} 
+                  onSuggestionClick={handleSuggestionClick} 
+                />
+              </div>
+            )}
+            
             <div className="flex items-end space-x-3">
               <div className="flex-1 relative">
                 <textarea

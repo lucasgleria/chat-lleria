@@ -1,0 +1,324 @@
+{
+  "question": "Tell me about his projects",
+  "role": "recruiter",
+  "relevant_fields": [
+    "projects"
+  ],
+  "answer": "**Introdução:**\n\nThis response addresses your question about Lucas's projects.\n\n\n**Resposta Principal:**\n\nLucas has been involved in several significant projects, showcasing a range of skills and experiences.  One notable project is LibraVoice, an extension laboratory focused on Agile methodologies and SCRUM, utilizing LSTM for sign language recognition and translation. This project demonstrates his proficiency in software development, particularly in the application of deep learning techniques for real-world problems.\n\nAnother project, lleria-medinizer, highlights Lucas's collaborative spirit and expertise in computer vision.  This academic collaboration with IFSP-GRU R.A.G.E. involved developing a CRUD GUI (Create, Read, Update, Delete Graphical User Interface) focused on the pharmaceutical sector, again integrating LSTM.  This project underscores his ability to apply his technical skills within a specific domain and work effectively within a team.\n\nFinally, his OverChat project, a final project for a web development module, involved creating a replica of a social network application focused on business communication. This project showcases his understanding of web development principles and his ability to build functional and user-friendly applications.\n\n\n**Conclusão:**\n\nWas this information helpful? Would you like to know more about any of these projects in particular, perhaps focusing on the specific technologies used, the challenges faced, or the impact achieved?\n",
+  "factual_data": {
+    "projects": [
+      {
+        "name": "LibraVoice - Extension Laboratory in Agile Methodologies and SCRUM with LSTM",
+        "technologies": [
+          "Python",
+          "TensorFlow",
+          "Mediapipe",
+          "Numpy",
+          "OpenCV"
+        ],
+        "description": "Software for sign language recognition and translation to natural language.",
+        "highlights": [
+          "Functional and accessible software to assist PWD communication",
+          "LSTM integration for natural language processing",
+          "Application of agile methodologies and SCRUM in development"
+        ],
+        "link": "https://github.com/lucasgleria/LibraVoice/tree/main"
+      },
+      {
+        "name": "lleria-medinizer - Academic collaboration for IFSP-GRU R.A.G.E. with Computer Vision",
+        "technologies": [
+          "Python",
+          "EasyOCR",
+          "Tesseract",
+          "OpenCV",
+          "NLTK",
+          "Sqlite3",
+          "PysimpleGUI"
+        ],
+        "description": "CRUD GUI focused on pharmaceutical area, with LSTM integration.",
+        "highlights": [
+          "The final delivery of the functional program benefited the team resulting in maximum grade approval",
+          "Computer vision integration for pharmaceutical document processing",
+          "The owner of PysimpleGUI technology favorited the repository"
+        ],
+        "link": "https://github.com/lucasgleria/lleria-mednizer"
+      },
+      {
+        "name": "OverChat - Web Development Module Final Project",
+        "technologies": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Vercel",
+          "Prisma"
+        ],
+        "description": "X social network replica application focused on business communication.",
+        "highlights": [
+          "Functional business social network",
+          "Complete frontend and backend development",
+          "Deploy on Vercel with database integration"
+        ],
+        "link": "https://github.com/lucasgleria/over-chat"
+      },
+      {
+        "name": "Linktrell - Linktree-style Application",
+        "technologies": [
+          "JavaScript",
+          "Node.js",
+          "Express"
+        ],
+        "description": "Developed in JavaScript with Node.js, with emphasis on Data Analysis and Visualization.",
+        "highlights": [
+          "Personal project focused on improving data analysis skills",
+          "Full-stack development with Node.js",
+          "Focus on data visualization and analysis"
+        ],
+        "link": "https://github.com/lucasgleria/Linktrell"
+      },
+      {
+        "name": "Microservices Structure - Docker and Python Microservices Architecture",
+        "technologies": [
+          "Python",
+          "TypeScript",
+          "React",
+          "Docker",
+          "FastAPI",
+          "MongoDB",
+          "Redis",
+          "Prometheus",
+          "Grafana"
+        ],
+        "description": "Base structure for microservices development with Docker and Python, frontend integration with Node.js and React. Support for data analysis and monitoring.",
+        "highlights": [
+          "Complete microservices architecture with API Gateway for request routing",
+          "Integration of Prometheus for metrics collection and Grafana for data visualization and analysis",
+          "Multi-language service communication (Python and TypeScript)",
+          "Docker containerization and orchestration with comprehensive monitoring",
+          "Authentication service, calculator service, and timer service implementation"
+        ],
+        "link": "https://github.com/lucasgleria/microservices-structure"
+      },
+      {
+        "name": "Signature Recognizer - Neural Network Signature Verification System",
+        "technologies": [
+          "Python",
+          "PyTorch",
+          "TensorFlow",
+          "EfficientNet-B0",
+          "Triplet Loss",
+          "Google Colab",
+          "CEDAR Dataset"
+        ],
+        "description": "Implementation of a signature similarity verification system using neural networks and Triplet Loss, focused on embeddings, biometric evaluation and the CEDAR dataset.",
+        "highlights": [
+          "Deep learning model training with EfficientNet-B0 and Triplet Loss for signature verification",
+          "Processing and analysis of the challenging CEDAR dataset with genuine and forged signatures",
+          "Implementation of biometric evaluation metrics including ROC Curve and Equal Error Rate (EER)",
+          "Embedding generation and signature verification based on Euclidean distance",
+          "Complete pipeline from data preprocessing to model evaluation in Google Colab environment"
+        ],
+        "link": "https://github.com/lucasgleria/signature-recognizer"
+      },
+      {
+        "name": "URL Shortener - Desktop Link Shortening Application",
+        "technologies": [
+          "Python",
+          "PyQt6",
+          "Flask",
+          "MongoDB",
+          "PyMongo",
+          "Validators"
+        ],
+        "description": "A simple and efficient desktop application for shortening URLs, with history and data persistence in MongoDB, and a Flask redirect server.",
+        "highlights": [
+          "Desktop GUI application using PyQt6 with intuitive interface for URL shortening",
+          "MongoDB integration for data persistence and link history management",
+          "Flask web server for handling URL redirections from shortened links",
+          "URL validation and robust backend logic for link generation and management",
+          "Complete solution combining desktop application with web server functionality"
+        ],
+        "link": "https://github.com/lucasgleria/encurtador-simples"
+      },
+      {
+        "name": "Virtual Agenda - Task Management System",
+        "technologies": [
+          "Python",
+          "Tkinter",
+          "SQLite",
+          "tkcalendar",
+          "plyer",
+          "matplotlib"
+        ],
+        "description": "Complete task, event and scheduling management system developed in Python with Tkinter GUI. Advanced notification features, statistical dashboard and priority management.",
+        "highlights": [
+          "Complete MVC architecture implementation with separation of concerns",
+          "Advanced task management with 4 priority levels and status tracking",
+          "Recurring events system with automatic task generation for 90 days",
+          "Real-time statistical dashboard with interactive charts and productivity metrics",
+          "System notifications, backup functionality and data export capabilities"
+        ],
+        "link": "https://github.com/lucasgleria/agenda-virtual"
+      },
+      {
+        "name": "BlogApp - Full-Stack Blog Application",
+        "technologies": [
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "Handlebars.js",
+          "Bootstrap",
+          "Railway"
+        ],
+        "description": "Complete web application simulating a blog system with viewing and management functionalities for posts and categories. Developed with Node.js, Express and MongoDB, deployed on Railway.",
+        "highlights": [
+          "Full-stack development with Node.js backend and Handlebars.js templating",
+          "User authentication and authorization system with admin panel",
+          "MongoDB integration for data persistence and content management",
+          "Responsive design with Bootstrap for optimal user experience",
+          "Complete CRUD operations for posts and categories with admin interface"
+        ],
+        "link": "https://github.com/lucasgleria/blogapp"
+      },
+      {
+        "name": "Java Inventory Management System",
+        "technologies": [
+          "Java",
+          "Swing",
+          "JDBC",
+          "MySQL",
+          "Google Sheets API",
+          "Maven",
+          "Multithreading"
+        ],
+        "description": "Java application for inventory management with CLI and GUI versions. Academic extension project demonstrating Object-Oriented Programming principles and SOLID architecture.",
+        "highlights": [
+          "Implementation of 5 essential pillars: multithreading, inheritance, exception handling, interfaces and JDBC integration",
+          "Dual interface approach: CLI for educational purposes and GUI for practical use",
+          "Google Sheets API integration for automatic data import and synchronization",
+          "SOLID architecture principles with robust exception handling and data validation",
+          "Academic project that reduced manual management time by 80% for local business"
+        ],
+        "link": "https://github.com/lucasgleria/projeto-de-extensao"
+      },
+      {
+        "name": "FinancialApp - Digital Banking Application",
+        "technologies": [
+          "Python",
+          "Django",
+          "SQLite3",
+          "HTML5",
+          "CSS3",
+          "Git",
+          "GitHub"
+        ],
+        "description": "Digital banking application in website format for portfolio demonstration. Features include account management, expense tracking, financial planning and transaction history.",
+        "highlights": [
+          "Complete financial management system with account and expense tracking",
+          "Dynamic dashboard with expense categories and financial planning tools",
+          "Transaction history with filtering capabilities by account, category and period",
+          "Bill management system with due date tracking and payment status",
+          "Responsive web design with modern UI/UX for financial applications"
+        ],
+        "link": "https://github.com/lucasgleria/financialapp"
+      },
+      {
+        "name": "Musicaller.ia - Music Course Website",
+        "technologies": [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "Node.js",
+          "Git",
+          "GitHub",
+          "Railway"
+        ],
+        "description": "Music course website application developed in collaboration with Matheus Ramos Silva. Features include course display, events, contact forms and user authentication.",
+        "highlights": [
+          "Collaborative development project with modern web technologies",
+          "Responsive design with carousel display for courses and events",
+          "User authentication system with signup and login functionality",
+          "Contact form integration and material request system",
+          "Deployed on Railway platform with full route accessibility"
+        ],
+        "link": "https://github.com/lucasgleria/musicaller-ia"
+      },
+      {
+        "name": "FlappyZap - WhatsApp-themed Flappy Bird Game",
+        "technologies": [
+          "Python",
+          "Pygame"
+        ],
+        "description": "A Flappy Bird parody game using WhatsApp logo, developed as an educational project to demonstrate pygame library usage for simple game creation in Python.",
+        "highlights": [
+          "Complete 2D game implementation with collision detection and scoring system",
+          "WhatsApp-themed design with humor and entertainment value",
+          "Simple controls using spacebar for jumping and enter for restart",
+          "Educational project demonstrating game development concepts",
+          "Minimalist design inspired by original Flappy Bird style"
+        ],
+        "link": "https://github.com/lucasgleria/FlappyZap"
+      },
+      {
+        "name": "Seamese Networks Algorithm - Image Similarity Search System",
+        "technologies": [
+          "Python",
+          "PyTorch",
+          "EfficientNet-B0",
+          "Triplet Loss",
+          "Google Colab",
+          "MNIST Dataset"
+        ],
+        "description": "Implementation of an image similarity search system using neural networks and Triplet Loss, focused on embeddings and visual analysis on the MNIST dataset.",
+        "highlights": [
+          "Deep learning model training with EfficientNet-B0 and Triplet Loss for image similarity",
+          "Processing and analysis of MNIST dataset for digit recognition and similarity search",
+          "Implementation of embedding generation and similarity search using Euclidean distance",
+          "Complete pipeline from data preprocessing to model evaluation in Google Colab",
+          "Educational project demonstrating fundamental concepts of computer vision and deep learning"
+        ],
+        "link": "https://github.com/lucasgleria/seamese-network-algorithm"
+      },
+      {
+        "name": "Structures'nAlgorithms - Data Structures and Algorithms Collection",
+        "technologies": [
+          "Python",
+          "Educational Content"
+        ],
+        "description": "Collection of practical challenges focused on fundamental data structures and algorithms for beginner developers.",
+        "highlights": [
+          "Comprehensive educational resource covering essential computer science concepts",
+          "Implementation of search algorithms (linear and binary search)",
+          "Data structures implementation (stacks, queues, linked lists)",
+          "Sorting algorithms with different complexity levels (bubble, selection, insertion, merge, quick sort)",
+          "Progressive learning approach with practical examples and solutions"
+        ],
+        "link": "https://github.com/lucasgleria/Structures-nAlgorithms"
+      },
+      {
+        "name": "chat-lleria - Intelligent Chatbot with Gemini API and Role System",
+        "technologies": [
+          "Python",
+          "Flask",
+          "React",
+          "Google Gemini API",
+          "Tailwind CSS",
+          "Axios",
+          "JSON",
+          "REST APIs"
+        ],
+        "description": "AI-powered chatbot using Google Gemini 1.5 Flash API with a sophisticated role system for personalized resume interactions. Features 4 different user profiles (Recruiter, Developer, Client, Student) with customized responses.",
+        "highlights": [
+          "Advanced AI integration with Google Gemini 1.5 Flash API for intelligent conversations",
+          "Sophisticated role system with 4 personalized interaction profiles (Recruiter, Developer, Client, Student)",
+          "Full-stack development with Flask backend and React frontend with modern UI/UX",
+          "Real-time chat interface with conversation history and context management",
+          "Responsive design with smooth animations and multi-screen user flow",
+          "RESTful API architecture with role-based prompt customization and validation"
+        ],
+        "link": "https://github.com/lucasgleria/Gemini-ChatBot"
+      }
+    ]
+  },
+  "created_at": "2025-06-30T11:37:06.640854",
+  "cache_key": "b92d474f15474b286ce063521fad04ee"
+}

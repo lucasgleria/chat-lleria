@@ -11,6 +11,8 @@ from utils.cache_handler import CacheHandler
 from utils.logger import logger, log_execution_time
 from utils.rate_limiter import rate_limiter
 import sys
+import re
+import unicodedata
 
 # Carregar variáveis de ambiente do arquivo .env
 load_dotenv()
@@ -41,6 +43,59 @@ if not os.getenv("TESTING") and "pytest" not in sys.modules:
 role_handler = RoleHandler()
 curriculo_handler = CurriculoHandler()
 cache_handler = CacheHandler()
+
+# --- Gemini API Key Rotation ---
+class GeminiAPIKeyManager:
+    def __init__(self):
+        self.api_keys = [
+            os.getenv("GEMINI_API_KEY"),
+            os.getenv("GEMINI_KEY_API2")
+        ]
+        self.current_index = 0
+        self.last_error = None
+
+    def get_current_key(self):
+        return self.api_keys[self.current_index]
+
+    def switch_key(self):
+        if self.current_index == 0 and self.api_keys[1]:
+            self.current_index = 1
+            return True
+        return False
+
+    def reset(self):
+        self.current_index = 0
+        self.last_error = None
+
+# Instanciar o gerenciador de chaves
+key_manager = GeminiAPIKeyManager()
+
+# Função para gerar conteúdo com fallback de chave
+from google import genai
+
+def gemini_generate_content(system_instruction, prompt):
+    """Gera conteúdo usando o Gemini, alternando a chave se necessário."""
+    for attempt in range(2):
+        client = genai.Client(api_key=key_manager.get_current_key())
+        try:
+            response = client.models.generate_content(
+                model="gemini-1.5-flash-latest",
+                contents=prompt,
+                config={
+                    "system_instruction": system_instruction
+                }
+            )
+            return response.text
+        except Exception as e:
+            # Tenta identificar erro de quota excedida (429) apenas pela mensagem
+            if 'quota' in str(e).lower() or '429' in str(e):
+                if key_manager.switch_key():
+                    continue
+                else:
+                    raise e
+            else:
+                raise e
+    raise RuntimeError("Todas as chaves da API Gemini excederam a quota diária.")
 
 # --- Here we load and build a system instruction to JSON file ---
 @log_execution_time(logger, "build_system_instruction")
@@ -203,12 +258,6 @@ def chat():
             )
             logger.debug("Role prompt generated successfully")
 
-            logger.debug("Initializing Gemini model")
-            # Inicializar modelo com prompt personalizado (versão 0.8.5+ suporta system_instruction)
-            chat_model = genai.GenerativeModel(
-                "gemini-1.5-flash-latest",
-                system_instruction=personalized_system_instruction
-            )
             logger.debug("Gemini model initialized successfully")
 
             # --- NOVO: Montar resposta factual ou fallback robusto ---
@@ -231,22 +280,64 @@ def chat():
                         resumo.append(f"- {field.replace('_', ' ').capitalize()}: {value}")
                 factual_summary = '\n'.join(resumo)
                 logger.debug("Factual summary created", summary_length=len(factual_summary))
-                
-                # Gerar resposta usando o Gemini
-                try:
-                    response = chat_model.generate_content(
-                        f"Responda à pergunta do usuário usando apenas as informações abaixo, sem inventar nada. Seja claro, objetivo e profissional.\n\nPergunta: {question}\n\nInformações disponíveis:\n{factual_summary}"
-                    )
-                    answer = response.text
-                    logger.debug("Gemini response generated successfully")
-                    
-                    # Armazenar no cache
-                    cache_handler.set(question, role, relevant_fields, answer, factual_data)
-                    
-                except Exception as gemini_error:
-                    logger.error("Gemini API error", error=gemini_error, question_preview=question[:50])
-                    # Fallback se o Gemini falhar
-                    answer = f"Com base nas informações disponíveis:\n{factual_summary}\n\nResposta à pergunta '{question}': As informações estão disponíveis acima."
+
+                # Detectar idioma da pergunta (simples: se tem acento ou palavras típicas do português)
+                def is_portuguese(text):
+                    # Critério simples: presença de acentos ou palavras comuns do português
+                    if re.search(r'[ãáàâêéíóõôúç]', text, re.IGNORECASE):
+                        return True
+                    pt_keywords = ["qual", "como", "quando", "quem", "onde", "por que", "para que", "sobre", "projetos", "formação", "certificações", "habilidades", "experiência"]
+                    return any(k in unicodedata.normalize('NFKD', text).lower() for k in pt_keywords)
+
+                if is_portuguese(question):
+                    prompt_estruturado = (
+                        "Responda à pergunta do usuário usando apenas as informações abaixo, sem inventar nada. "
+                        "Estruture sua resposta em três partes, mas NÃO utilize títulos, marcadores, separadores ou qualquer palavra como 'Introdução', 'Resposta Principal', 'Conclusão' ou variações/sinônimos no texto final. Caso utilize, use apenas em português.\n"
+                        "- Comece repetindo parcialmente a pergunta respondida, mostrando ao usuário que você entendeu a questão.\n"
+                        "- Em seguida, desenvolva a resposta da questão, separando por parágrafos claros.\n"
+                        "- Finalize perguntando ao usuário se a resposta foi útil e/ou sugerindo uma próxima pergunta relacionada ao tema.\n"
+                        "Evite saudações e não use essa estrutura para perguntas que não sejam sobre o Lucas.\n"
+                        "\nPergunta: {question}\n\nInformações disponíveis:\n{factual_summary}"
+                    ).format(question=question, factual_summary=factual_summary)
+                else:
+                    prompt_estruturado = (
+                        "Answer the user's question using only the information below, without making anything up. "
+                        "Structure your answer in three parts, but DO NOT use headings, bullet points, separators, or any words like 'Introduction', 'Main Answer', 'Conclusion' or similar/synonyms in the final text. If you use any, use only in English.\n"
+                        "- Start by partially repeating the question, showing the user you understood it.\n"
+                        "- Then, develop the main answer, using clear paragraphs.\n"
+                        "- Finish by asking if the answer was helpful and/or suggesting a related follow-up question.\n"
+                        "Avoid greetings and do not use this structure for questions not about Lucas.\n"
+                        "\nQuestion: {question}\n\nAvailable information:\n{factual_summary}"
+                    ).format(question=question, factual_summary=factual_summary)
+
+                answer = gemini_generate_content(
+                    personalized_system_instruction,
+                    prompt_estruturado
+                )
+                answer = answer or ''
+
+                # Pós-processamento: remover títulos de estrutura
+                def remove_structural_titles(text):
+                    import re
+                    # Regex para títulos comuns em pt/en, com ou sem markdown
+                    patterns = [
+                        r'^\s*#+\s*(Introdu[cç][aã]o|Resposta Principal|Conclus[ãa]o)\s*$',
+                        r'^\s*#+\s*(Introduction|Main Answer|Conclusion)\s*$',
+                        r'^\s*(Introdu[cç][aã]o|Resposta Principal|Conclus[ãa]o)\s*$',
+                        r'^\s*(Introduction|Main Answer|Conclusion)\s*$',
+                    ]
+                    lines = text.splitlines()
+                    filtered = []
+                    for line in lines:
+                        if not any(re.match(p, line.strip(), re.IGNORECASE) for p in patterns):
+                            filtered.append(line)
+                    return '\n'.join(filtered).strip()
+
+                answer = remove_structural_titles(answer)
+
+                logger.debug("Gemini response generated successfully")
+                # Armazenar no cache
+                cache_handler.set(question, role, relevant_fields, answer, factual_data)
             else:
                 # Fallback: não há informação factual
                 available_fields = list(curriculo_handler.cache.keys()) or [

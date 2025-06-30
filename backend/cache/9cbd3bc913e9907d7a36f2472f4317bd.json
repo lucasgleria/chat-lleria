@@ -1,0 +1,133 @@
+{
+  "question": "Tell me about his techincal skills",
+  "role": "recruiter",
+  "relevant_fields": [
+    "skills"
+  ],
+  "answer": "Lucas possesses a wide range of technical skills encompassing several areas.  His expertise includes data analysis and business intelligence using SQL (across multiple databases like SQLite3, MySQL, PostgreSQL, MongoDB, and Neo4j), Python (with libraries such as NumPy, Pandas, Matplotlib, Seaborn, and Scikit-learn), Power BI, and data visualization techniques.\n\nFurthermore, he's proficient in AI and machine learning, demonstrating skills in various algorithms (regression, classification), deep learning frameworks (TensorFlow, Keras, PyTorch), NLP, computer vision, MLOps using Docker, and chatbot development, including experience with large language models like Google Gemini API.  His experience also covers biometric evaluation, image similarity search, and  the development of neural networks (LSTM, EfficientNet-B0) and utilizing techniques like triplet loss and embeddings.\n\n\nHis programming skills extend to Python, HTML, CSS, JavaScript, Java, PHP, R, TypeScript, and Markdown. He's adept at using version control systems like Git and GitHub, and collaborative development using Node.js.  His web development skills include frameworks such as Django, Flask, FastAPI, jQuery, Bootstrap, Tailwind, Handlebars, Express.js, and React.  He is also experienced with database design and management using SQLite3, MySQL, PostgreSQL, MongoDB, and Neo4j.  His DevOps and cloud skills include Docker, Docker Compose, Prometheus, Grafana, Railway, and Vercel, along with container orchestration experience.  He even has skills in game development (Pygame, 2D game development) and desktop application development using Tkinter, PyQt6, PySimpleGUI, and Java Swing.\n\nFinally, Lucas demonstrates a solid grasp of software development methodologies (SCRUM, MVC, UML, SOLID), design principles (UI/UX design, responsive design using Figma and Canva), and API integration (using Google Gemini API and Axios).  He has experience with CRM tools like HubSpot and Rubeus, and uses Prometheus and Grafana for monitoring and analytics.\n\n\nWas this information helpful? Would you like me to elaborate on any specific area, perhaps focusing on his experience with a particular technology or project?\n",
+  "factual_data": {
+    "skills": {
+      "data_analysis_bi": [
+        "SQL (Sqlite3, MySQL, PostgreSQL, MongoDB, Neo4j)",
+        "Python (Numpy, Pandas, Matplotlib, Seaborn, Scikit-learn)",
+        "Data Science, ETL / Data Pipelines",
+        "Power BI",
+        "Data Visualization and Analytics"
+      ],
+      "ai_ml": [
+        "ML Algorithms (Regression, Classification)",
+        "Deep Learning (TensorFlow, Keras, PyTorch, EasyOCR, Tesseract, Mediapipe)",
+        "NLP (Natural Language Processing)",
+        "Computer Vision",
+        "MLOps (Docker)",
+        "Neural Networks (LSTM, EfficientNet-B0)",
+        "Triplet Loss and Embeddings",
+        "Biometric Evaluation (ROC Curve, EER)",
+        "Image Similarity Search",
+        "Large Language Models (Google Gemini API)",
+        "Chatbot Development",
+        "AI Integration and API Management"
+      ],
+      "programming_languages": [
+        "Python",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Java",
+        "PHP",
+        "R",
+        "Markdown",
+        "TypeScript"
+      ],
+      "version_control": [
+        "Git",
+        "GitHub",
+        "Node.js",
+        "Collaborative Development"
+      ],
+      "web_frameworks": [
+        "Django",
+        "Flask",
+        "FastAPI",
+        "jQuery",
+        "Bootstrap",
+        "Tailwind",
+        "Handlebars",
+        "Express.js",
+        "React"
+      ],
+      "databases": [
+        "SQLite3",
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "Neo4j",
+        "Database Design and Management"
+      ],
+      "devops_cloud": [
+        "Docker",
+        "Docker Compose",
+        "Prometheus",
+        "Grafana",
+        "Railway",
+        "Vercel",
+        "Container Orchestration"
+      ],
+      "game_development": [
+        "Pygame",
+        "2D Game Development",
+        "Collision Detection",
+        "Game Physics",
+        "Interactive Applications"
+      ],
+      "desktop_applications": [
+        "Tkinter",
+        "PyQt6",
+        "PysimpleGUI",
+        "Java Swing",
+        "GUI Development",
+        "Desktop Applications"
+      ],
+      "methodologies_concepts": [
+        "SCRUM",
+        "CRUD",
+        "MVC",
+        "UML",
+        "SOLID",
+        "Object-Oriented Programming",
+        "Microservices Architecture",
+        "API Gateway",
+        "REST APIs",
+        "Data Structures and Algorithms",
+        "Role-based Systems",
+        "Conversational AI Design"
+      ],
+      "design_tools": [
+        "Figma",
+        "Canva",
+        "UI/UX Design",
+        "Responsive Design"
+      ],
+      "crm_tools": [
+        "HubSpot",
+        "Rubeus"
+      ],
+      "monitoring_analytics": [
+        "Prometheus",
+        "Grafana",
+        "System Monitoring",
+        "Performance Metrics",
+        "Data Visualization"
+      ],
+      "api_integration": [
+        "Google Gemini API",
+        "Axios",
+        "HTTP Client Management",
+        "API Authentication",
+        "Webhook Integration"
+      ]
+    }
+  },
+  "created_at": "2025-06-30T11:26:33.552834",
+  "cache_key": "9cbd3bc913e9907d7a36f2472f4317bd"
+}

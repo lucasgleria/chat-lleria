@@ -1,0 +1,377 @@
+{
+  "question": "Can you tell me about LibraVoice?",
+  "role": "recruiter",
+  "relevant_fields": [
+    "professional_experience",
+    "intelligent_responses",
+    "certifications",
+    "soft_skills",
+    "academic_background"
+  ],
+  "answer": "### Introdução\n\nThis response addresses your question about LibraVoice.\n\n### Resposta Principal\n\nLibraVoice is an AI-powered sign language recognition system developed by Lucas.  It addresses the challenge of the communication barrier faced by people with disabilities (PWDs).  This project showcases Lucas's expertise in several key areas, including LSTM networks, computer vision, and real-time processing. The system's impact is significant as it improves accessibility for the PWD community, demonstrating a strong social impact.  From a technical perspective, the high level of complexity involved in integrating LSTM and real-time processing highlights Lucas's advanced abilities in AI/ML.  Furthermore, LibraVoice's potential as an accessibility solution positions it for possible expansion into a social enterprise, demonstrating potential business value.\n\n### Conclusão\n\nWas this information helpful?  Would you like to know more about the technical specifications of LibraVoice, or perhaps about other projects Lucas has worked on that demonstrate his problem-solving skills?\n",
+  "factual_data": {
+    "professional_experience": [
+      {
+        "role": "Client Management",
+        "organization": "CLA",
+        "duration": "March 2023 - Present",
+        "status": "Current",
+        "description": "Responsible for client and document management, working in various functions.",
+        "responsibilities": [
+          "Client and document management",
+          "Working in various administrative functions"
+        ]
+      },
+      {
+        "role": "CRM Analysis Internship",
+        "organization": "OverStack",
+        "duration": "August 2022 - February 2023",
+        "status": "Completed",
+        "description": "Management and maintenance of Hubspot and Rubeus CRMs.",
+        "responsibilities": [
+          "Management and maintenance of Hubspot and Rubeus CRMs"
+        ]
+      },
+      {
+        "role": "Front-End Development Internship",
+        "organization": "OverStack",
+        "duration": "August 2022 - February 2023",
+        "status": "Completed",
+        "description": "Development, nurturing and maintenance of Landing Pages.",
+        "responsibilities": [
+          "Development, nurturing and maintenance of Landing Pages"
+        ]
+      },
+      {
+        "role": "Marketing Copywriter Professional Practice",
+        "organization": "ENIAC - ENIAC Audiovisual Center (NAVE)",
+        "duration": "February 2021 - December 2021",
+        "status": "Completed",
+        "description": "Writing marketing texts for Landing Pages.",
+        "responsibilities": [
+          "Writing marketing texts for Landing Pages"
+        ]
+      },
+      {
+        "role": "Professional Practice",
+        "organization": "ENIAC",
+        "duration": "January 2020 - January 2021",
+        "status": "Completed",
+        "description": "Experience with Html5 and Css markup language and participation in people management activities.",
+        "responsibilities": [
+          "Experience with Html5 and Css markup language",
+          "Participation in people management activities"
+        ]
+      }
+    ],
+    "intelligent_responses": {
+      "key_achievements": [
+        {
+          "category": "Academic Excellence",
+          "achievement": "Completed Database Management Degree with focus on Data Analysis",
+          "impact": "Demonstrates strong foundation in data management and analytical thinking",
+          "relevance": [
+            "recruiter",
+            "developer",
+            "student"
+          ]
+        },
+        {
+          "category": "Technical Leadership",
+          "achievement": "Developed 19 diverse projects spanning AI/ML, Web Development, and Desktop Applications",
+          "impact": "Shows versatility and ability to work across multiple technology stacks",
+          "relevance": [
+            "recruiter",
+            "developer",
+            "client"
+          ]
+        },
+        {
+          "category": "AI/ML Expertise",
+          "achievement": "Implemented advanced AI solutions including signature verification, computer vision, and conversational AI",
+          "impact": "Proven experience with cutting-edge AI technologies and real-world applications",
+          "relevance": [
+            "developer",
+            "client",
+            "recruiter"
+          ]
+        },
+        {
+          "category": "Problem Solving",
+          "achievement": "Reduced manual management time by 80% in academic inventory project",
+          "impact": "Demonstrates ability to create impactful solutions that drive efficiency",
+          "relevance": [
+            "recruiter",
+            "client",
+            "developer"
+          ]
+        },
+        {
+          "category": "Continuous Learning",
+          "achievement": "Maintains 97% English proficiency and actively pursues new technologies",
+          "impact": "Shows adaptability and commitment to professional growth",
+          "relevance": [
+            "recruiter",
+            "student",
+            "developer"
+          ]
+        }
+      ],
+      "technical_expertise_levels": {
+        "expert": [
+          "Python Programming",
+          "SQL and Database Management",
+          "Machine Learning Fundamentals",
+          "Web Development (Full-Stack)",
+          "Git and Version Control"
+        ],
+        "advanced": [
+          "Deep Learning (TensorFlow, PyTorch)",
+          "Computer Vision",
+          "Natural Language Processing",
+          "Docker and Containerization",
+          "React and Modern JavaScript"
+        ],
+        "intermediate": [
+          "Java Development",
+          "Microservices Architecture",
+          "Cloud Platforms (Railway, Vercel)",
+          "Data Visualization",
+          "API Development and Integration"
+        ]
+      },
+      "project_impact_metrics": {
+        "libravoice": {
+          "social_impact": "Assists PWD communication through sign language recognition",
+          "technical_complexity": "High - LSTM integration and real-time processing",
+          "business_value": "Accessibility solution with potential for social enterprise"
+        },
+        "signature_recognizer": {
+          "academic_rigor": "Published research-level implementation with biometric evaluation",
+          "technical_innovation": "Advanced deep learning with Triplet Loss and EfficientNet-B0",
+          "real_world_applicability": "Security and authentication systems"
+        },
+        "microservices_structure": {
+          "architectural_excellence": "Complete microservices ecosystem with monitoring",
+          "scalability_demonstration": "Containerized services with API Gateway",
+          "production_readiness": "Monitoring, logging, and deployment ready"
+        },
+        "chat_lleria": {
+          "ai_integration": "Sophisticated role-based conversational AI system",
+          "user_experience": "Modern UI/UX with personalized interactions",
+          "technical_versatility": "Full-stack development with AI API integration"
+        }
+      },
+      "career_progression_indicators": {
+        "skill_evolution": [
+          {
+            "period": "2020-2022",
+            "focus": "Web Development and IT Fundamentals",
+            "key_skills": [
+              "HTML/CSS",
+              "JavaScript",
+              "Basic Programming"
+            ]
+          },
+          {
+            "period": "2022-2023",
+            "focus": "Full-Stack Development and CRM",
+            "key_skills": [
+              "Node.js",
+              "React",
+              "Database Management",
+              "API Development"
+            ]
+          },
+          {
+            "period": "2023-2025",
+            "focus": "AI/ML and Advanced Technologies",
+            "key_skills": [
+              "Python",
+              "Machine Learning",
+              "Deep Learning",
+              "Computer Vision"
+            ]
+          }
+        ],
+        "project_complexity_increase": {
+          "early_projects": "Basic web applications and simple games",
+          "mid_projects": "Full-stack applications with database integration",
+          "recent_projects": "AI/ML systems, microservices architecture, advanced algorithms"
+        }
+      },
+      "collaboration_evidence": [
+        {
+          "type": "Academic Collaboration",
+          "project": "lleria-medinizer",
+          "partners": "IFSP-GRU R.A.G.E. team",
+          "outcome": "Maximum grade approval and functional program delivery"
+        },
+        {
+          "type": "Open Source Contribution",
+          "project": "PysimpleGUI repository",
+          "impact": "Repository favorited by technology owner",
+          "recognition": "Community acknowledgment of code quality"
+        },
+        {
+          "type": "Educational Content",
+          "project": "Structures'nAlgorithms",
+          "benefit": "Helps beginner developers learn fundamental concepts",
+          "contribution": "Knowledge sharing and community building"
+        }
+      ],
+      "problem_solving_examples": [
+        {
+          "challenge": "Sign Language Communication Barrier",
+          "solution": "LibraVoice - AI-powered sign language recognition system",
+          "technologies": [
+            "LSTM",
+            "Computer Vision",
+            "Real-time Processing"
+          ],
+          "impact": "Accessibility improvement for PWD community"
+        },
+        {
+          "challenge": "Manual Inventory Management Inefficiency",
+          "solution": "Java Inventory System with Google Sheets integration",
+          "technologies": [
+            "Java",
+            "JDBC",
+            "Google Sheets API",
+            "Multithreading"
+          ],
+          "impact": "80% reduction in manual management time"
+        },
+        {
+          "challenge": "Complex Microservices Architecture",
+          "solution": "Complete microservices ecosystem with monitoring",
+          "technologies": [
+            "Docker",
+            "Prometheus",
+            "Grafana",
+            "API Gateway"
+          ],
+          "impact": "Scalable, monitored, production-ready architecture"
+        },
+        {
+          "challenge": "Personalized Resume Interactions",
+          "solution": "Role-based AI chatbot with contextual responses",
+          "technologies": [
+            "Gemini API",
+            "React",
+            "Flask",
+            "Role System"
+          ],
+          "impact": "Enhanced user experience with personalized interactions"
+        }
+      ],
+      "learning_patterns": {
+        "self_directed_learning": [
+          "Continuous skill development through personal projects",
+          "Active participation in online courses and certifications",
+          "Exploration of new technologies and frameworks"
+        ],
+        "practical_application": [
+          "Immediate application of learned concepts in projects",
+          "Cross-pollination of skills across different domains",
+          "Iterative improvement based on project outcomes"
+        ],
+        "knowledge_sharing": [
+          "Educational content creation for developer community",
+          "Open source contributions and repository sharing",
+          "Documentation and code comments for learning purposes"
+        ]
+      },
+      "adaptability_indicators": {
+        "technology_stack_versatility": [
+          "Proficiency across 9 programming languages",
+          "Experience with 15+ frameworks and technologies",
+          "Ability to work with both traditional and modern architectures"
+        ],
+        "project_diversity": [
+          "AI/ML projects with advanced algorithms",
+          "Web applications with modern frameworks",
+          "Desktop applications with GUI development",
+          "Game development and interactive applications",
+          "Educational content and documentation"
+        ],
+        "role_flexibility": [
+          "Technical development and implementation",
+          "Project management and team collaboration",
+          "Problem analysis and solution design",
+          "Knowledge sharing and mentoring"
+        ]
+      }
+    },
+    "certifications": [
+      {
+        "name": "The complete database and SQL course, without mysteries",
+        "issuer": "Udemy - Professor Felipe Mafra",
+        "year": "2025",
+        "status": "In Progress",
+        "duration": "58h",
+        "description": "Complete database and SQL course without mysteries.",
+        "certification_code": "Coming soon"
+      },
+      {
+        "name": "Data Science",
+        "issuer": "DIO - Powered by Ifood",
+        "year": "2023",
+        "status": "Completed",
+        "duration": "80h",
+        "description": "Complete Data Science course focusing on data analysis and machine learning.",
+        "certification_code": "AFDC8DC6"
+      },
+      {
+        "name": "Cloud Computing",
+        "issuer": "KaSolution - Powered by AWS",
+        "year": "2023",
+        "status": "Completed",
+        "duration": "4h",
+        "description": "Introductory cloud computing course focusing on AWS.",
+        "certification_code": "03750-67718"
+      }
+    ],
+    "soft_skills": [
+      "Empathy",
+      "Proactivity",
+      "Creativity and Innovation",
+      "Complex Problem Solving",
+      "Teamwork and Collaboration",
+      "Time Management and Prioritization",
+      "Technical Leadership",
+      "Project Management",
+      "Cross-functional Collaboration",
+      "Continuous Learning",
+      "Adaptability to New Technologies",
+      "Problem Analysis and Solution Design"
+    ],
+    "academic_background": [
+      {
+        "school": "UNESA",
+        "location": "São Paulo, Brazil",
+        "degree": "Database Management Degree",
+        "year": "2023-2025",
+        "status": "Completed",
+        "focus": "Database Management and Data Analysis"
+      },
+      {
+        "school": "ENIAC",
+        "location": "São Paulo, Brazil",
+        "degree": "High School Integrated with IT Technician",
+        "year": "2020-2022",
+        "status": "Completed",
+        "focus": "Information Technology"
+      },
+      {
+        "school": "Escola Marconi",
+        "location": "São Paulo, Brazil",
+        "degree": "Elementary School I and II",
+        "year": "Before 2020",
+        "status": "Completed"
+      }
+    ]
+  },
+  "created_at": "2025-06-30T11:37:24.818075",
+  "cache_key": "447b541e0e1d2ba8debde05e328c8176"
+}
