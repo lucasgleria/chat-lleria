@@ -3,12 +3,11 @@
 **Sistema de chatbot inteligente que utiliza a API Google Gemini para fornecer respostas personalizadas sobre mim, com sistema de roles para diferentes contextos de interação**
 
 [![Licença](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-7.5.1-green.svg)]()
-[![Status](https://img.shields.io/badge/status-concluído-green.svg)]()
+[![Version](https://img.shields.io/badge/Version-9.6.3-green.svg)]()
+[![Status](https://img.shields.io/badge/status-em_desenvolvimento-yellow.svg)]()
 [![deploy](https://img.shields.io/badge/deploy-active-green.svg)]()
 [![Backend CI](https://github.com/lucasgleria/chat-lleria/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/lucasgleria/chat-lleria/actions/workflows/backend-ci.yml)
 [![Frontend CI](https://github.com/lucasgleria/chat-lleria/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/lucasgleria/chat-lleria/actions/workflows/frontend-ci.yml)
-[![codecov](https://codecov.io/gh/lucasgleria/chat-lleria/branch/main/graph/badge.svg)](https://codecov.io/gh/lucasgleria/chat-lleria)
 
 ## 📌 Sumário
 
@@ -93,13 +92,11 @@ cd chat-lleria
 cd backend
 
 # Instale as dependências Python
-pipenv install
+pip install -r requirements.txt
 
 # Crie arquivo .env
 echo "GEMINI_API_KEY=sua_chave_api_aqui" > .env
-
-# Ative o ambiente virtual
-pipenv shell
+echo "GEMINI_API_KEY2=sua_chave_api_aqui" > .env
 ```
 
 3. Configure o Frontend:
@@ -120,11 +117,7 @@ npm install
 ### Iniciar o Projeto
 
 ```bash
-# Terminal 1 - Backend
-cd backend
-pipenv run python main.py
-
-# Terminal 2 - Frontend
+# Terminal - Frontend
 cd frontend
 npm start
 ```
