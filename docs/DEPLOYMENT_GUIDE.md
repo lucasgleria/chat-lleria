@@ -60,7 +60,7 @@ O projeto já está configurado com:
 ### 1.3 Deploy Automático
 - O Render detectará automaticamente o `render.yaml`
 - Cada push para `main` triggerará um novo deploy
-- O serviço ficará disponível em: `https://gemini-chatbot-backend.onrender.com`
+- O serviço ficará disponível em: `https://chat-lleria.onrender.com`
 
 ## 🌐 FASE 2: Deploy do Frontend no Vercel
 
@@ -94,7 +94,7 @@ O projeto já está configurado com:
    - Vá em "Settings" → "Environment Variables"
    - Adicione:
      ```
-     REACT_APP_BACKEND_URL = https://gemini-chatbot-backend.onrender.com
+     REACT_APP_BACKEND_URL = https://chat-lleria.onrender.com
      ```
 
 5. **Configurar Domínio**
@@ -113,7 +113,7 @@ Vá em `Settings` → `Secrets and variables` → `Actions`:
 
 ```
 GEMINI_API_KEY = sua_chave_api_aqui
-REACT_APP_BACKEND_URL = https://gemini-chatbot-backend.onrender.com
+REACT_APP_BACKEND_URL = https://chat-lleria.onrender.com
 CODECOV_TOKEN = seu_token_codecov (se usar)
 ```
 
@@ -131,13 +131,13 @@ VERCEL_PROJECT_ID = id_do_projeto_vercel
 ### 4.1 Testar Backend
 ```bash
 # Testar health check
-curl https://gemini-chatbot-backend.onrender.com/health
+curl https://chat-lleria.onrender.com/health
 
 # Testar endpoint de roles
-curl https://gemini-chatbot-backend.onrender.com/roles
+curl https://chat-lleria.onrender.com/roles
 
 # Testar chat (POST)
-curl -X POST https://gemini-chatbot-backend.onrender.com/chat \
+curl -X POST https://chat-lleria.onrender.com/chat \
   -H "Content-Type: application/json" \
   -d '{"question": "Olá", "role": "recruiter"}'
 ```
@@ -161,8 +161,8 @@ curl -X POST https://gemini-chatbot-backend.onrender.com/chat \
 
 ### 5.3 Métricas do Backend
 ```
-https://gemini-chatbot-backend.onrender.com/cache/stats
-https://gemini-chatbot-backend.onrender.com/rate-limit/stats
+https://chat-lleria.onrender.com/cache/stats
+https://chat-lleria.onrender.com/rate-limit/stats
 ```
 
 ## ⚠️ Pontos de Atenção

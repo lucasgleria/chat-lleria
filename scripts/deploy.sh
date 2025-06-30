@@ -220,8 +220,8 @@ show_deploy_status() {
     print_message "Status dos deploys:"
     echo
     echo "📊 Backend (Render):"
-    echo "   - URL: https://gemini-chatbot-backend.onrender.com"
-    echo "   - Health Check: https://gemini-chatbot-backend.onrender.com/health"
+    echo "   - URL: https://chat-lleria.onrender.com"
+    echo "   - Health Check: https://chat-lleria.onrender.com/health"
     echo
     echo "🌐 Frontend (Vercel):"
     echo "   - URL: https://gemini-chatbot.vercel.app"

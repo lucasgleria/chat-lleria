@@ -6,7 +6,7 @@ const getBackendUrl = () => {
   }
   
   // Em produção, usar a variável de ambiente ou fallback
-  return process.env.REACT_APP_BACKEND_URL || 'https://gemini-chatbot-backend.onrender.com';
+  return process.env.REACT_APP_BACKEND_URL || 'https://chat-lleria.onrender.com';
 };
 
 export const API_CONFIG = {
