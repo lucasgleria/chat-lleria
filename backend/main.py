@@ -332,6 +332,28 @@ def get_rate_limit_stats():
         logger.error("Error getting rate limit stats", error=e)
         return jsonify({"error": "Failed to get rate limit stats"}), 500
 
+# Health check endpoint para Render
+@app.route("/health", methods=["GET"])
+def health_check():
+    """Endpoint de health check para serviços de deploy"""
+    try:
+        # Verificar se a API key está configurada
+        api_key_status = "configured" if os.getenv("GEMINI_API_KEY") else "missing"
+        
+        return jsonify({
+            "status": "healthy",
+            "timestamp": time.time(),
+            "api_key": api_key_status,
+            "version": "1.0.0"
+        }), 200
+    except Exception as e:
+        logger.error("Health check failed", error=e)
+        return jsonify({
+            "status": "unhealthy",
+            "error": str(e),
+            "timestamp": time.time()
+        }), 500
+
 if __name__ == "__main__":
     logger.info("Starting Gemini ChatBot", version="1.0.0")
     print("Iniciando Gemini ChatBot...")

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { useRole } from './components/RoleContext';
+import { getApiUrl, API_CONFIG } from './config/api';
 
 function ChatWindow({ onBackToRoleSelect }) {
   const { selectedRole } = useRole();
@@ -84,7 +85,7 @@ function ChatWindow({ onBackToRoleSelect }) {
           requestData.role = selectedRole.id;
         }
 
-        const response = await axios.post('http://localhost:5000/chat', requestData, {
+        const response = await axios.post(getApiUrl(API_CONFIG.ENDPOINTS.CHAT), requestData, {
           headers: {
             'Content-Type': 'application/json',
           }

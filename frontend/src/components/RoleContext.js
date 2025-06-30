@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { fallbackRoles, getRoleById } from '../data/roles';
+import { getApiUrl, API_CONFIG } from '../config/api';
 
 // Create context
 const RoleContext = createContext();
@@ -27,7 +28,7 @@ export const RoleProvider = ({ children }) => {
       setError(null);
       
       // Try to load from backend
-      const response = await fetch('http://localhost:5000/roles');
+      const response = await fetch(getApiUrl(API_CONFIG.ENDPOINTS.ROLES));
       
       if (response.ok) {
         const data = await response.json();

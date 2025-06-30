@@ -55,3 +55,20 @@ jobs:
         token: ${{ secrets.CODECOV_TOKEN }}
         flags: backend
         name: backend-coverage
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Deploy to Render
+      env:
+        RENDER_TOKEN: ${{ secrets.RENDER_TOKEN }}
+        RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}
+      run: |
+        echo "Deploy triggered for backend"
+        echo "Render will automatically deploy from GitHub integration"
