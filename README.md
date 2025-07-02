@@ -1,4 +1,4 @@
-# 🤖 Gemini ChatBot - Sistema de Chat Inteligente com IA
+# 🤖 CHat lleria - Sistema de Chat Inteligente com IA
 
 **Sistema de chatbot inteligente que utiliza a API Google Gemini para fornecer respostas personalizadas sobre currículos profissionais, com sistema de roles para diferentes contextos de interação**
 
