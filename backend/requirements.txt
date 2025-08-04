@@ -1,7 +1,7 @@
 flask
 google-generativeai
 # Novo SDK recomendado pelo Google para Gemini 2.x+
-google-genai
+# google-genai
 google-cloud-aiplatform
 requests
 python-dotenv

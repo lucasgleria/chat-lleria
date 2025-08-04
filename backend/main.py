@@ -211,36 +211,50 @@ def after_request(response):
     
     return response
 
-def filtrar_projetos_por_pergunta(projetos, pergunta):
-    pergunta_lower = pergunta.lower()
-    campos_busca = ["name", "description", "role", "status", "team", "technologies", "features", "highlights", "challenges", "results"]
+def filter_projects_by_question(projects, question):
+    question_lower = question.lower()
+    search_field = ["name", "description", "role", "status", "team", "technologies", "features", "highlights", "challenges", "results"]
 
-    def projeto_relevante(projeto):
-        for campo in campos_busca:
-            valor = projeto.get(campo, "")
-            if isinstance(valor, list):
-                valor = " ".join(str(v).lower() for v in valor)
+    def relevant_projects(project):
+        for field in search_field:
+            value = project.get(field, "")
+            if isinstance(value, list):
+                value = " ".join(str(v).lower() for v in value)
             else:
-                valor = str(valor).lower()
-            if pergunta_lower in valor or difflib.SequenceMatcher(None, pergunta_lower, valor).ratio() > 0.4:
+                value = str(value).lower()
+            if question_lower in value or difflib.SequenceMatcher(None, question_lower, value).ratio() > 0.4:
                 return True
         return False
 
-    projetos_filtrados = [p for p in projetos if projeto_relevante(p)]
+    filtered_projects = [p for p in projects if relevant_projects(p)]
 
-    if not projetos_filtrados:
-        projetos_filtrados = sorted(
-            projetos,
-            key=lambda p: difflib.SequenceMatcher(None, pergunta_lower, p.get("description", "").lower()).ratio(),
+    if not filtered_projects:
+        filtered_projects = sorted(
+            projects,
+            key=lambda p: difflib.SequenceMatcher(None, question_lower, p.get("description", "").lower()).ratio(),
             reverse=True
         )
 
-    projetos_ordenados = sorted(
-        projetos_filtrados,
+    ordered_projects = sorted(
+        filtered_projects,
         key=lambda p: len(p.get("technologies", [])) + p.get("year", 0),
         reverse=True
     )
-    return projetos_ordenados[:5]
+    return ordered_projects[:5]
+
+def format_highlight(text, info_dict):
+    # Destaca valores únicos em negrito (Markdown)
+    for key, value in info_dict.items():
+        if isinstance(value, list):
+            for v in value:
+                v_str = str(v)
+                if v_str and v_str in text:
+                    text = text.replace(v_str, f"**{v_str}**")
+        else:
+            v_str = str(value)
+            if v_str and v_str in text:
+                text = text.replace(v_str, f"**{v_str}**")
+    return text
 
 # --- Main Endpoint (POST /chat) ---
 @app.route("/chat", methods=["POST"])
@@ -257,7 +271,7 @@ def chat():
     role = data.get("role", "recruiter")  # NOVO: parâmetro role
 
     if not question:
-        # Retorna erro se a pergunta estiver vazia.
+        # Retorna erro se a question estiver vazia.
         logger.warning("Empty question received", ip=get_client_ip())
         return jsonify({"answer": "Please provide your question."}), 400
 
@@ -295,42 +309,66 @@ def chat():
             # --- NOVO: Montar resposta factual ou fallback robusto ---
             if factual_data:
                 # Monta uma resposta factual clara para o modelo reescrever
-                resumo = []
+                # summarize = []
+                # for field, value in factual_data.items():
+                #     if isinstance(value, list):
+                #         if field == 'academic_background':
+                #             for degree in value:
+                #                 summarize.append(f"- {degree.get('degree', '')} em {degree.get('school', '')} ({degree.get('year', '')})")
+                #         elif field == 'projects':
+                #             projects_relevantes = filter_projects_by_question(value, question)
+                #             for proj in projects_relevantes:
+                #                 summarize.append(f"- project: {proj.get('name', '')} - {proj.get('description', '')}")
+                #         else:
+                #             summarize.append(f"- {field.replace('_', ' ').capitalize()}: {', '.join(str(x) for x in value[:5])}")
+                #     elif isinstance(value, dict):
+                #         summarize.append(f"- {field.replace('_', ' ').capitalize()}: {', '.join([f'{k}: {v}' for k, v in value.items()])}")
+                #     else:
+                #         summarize.append(f"- {field.replace('_', ' ').capitalize()}: {value}")
+                # factual_summary = '\n'.join(summarize)
+                # logger.debug("Factual summary created", summary_length=len(factual_summary))
+
+                summarize = []
                 for field, value in factual_data.items():
                     if isinstance(value, list):
                         if field == 'academic_background':
                             for formacao in value:
-                                resumo.append(f"- {formacao.get('degree', '')} em {formacao.get('school', '')} ({formacao.get('year', '')})")
+                                row = f"- {formacao.get('degree', '')} em {formacao.get('school', '')} ({formacao.get('year', '')})"
+                                summarize.append(format_highlight(row, formacao))
                         elif field == 'projects':
-                            projetos_relevantes = filtrar_projetos_por_pergunta(value, question)
-                            for proj in projetos_relevantes:
-                                resumo.append(f"- Projeto: {proj.get('name', '')} - {proj.get('description', '')}")
+                            projects_relevantes = filter_projects_by_question(value, question)
+                            for proj in projects_relevantes:
+                                row = f"- Projeto: {proj.get('name', '')} - {proj.get('description', '')}"
+                                summarize.append(format_highlight(row, proj))
                         else:
-                            resumo.append(f"- {field.replace('_', ' ').capitalize()}: {', '.join(str(x) for x in value[:5])}")
+                            row = f"- {field.replace('_', ' ').capitalize()}: {', '.join(str(x) for x in value[:5])}"
+                            summarize.append(format_highlight(row, {field: value}))
                     elif isinstance(value, dict):
-                        resumo.append(f"- {field.replace('_', ' ').capitalize()}: {', '.join([f'{k}: {v}' for k, v in value.items()])}")
+                        row = f"- {field.replace('_', ' ').capitalize()}: {', '.join([f'{k}: {v}' for k, v in value.items()])}"
+                        summarize.append(format_highlight(row, value))
                     else:
-                        resumo.append(f"- {field.replace('_', ' ').capitalize()}: {value}")
-                factual_summary = '\n'.join(resumo)
+                        row = f"- {field.replace('_', ' ').capitalize()}: {value}"
+                        summarize.append(format_highlight(row, {field: value}))
+                factual_summary = '\n'.join(summarize)
                 logger.debug("Factual summary created", summary_length=len(factual_summary))
 
-                # Detectar idioma da pergunta (simples: se tem acento ou palavras típicas do português)
+                # Detectar idioma da question (simples: se tem acento ou palavras típicas do português)
                 def is_portuguese(text):
                     # Critério simples: presença de acentos ou palavras comuns do português
                     if re.search(r'[ãáàâêéíóõôúç]', text, re.IGNORECASE):
                         return True
-                    pt_keywords = ["qual", "como", "quando", "quem", "onde", "por que", "para que", "sobre", "projetos", "formação", "certificações", "habilidades", "experiência"]
+                    pt_keywords = ["qual", "como", "quando", "quem", "onde", "por que", "para que", "sobre", "projects", "formação", "certificações", "habilidades", "experiência"]
                     return any(k in unicodedata.normalize('NFKD', text).lower() for k in pt_keywords)
 
                 if is_portuguese(question):
                     prompt_estruturado = (
-                        "Responda à pergunta do usuário usando apenas as informações abaixo, sem inventar nada. "
+                        "Responda à question do usuário usando apenas as informações abaixo, sem inventar nada. "
                         "Estruture sua resposta em três partes, mas NÃO utilize títulos, marcadores, separadores ou qualquer palavra como 'Introdução', 'Resposta Principal', 'Conclusão' ou variações/sinônimos no texto final. Caso utilize, use apenas em português.\n"
-                        "- Comece repetindo parcialmente a pergunta respondida, mostrando ao usuário que você entendeu a questão.\n"
+                        "- Comece repetindo parcialmente a question respondida, mostrando ao usuário que você entendeu a questão.\n"
                         "- Em seguida, desenvolva a resposta da questão, separando por parágrafos claros.\n"
-                        "- Finalize perguntando ao usuário se a resposta foi útil e/ou sugerindo uma próxima pergunta relacionada ao tema.\n"
-                        "Evite saudações e não use essa estrutura para perguntas que não sejam sobre o Lucas.\n"
-                        "\nPergunta: {question}\n\nInformações disponíveis:\n{factual_summary}"
+                        "- Finalize questionndo ao usuário se a resposta foi útil e/ou sugerindo uma próxima question relacionada ao tema.\n"
+                        "Evite saudações e não use essa estrutura para questions que não sejam sobre o Lucas.\n"
+                        "\nquestion: {question}\n\nInformações disponíveis:\n{factual_summary}"
                     ).format(question=question, factual_summary=factual_summary)
                 else:
                     prompt_estruturado = (
@@ -376,7 +414,7 @@ def chat():
                 available_fields = list(curriculo_handler.cache.keys()) or [
                     'academic_background', 'professional_experience', 'projects', 'skills', 'certifications', 'soft_skills', 'languages', 'intelligent_responses']
                 sugestao = ', '.join([f for f in available_fields if f not in ['contact', 'name', 'title', 'summary', 'what_im_looking_for', 'additional_info']])
-                answer = f"Não há informações sobre esse tema no currículo de Lucas. Posso te contar sobre: {sugestao.replace('_', ' ')}. Exemplos de perguntas: 'Qual a formação acadêmica?', 'Quais projetos ele já desenvolveu?', 'Quais certificações ele possui?'"
+                answer = f"Não há informações sobre esse tema no currículo de Lucas. Posso te contar sobre: {sugestao.replace('_', ' ')}. Exemplos de questions: 'Qual a formação acadêmica?', 'Quais projects ele já desenvolveu?', 'Quais certificações ele possui?'"
                 logger.debug("Fallback response sent", available_fields=available_fields)
 
     except Exception as e:
@@ -411,10 +449,10 @@ def get_roles():
         logger.error("Error getting roles", error=e)
         return jsonify({"roles": []}), 500
 
-# Novo endpoint para obter exemplos de perguntas
+# Novo endpoint para obter exemplos de questions
 @app.route("/roles/<role_id>/examples", methods=["GET"])
 def get_role_examples(role_id):
-    """Retorna exemplos de perguntas para uma role específica"""
+    """Retorna exemplos de questions para uma role específica"""
     try:
         examples = role_handler.get_role_examples(role_id)
         return jsonify({"examples": examples})
