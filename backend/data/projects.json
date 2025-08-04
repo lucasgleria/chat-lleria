@@ -2,52 +2,151 @@
   "projects": [
     {
       "name": "LibraVoice - Extension Laboratory in Agile Methodologies and SCRUM with LSTM",
-      "technologies": ["Python", "TensorFlow", "Mediapipe", "Numpy", "OpenCV"],
-      "description": "Software for sign language recognition and translation to natural language.",
+      "description": "Software for sign language recognition and translation to natural language. Developed to assist people with disabilities (PWD) in communication, using advanced LSTM models and agile methodologies.",
+      "year": 2023,
+      "role": "Lead Developer",
+      "status": "Finalizado",
+      "team": ["Lucas Gleria"],
+      "technologies": ["Python 3.10", "TensorFlow 2.x", "Mediapipe", "Numpy", "OpenCV"],
+      "features": [
+        "Sign language recognition via computer vision",
+        "Natural language translation using LSTM",
+        "Accessible user interface",
+        "Agile and SCRUM-based development process"
+      ],
       "highlights": [
         "Functional and accessible software to assist PWD communication",
         "LSTM integration for natural language processing",
         "Application of agile methodologies and SCRUM in development"
       ],
-      "link": "https://github.com/lucasgleria/LibraVoice/tree/main"
+      "challenges": [
+        "Treinamento de modelos LSTM com datasets limitados",
+        "Integração de múltiplas bibliotecas de visão computacional",
+        "Garantir acessibilidade para diferentes tipos de deficiência"
+      ],
+      "results": [
+        "Software funcional utilizado em ambiente acadêmico",
+        "Reconhecimento positivo por parte de usuários PWD",
+        "Documentação publicada para reprodutibilidade"
+      ],
+      "link": "https://github.com/lucasgleria/LibraVoice/tree/main",
+      "demo": "",
+      "documentation": "https://github.com/lucasgleria/LibraVoice/tree/main/docs"
     },
     {
       "name": "lleria-medinizer - Academic collaboration for IFSP-GRU R.A.G.E. with Computer Vision",
-      "technologies": ["Python", "EasyOCR", "Tesseract", "OpenCV", "NLTK", "Sqlite3", "PysimpleGUI"],
-      "description": "CRUD GUI focused on pharmaceutical area, with LSTM integration.",
+      "description": "CRUD GUI focused on pharmaceutical area, with LSTM integration for document processing and OCR. Developed as part of an academic collaboration.",
+      "year": 2022,
+      "role": "Fullstack Developer",
+      "status": "Finalizado",
+      "team": ["Lucas Gleria", "Equipe IFSP-GRU"],
+      "technologies": ["Python 3.9", "EasyOCR", "Tesseract", "OpenCV", "NLTK", "Sqlite3", "PysimpleGUI"],
+      "features": [
+        "OCR para documentos farmacêuticos",
+        "Interface gráfica CRUD",
+        "Processamento de linguagem natural com LSTM",
+        "Persistência de dados em Sqlite3"
+      ],
       "highlights": [
         "The final delivery of the functional program benefited the team resulting in maximum grade approval",
         "Computer vision integration for pharmaceutical document processing",
         "The owner of PysimpleGUI technology favorited the repository"
       ],
-      "link": "https://github.com/lucasgleria/lleria-mednizer"
+      "challenges": [
+        "Reconhecimento de texto em documentos de baixa qualidade",
+        "Integração de múltiplas bibliotecas de OCR",
+        "Desenvolvimento de interface amigável para usuários não técnicos"
+      ],
+      "results": [
+        "Aprovação máxima em avaliação acadêmica",
+        "Reconhecimento da comunidade PysimpleGUI",
+        "Ferramenta utilizada em projetos internos"
+      ],
+      "link": "https://github.com/lucasgleria/lleria-mednizer",
+      "demo": "",
+      "documentation": "https://github.com/lucasgleria/lleria-mednizer/blob/main/README.md"
     },
     {
       "name": "OverChat - Web Development Module Final Project",
-      "technologies": ["HTML", "CSS", "JavaScript", "Vercel", "Prisma"],
-      "description": "X social network replica application focused on business communication.",
+      "description": "X social network replica application focused on business communication. Fullstack project with deployment and database integration.",
+      "year": 2023,
+      "role": "Frontend & Backend Developer",
+      "status": "Finalizado",
+      "team": ["Lucas Gleria"],
+      "technologies": ["HTML5", "CSS3", "JavaScript ES6", "Vercel", "Prisma"],
+      "features": [
+        "Business-focused social network",
+        "Frontend e backend completos",
+        "Integração com banco de dados via Prisma",
+        "Deploy automatizado no Vercel"
+      ],
       "highlights": [
         "Functional business social network",
         "Complete frontend and backend development",
         "Deploy on Vercel with database integration"
       ],
-      "link": "https://github.com/lucasgleria/over-chat"
+      "challenges": [
+        "Desenvolvimento de autenticação segura",
+        "Integração de frontend e backend",
+        "Gerenciamento de dados em tempo real"
+      ],
+      "results": [
+        "Aplicação funcional disponível online",
+        "Feedback positivo de usuários de negócios",
+        "Documentação técnica publicada"
+      ],
+      "link": "https://github.com/lucasgleria/over-chat",
+      "demo": "https://over-chat.vercel.app",
+      "documentation": "https://github.com/lucasgleria/over-chat/blob/main/README.md"
     },
     {
       "name": "Linktrell - Linktree-style Application",
-      "technologies": ["JavaScript", "Node.js", "Express"],
-      "description": "Developed in JavaScript with Node.js, with emphasis on Data Analysis and Visualization.",
+      "description": "Aplicativo estilo Linktree desenvolvido em JavaScript e Node.js, com foco em análise e visualização de dados.",
+      "year": 2022,
+      "role": "Fullstack Developer",
+      "status": "Finalizado",
+      "team": ["Lucas Gleria"],
+      "technologies": ["JavaScript ES6", "Node.js 16", "Express 4"],
+      "features": [
+        "Gerenciamento de múltiplos links",
+        "Visualização de dados de acesso",
+        "Backend Node.js com Express",
+        "Interface responsiva"
+      ],
       "highlights": [
         "Personal project focused on improving data analysis skills",
         "Full-stack development with Node.js",
         "Focus on data visualization and analysis"
       ],
-      "link": "https://github.com/lucasgleria/Linktrell"
+      "challenges": [
+        "Implementação de gráficos dinâmicos",
+        "Otimização de consultas para análise de dados",
+        "Design responsivo para diferentes dispositivos"
+      ],
+      "results": [
+        "Ferramenta pessoal utilizada para portfólio",
+        "Melhoria nas habilidades de análise de dados",
+        "Documentação clara para reuso"
+      ],
+      "link": "https://github.com/lucasgleria/Linktrell",
+      "demo": "",
+      "documentation": "https://github.com/lucasgleria/Linktrell/blob/main/README.md"
     },
     {
       "name": "Microservices Structure - Docker and Python Microservices Architecture",
-      "technologies": ["Python", "TypeScript", "React", "Docker", "FastAPI", "MongoDB", "Redis", "Prometheus", "Grafana"],
       "description": "Base structure for microservices development with Docker and Python, frontend integration with Node.js and React. Support for data analysis and monitoring.",
+      "year": 2024,
+      "role": "Arquitetura e DevOps",
+      "status": "Finalizado",
+      "team": ["Lucas Gleria"],
+      "technologies": ["Python 3.11", "TypeScript", "React 18", "Docker", "FastAPI", "MongoDB", "Redis", "Prometheus", "Grafana"],
+      "features": [
+        "Arquitetura completa de microserviços",
+        "API Gateway para roteamento",
+        "Monitoramento com Prometheus e Grafana",
+        "Serviços multi-linguagem (Python e TypeScript)",
+        "Autenticação, calculadora e timer como microserviços"
+      ],
       "highlights": [
         "Complete microservices architecture with API Gateway for request routing",
         "Integration of Prometheus for metrics collection and Grafana for data visualization and analysis",
@@ -55,12 +154,34 @@
         "Docker containerization and orchestration with comprehensive monitoring",
         "Authentication service, calculator service, and timer service implementation"
       ],
-      "link": "https://github.com/lucasgleria/microservices-structure"
+      "challenges": [
+        "Orquestração de containers Docker",
+        "Comunicação entre serviços de diferentes linguagens",
+        "Implementação de monitoramento em tempo real"
+      ],
+      "results": [
+        "Estrutura base para novos projetos de microserviços",
+        "Documentação para onboarding rápido",
+        "Ambiente de desenvolvimento replicável"
+      ],
+      "link": "https://github.com/lucasgleria/microservices-structure",
+      "demo": "",
+      "documentation": "https://github.com/lucasgleria/microservices-structure/blob/main/README.md"
     },
     {
       "name": "Signature Recognizer - Neural Network Signature Verification System",
-      "technologies": ["Python", "PyTorch", "TensorFlow", "EfficientNet-B0", "Triplet Loss", "Google Colab", "CEDAR Dataset"],
       "description": "Implementation of a signature similarity verification system using neural networks and Triplet Loss, focused on embeddings, biometric evaluation and the CEDAR dataset.",
+      "year": 2024,
+      "role": "ML Engineer",
+      "status": "Finalizado",
+      "team": ["Lucas Gleria"],
+      "technologies": ["Python 3.11", "PyTorch", "TensorFlow", "EfficientNet-B0", "Triplet Loss", "Google Colab", "CEDAR Dataset"],
+      "features": [
+        "Signature verification using deep learning",
+        "Triplet Loss for embedding generation",
+        "Biometric evaluation metrics (ROC, EER)",
+        "Pipeline from preprocessing to model evaluation"
+      ],
       "highlights": [
         "Deep learning model training with EfficientNet-B0 and Triplet Loss for signature verification",
         "Processing and analysis of the challenging CEDAR dataset with genuine and forged signatures",
@@ -68,12 +189,34 @@
         "Embedding generation and signature verification based on Euclidean distance",
         "Complete pipeline from data preprocessing to model evaluation in Google Colab environment"
       ],
-      "link": "https://github.com/lucasgleria/signature-recognizer"
+      "challenges": [
+        "Treinamento com dados desbalanceados",
+        "Avaliação de métricas biométricas",
+        "Otimização de embeddings para alta precisão"
+      ],
+      "results": [
+        "Modelo funcional para verificação de assinaturas",
+        "Documentação e exemplos publicados",
+        "Utilização em estudos acadêmicos"
+      ],
+      "link": "https://github.com/lucasgleria/signature-recognizer",
+      "demo": "",
+      "documentation": "https://github.com/lucasgleria/signature-recognizer/blob/main/README.md"
     },
     {
       "name": "URL Shortener - Desktop Link Shortening Application",
-      "technologies": ["Python", "PyQt6", "Flask", "MongoDB", "PyMongo", "Validators"],
       "description": "A simple and efficient desktop application for shortening URLs, with history and data persistence in MongoDB, and a Flask redirect server.",
+      "year": 2023,
+      "role": "Fullstack Developer",
+      "status": "Finalizado",
+      "team": ["Lucas Gleria"],
+      "technologies": ["Python 3.10", "PyQt6", "Flask", "MongoDB", "PyMongo", "Validators"],
+      "features": [
+        "Desktop GUI for URL shortening",
+        "MongoDB persistence and history",
+        "Flask server for redirection",
+        "URL validation and management"
+      ],
       "highlights": [
         "Desktop GUI application using PyQt6 with intuitive interface for URL shortening",
         "MongoDB integration for data persistence and link history management",
@@ -81,12 +224,35 @@
         "URL validation and robust backend logic for link generation and management",
         "Complete solution combining desktop application with web server functionality"
       ],
-      "link": "https://github.com/lucasgleria/encurtador-simples"
+      "challenges": [
+        "Integração entre PyQt6 e Flask",
+        "Persistência eficiente de dados",
+        "Validação robusta de URLs"
+      ],
+      "results": [
+        "Aplicação funcional para encurtamento de links",
+        "Documentação publicada",
+        "Utilização pessoal e acadêmica"
+      ],
+      "link": "https://github.com/lucasgleria/encurtador-simples",
+      "demo": "",
+      "documentation": "https://github.com/lucasgleria/encurtador-simples/blob/main/README.md"
     },
     {
       "name": "Virtual Agenda - Task Management System",
-      "technologies": ["Python", "Tkinter", "SQLite", "tkcalendar", "plyer", "matplotlib"],
       "description": "Complete task, event and scheduling management system developed in Python with Tkinter GUI. Advanced notification features, statistical dashboard and priority management.",
+      "year": 2023,
+      "role": "Fullstack Developer",
+      "status": "Finalizado",
+      "team": ["Lucas Gleria"],
+      "technologies": ["Python 3.10", "Tkinter", "SQLite", "tkcalendar", "plyer", "matplotlib"],
+      "features": [
+        "MVC architecture",
+        "Task management with priorities",
+        "Recurring events system",
+        "Statistical dashboard",
+        "System notifications and backup"
+      ],
       "highlights": [
         "Complete MVC architecture implementation with separation of concerns",
         "Advanced task management with 4 priority levels and status tracking",
@@ -94,12 +260,34 @@
         "Real-time statistical dashboard with interactive charts and productivity metrics",
         "System notifications, backup functionality and data export capabilities"
       ],
-      "link": "https://github.com/lucasgleria/agenda-virtual"
+      "challenges": [
+        "Implementação de eventos recorrentes",
+        "Dashboard interativo com matplotlib",
+        "Backup e exportação de dados"
+      ],
+      "results": [
+        "Ferramenta funcional para gestão de tarefas",
+        "Documentação e exemplos publicados",
+        "Utilização pessoal e acadêmica"
+      ],
+      "link": "https://github.com/lucasgleria/agenda-virtual",
+      "demo": "",
+      "documentation": "https://github.com/lucasgleria/agenda-virtual/blob/main/README.md"
     },
     {
       "name": "BlogApp - Full-Stack Blog Application",
-      "technologies": ["Node.js", "Express.js", "MongoDB", "Handlebars.js", "Bootstrap", "Railway"],
       "description": "Complete web application simulating a blog system with viewing and management functionalities for posts and categories. Developed with Node.js, Express and MongoDB, deployed on Railway.",
+      "year": 2023,
+      "role": "Fullstack Developer",
+      "status": "Finalizado",
+      "team": ["Lucas Gleria"],
+      "technologies": ["Node.js 18", "Express.js 4", "MongoDB", "Handlebars.js", "Bootstrap 5", "Railway"],
+      "features": [
+        "CRUD de posts e categorias",
+        "Autenticação e painel administrativo",
+        "Design responsivo com Bootstrap",
+        "Persistência de dados com MongoDB"
+      ],
       "highlights": [
         "Full-stack development with Node.js backend and Handlebars.js templating",
         "User authentication and authorization system with admin panel",
@@ -107,12 +295,34 @@
         "Responsive design with Bootstrap for optimal user experience",
         "Complete CRUD operations for posts and categories with admin interface"
       ],
-      "link": "https://github.com/lucasgleria/blogapp"
+      "challenges": [
+        "Implementação de autenticação segura",
+        "Design responsivo para múltiplos dispositivos",
+        "Gerenciamento eficiente de dados"
+      ],
+      "results": [
+        "Aplicação funcional disponível online",
+        "Documentação publicada",
+        "Utilização pessoal e acadêmica"
+      ],
+      "link": "https://github.com/lucasgleria/blogapp",
+      "demo": "",
+      "documentation": "https://github.com/lucasgleria/blogapp/blob/main/README.md"
     },
     {
       "name": "Java Inventory Management System",
-      "technologies": ["Java", "Swing", "JDBC", "MySQL", "Google Sheets API", "Maven", "Multithreading"],
       "description": "Java application for inventory management with CLI and GUI versions. Academic extension project demonstrating Object-Oriented Programming principles and SOLID architecture.",
+      "year": 2022,
+      "role": "Java Developer",
+      "status": "Finalizado",
+      "team": ["Lucas Gleria"],
+      "technologies": ["Java 11", "Swing", "JDBC", "MySQL", "Google Sheets API", "Maven", "Multithreading"],
+      "features": [
+        "CLI e GUI para gestão de estoque",
+        "Integração com Google Sheets",
+        "Arquitetura SOLID",
+        "Multithreading para operações simultâneas"
+      ],
       "highlights": [
         "Implementation of 5 essential pillars: multithreading, inheritance, exception handling, interfaces and JDBC integration",
         "Dual interface approach: CLI for educational purposes and GUI for practical use",
@@ -120,12 +330,35 @@
         "SOLID architecture principles with robust exception handling and data validation",
         "Academic project that reduced manual management time by 80% for local business"
       ],
-      "link": "https://github.com/lucasgleria/projeto-de-extensao"
+      "challenges": [
+        "Implementação de multithreading",
+        "Integração com Google Sheets",
+        "Validação robusta de dados"
+      ],
+      "results": [
+        "Redução de 80% no tempo de gestão manual",
+        "Documentação publicada",
+        "Utilização em ambiente acadêmico"
+      ],
+      "link": "https://github.com/lucasgleria/projeto-de-extensao",
+      "demo": "",
+      "documentation": "https://github.com/lucasgleria/projeto-de-extensao/blob/main/README.md"
     },
     {
       "name": "FinancialApp - Digital Banking Application",
-      "technologies": ["Python", "Django", "SQLite3", "HTML5", "CSS3", "Git", "GitHub"],
       "description": "Digital banking application in website format for portfolio demonstration. Features include account management, expense tracking, financial planning and transaction history.",
+      "year": 2023,
+      "role": "Fullstack Developer",
+      "status": "Finalizado",
+      "team": ["Lucas Gleria"],
+      "technologies": ["Python 3.10", "Django", "SQLite3", "HTML5", "CSS3", "Git", "GitHub"],
+      "features": [
+        "Gestão de contas e despesas",
+        "Dashboard dinâmico",
+        "Histórico de transações",
+        "Gestão de boletos e pagamentos",
+        "Design responsivo"
+      ],
       "highlights": [
         "Complete financial management system with account and expense tracking",
         "Dynamic dashboard with expense categories and financial planning tools",
@@ -133,12 +366,34 @@
         "Bill management system with due date tracking and payment status",
         "Responsive web design with modern UI/UX for financial applications"
       ],
-      "link": "https://github.com/lucasgleria/financialapp"
+      "challenges": [
+        "Implementação de dashboard dinâmico",
+        "Gestão eficiente de dados financeiros",
+        "Design responsivo para múltiplos dispositivos"
+      ],
+      "results": [
+        "Aplicação funcional para gestão financeira",
+        "Documentação publicada",
+        "Utilização pessoal e acadêmica"
+      ],
+      "link": "https://github.com/lucasgleria/financialapp",
+      "demo": "",
+      "documentation": "https://github.com/lucasgleria/financialapp/blob/main/README.md"
     },
     {
       "name": "Musicaller.ia - Music Course Website",
-      "technologies": ["HTML5", "CSS3", "JavaScript", "Node.js", "Git", "GitHub", "Railway"],
       "description": "Music course website application developed in collaboration with Matheus Ramos Silva. Features include course display, events, contact forms and user authentication.",
+      "year": 2023,
+      "role": "Fullstack Developer",
+      "status": "Finalizado",
+      "team": ["Lucas Gleria", "Matheus Ramos Silva"],
+      "technologies": ["HTML5", "CSS3", "JavaScript", "Node.js", "Git", "GitHub", "Railway"],
+      "features": [
+        "Exibição de cursos e eventos",
+        "Autenticação de usuários",
+        "Formulário de contato",
+        "Design responsivo"
+      ],
       "highlights": [
         "Collaborative development project with modern web technologies",
         "Responsive design with carousel display for courses and events",
@@ -146,12 +401,34 @@
         "Contact form integration and material request system",
         "Deployed on Railway platform with full route accessibility"
       ],
-      "link": "https://github.com/lucasgleria/musicaller-ia"
+      "challenges": [
+        "Implementação de autenticação",
+        "Design responsivo",
+        "Integração de formulário de contato"
+      ],
+      "results": [
+        "Aplicação funcional para cursos de música",
+        "Documentação publicada",
+        "Utilização por alunos e professores"
+      ],
+      "link": "https://github.com/lucasgleria/musicaller-ia",
+      "demo": "",
+      "documentation": "https://github.com/lucasgleria/musicaller-ia/blob/main/README.md"
     },
     {
       "name": "FlappyZap - WhatsApp-themed Flappy Bird Game",
-      "technologies": ["Python", "Pygame"],
       "description": "A Flappy Bird parody game using WhatsApp logo, developed as an educational project to demonstrate pygame library usage for simple game creation in Python.",
+      "year": 2022,
+      "role": "Game Developer",
+      "status": "Finalizado",
+      "team": ["Lucas Gleria"],
+      "technologies": ["Python 3.9", "Pygame"],
+      "features": [
+        "Jogo 2D com detecção de colisão",
+        "Sistema de pontuação",
+        "Design temático WhatsApp",
+        "Controles simples"
+      ],
       "highlights": [
         "Complete 2D game implementation with collision detection and scoring system",
         "WhatsApp-themed design with humor and entertainment value",
@@ -159,12 +436,34 @@
         "Educational project demonstrating game development concepts",
         "Minimalist design inspired by original Flappy Bird style"
       ],
-      "link": "https://github.com/lucasgleria/FlappyZap"
+      "challenges": [
+        "Implementação de física simples",
+        "Design minimalista",
+        "Controle responsivo"
+      ],
+      "results": [
+        "Jogo funcional para demonstração educacional",
+        "Documentação publicada",
+        "Utilização em aulas de programação"
+      ],
+      "link": "https://github.com/lucasgleria/FlappyZap",
+      "demo": "",
+      "documentation": "https://github.com/lucasgleria/FlappyZap/blob/main/README.md"
     },
     {
       "name": "Seamese Networks Algorithm - Image Similarity Search System",
-      "technologies": ["Python", "PyTorch", "EfficientNet-B0", "Triplet Loss", "Google Colab", "MNIST Dataset"],
       "description": "Implementation of an image similarity search system using neural networks and Triplet Loss, focused on embeddings and visual analysis on the MNIST dataset.",
+      "year": 2024,
+      "role": "ML Engineer",
+      "status": "Finalizado",
+      "team": ["Lucas Gleria"],
+      "technologies": ["Python 3.11", "PyTorch", "EfficientNet-B0", "Triplet Loss", "Google Colab", "MNIST Dataset"],
+      "features": [
+        "Busca de similaridade de imagens",
+        "Treinamento com Triplet Loss",
+        "Geração de embeddings",
+        "Pipeline completo de dados"
+      ],
       "highlights": [
         "Deep learning model training with EfficientNet-B0 and Triplet Loss for image similarity",
         "Processing and analysis of MNIST dataset for digit recognition and similarity search",
@@ -172,12 +471,34 @@
         "Complete pipeline from data preprocessing to model evaluation in Google Colab",
         "Educational project demonstrating fundamental concepts of computer vision and deep learning"
       ],
-      "link": "https://github.com/lucasgleria/seamese-network-algorithm"
+      "challenges": [
+        "Treinamento com dados de alta dimensionalidade",
+        "Otimização de embeddings",
+        "Avaliação de métricas de similaridade"
+      ],
+      "results": [
+        "Modelo funcional para busca de imagens similares",
+        "Documentação publicada",
+        "Utilização em estudos acadêmicos"
+      ],
+      "link": "https://github.com/lucasgleria/seamese-network-algorithm",
+      "demo": "",
+      "documentation": "https://github.com/lucasgleria/seamese-network-algorithm/blob/main/README.md"
     },
     {
       "name": "Structures'nAlgorithms - Data Structures and Algorithms Collection",
-      "technologies": ["Python", "Educational Content"],
       "description": "Collection of practical challenges focused on fundamental data structures and algorithms for beginner developers.",
+      "year": 2022,
+      "role": "Content Creator",
+      "status": "Finalizado",
+      "team": ["Lucas Gleria"],
+      "technologies": ["Python 3.9", "Educational Content"],
+      "features": [
+        "Implementação de algoritmos de busca",
+        "Estruturas de dados (pilhas, filas, listas ligadas)",
+        "Algoritmos de ordenação",
+        "Exemplos práticos e soluções"
+      ],
       "highlights": [
         "Comprehensive educational resource covering essential computer science concepts",
         "Implementation of search algorithms (linear and binary search)",
@@ -185,12 +506,35 @@
         "Sorting algorithms with different complexity levels (bubble, selection, insertion, merge, quick sort)",
         "Progressive learning approach with practical examples and solutions"
       ],
-      "link": "https://github.com/lucasgleria/Structures-nAlgorithms"
+      "challenges": [
+        "Explicação didática de algoritmos complexos",
+        "Implementação eficiente em Python",
+        "Criação de exemplos práticos"
+      ],
+      "results": [
+        "Material educacional utilizado por iniciantes",
+        "Documentação publicada",
+        "Feedback positivo da comunidade"
+      ],
+      "link": "https://github.com/lucasgleria/Structures-nAlgorithms",
+      "demo": "",
+      "documentation": "https://github.com/lucasgleria/Structures-nAlgorithms/blob/main/README.md"
     },
     {
       "name": "chat-lleria - Intelligent Chatbot with Gemini API and Role System",
-      "technologies": ["Python", "Flask", "React", "Google Gemini API", "Tailwind CSS", "Axios", "JSON", "REST APIs"],
       "description": "AI-powered chatbot using Google Gemini 1.5 Flash API with a sophisticated role system for personalized resume interactions. Features 4 different user profiles (Recruiter, Developer, Client, Student) with customized responses.",
+      "year": 2025,
+      "role": "Fullstack Developer",
+      "status": "Em andamento",
+      "team": ["Lucas Gleria"],
+      "technologies": ["Python 3.11", "Flask", "React 18", "Google Gemini API", "Tailwind CSS", "Axios", "JSON", "REST APIs"],
+      "features": [
+        "Chatbot inteligente com Gemini API",
+        "Sistema de perfis personalizados",
+        "Interface em tempo real com histórico",
+        "Design responsivo e animações",
+        "API RESTful com prompts customizados"
+      ],
       "highlights": [
         "Advanced AI integration with Google Gemini 1.5 Flash API for intelligent conversations",
         "Sophisticated role system with 4 personalized interaction profiles (Recruiter, Developer, Client, Student)",
@@ -199,7 +543,19 @@
         "Responsive design with smooth animations and multi-screen user flow",
         "RESTful API architecture with role-based prompt customization and validation"
       ],
-      "link": "https://github.com/lucasgleria/Gemini-ChatBot"
+      "challenges": [
+        "Integração com API Gemini",
+        "Gerenciamento de contexto de conversas",
+        "Customização de prompts por perfil"
+      ],
+      "results": [
+        "Chatbot funcional para demonstração de currículo",
+        "Documentação publicada",
+        "Utilização prevista para portfólio"
+      ],
+      "link": "https://github.com/lucasgleria/Gemini-ChatBot",
+      "demo": "",
+      "documentation": "https://github.com/lucasgleria/Gemini-ChatBot/blob/main/README.md"
     }
   ]
-} 
+}
