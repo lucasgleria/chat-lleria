@@ -6,7 +6,7 @@
       "year": 2023,
       "role": "Lead Developer",
       "status": "Finalizado",
-      "team": ["Lucas Gleria"],
+      "team": ["Lucas Leria"],
       "technologies": ["Python 3.10", "TensorFlow 2.x", "Mediapipe", "Numpy", "OpenCV"],
       "features": [
         "Sign language recognition via computer vision",
@@ -39,7 +39,7 @@
       "year": 2022,
       "role": "Fullstack Developer",
       "status": "Finalizado",
-      "team": ["Lucas Gleria", "Equipe IFSP-GRU"],
+      "team": ["Lucas leria", "Equipe IFSP-GRU"],
       "technologies": ["Python 3.9", "EasyOCR", "Tesseract", "OpenCV", "NLTK", "Sqlite3", "PysimpleGUI"],
       "features": [
         "OCR para documentos farmacêuticos",
@@ -72,7 +72,7 @@
       "year": 2023,
       "role": "Frontend & Backend Developer",
       "status": "Finalizado",
-      "team": ["Lucas Gleria"],
+      "team": ["Lucas Leria"],
       "technologies": ["HTML5", "CSS3", "JavaScript ES6", "Vercel", "Prisma"],
       "features": [
         "Business-focused social network",
@@ -105,7 +105,7 @@
       "year": 2022,
       "role": "Fullstack Developer",
       "status": "Finalizado",
-      "team": ["Lucas Gleria"],
+      "team": ["Lucas Leria"],
       "technologies": ["JavaScript ES6", "Node.js 16", "Express 4"],
       "features": [
         "Gerenciamento de múltiplos links",
@@ -138,7 +138,7 @@
       "year": 2024,
       "role": "Arquitetura e DevOps",
       "status": "Finalizado",
-      "team": ["Lucas Gleria"],
+      "team": ["Lucas Leria"],
       "technologies": ["Python 3.11", "TypeScript", "React 18", "Docker", "FastAPI", "MongoDB", "Redis", "Prometheus", "Grafana"],
       "features": [
         "Arquitetura completa de microserviços",
@@ -174,7 +174,7 @@
       "year": 2024,
       "role": "ML Engineer",
       "status": "Finalizado",
-      "team": ["Lucas Gleria"],
+      "team": ["Lucas Leria"],
       "technologies": ["Python 3.11", "PyTorch", "TensorFlow", "EfficientNet-B0", "Triplet Loss", "Google Colab", "CEDAR Dataset"],
       "features": [
         "Signature verification using deep learning",
@@ -209,7 +209,7 @@
       "year": 2023,
       "role": "Fullstack Developer",
       "status": "Finalizado",
-      "team": ["Lucas Gleria"],
+      "team": ["Lucas Leria"],
       "technologies": ["Python 3.10", "PyQt6", "Flask", "MongoDB", "PyMongo", "Validators"],
       "features": [
         "Desktop GUI for URL shortening",
@@ -244,7 +244,7 @@
       "year": 2023,
       "role": "Fullstack Developer",
       "status": "Finalizado",
-      "team": ["Lucas Gleria"],
+      "team": ["Lucas Leria"],
       "technologies": ["Python 3.10", "Tkinter", "SQLite", "tkcalendar", "plyer", "matplotlib"],
       "features": [
         "MVC architecture",
@@ -280,7 +280,7 @@
       "year": 2023,
       "role": "Fullstack Developer",
       "status": "Finalizado",
-      "team": ["Lucas Gleria"],
+      "team": ["Lucas Leria"],
       "technologies": ["Node.js 18", "Express.js 4", "MongoDB", "Handlebars.js", "Bootstrap 5", "Railway"],
       "features": [
         "CRUD de posts e categorias",
@@ -315,7 +315,7 @@
       "year": 2022,
       "role": "Java Developer",
       "status": "Finalizado",
-      "team": ["Lucas Gleria"],
+      "team": ["Lucas Leria"],
       "technologies": ["Java 11", "Swing", "JDBC", "MySQL", "Google Sheets API", "Maven", "Multithreading"],
       "features": [
         "CLI e GUI para gestão de estoque",
@@ -350,7 +350,7 @@
       "year": 2023,
       "role": "Fullstack Developer",
       "status": "Finalizado",
-      "team": ["Lucas Gleria"],
+      "team": ["Lucas Leria"],
       "technologies": ["Python 3.10", "Django", "SQLite3", "HTML5", "CSS3", "Git", "GitHub"],
       "features": [
         "Gestão de contas e despesas",
@@ -386,7 +386,7 @@
       "year": 2023,
       "role": "Fullstack Developer",
       "status": "Finalizado",
-      "team": ["Lucas Gleria", "Matheus Ramos Silva"],
+      "team": ["Lucas Leria", "Matheus Ramos Silva"],
       "technologies": ["HTML5", "CSS3", "JavaScript", "Node.js", "Git", "GitHub", "Railway"],
       "features": [
         "Exibição de cursos e eventos",
@@ -421,7 +421,7 @@
       "year": 2022,
       "role": "Game Developer",
       "status": "Finalizado",
-      "team": ["Lucas Gleria"],
+      "team": ["Lucas Leria"],
       "technologies": ["Python 3.9", "Pygame"],
       "features": [
         "Jogo 2D com detecção de colisão",
@@ -456,7 +456,7 @@
       "year": 2024,
       "role": "ML Engineer",
       "status": "Finalizado",
-      "team": ["Lucas Gleria"],
+      "team": ["Lucas Leria"],
       "technologies": ["Python 3.11", "PyTorch", "EfficientNet-B0", "Triplet Loss", "Google Colab", "MNIST Dataset"],
       "features": [
         "Busca de similaridade de imagens",
@@ -491,7 +491,7 @@
       "year": 2022,
       "role": "Content Creator",
       "status": "Finalizado",
-      "team": ["Lucas Gleria"],
+      "team": ["Lucas Leria"],
       "technologies": ["Python 3.9", "Educational Content"],
       "features": [
         "Implementação de algoritmos de busca",
@@ -526,7 +526,7 @@
       "year": 2025,
       "role": "Fullstack Developer",
       "status": "Em andamento",
-      "team": ["Lucas Gleria"],
+      "team": ["Lucas Leria"],
       "technologies": ["Python 3.11", "Flask", "React 18", "Google Gemini API", "Tailwind CSS", "Axios", "JSON", "REST APIs"],
       "features": [
         "Chatbot inteligente com Gemini API",

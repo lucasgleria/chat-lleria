@@ -13,6 +13,7 @@ from utils.rate_limiter import rate_limiter
 import sys
 import re
 import unicodedata
+import difflib
 
 # Carregar variáveis de ambiente do arquivo .env
 load_dotenv()
@@ -210,6 +211,37 @@ def after_request(response):
     
     return response
 
+def filtrar_projetos_por_pergunta(projetos, pergunta):
+    pergunta_lower = pergunta.lower()
+    campos_busca = ["name", "description", "role", "status", "team", "technologies", "features", "highlights", "challenges", "results"]
+
+    def projeto_relevante(projeto):
+        for campo in campos_busca:
+            valor = projeto.get(campo, "")
+            if isinstance(valor, list):
+                valor = " ".join(str(v).lower() for v in valor)
+            else:
+                valor = str(valor).lower()
+            if pergunta_lower in valor or difflib.SequenceMatcher(None, pergunta_lower, valor).ratio() > 0.4:
+                return True
+        return False
+
+    projetos_filtrados = [p for p in projetos if projeto_relevante(p)]
+
+    if not projetos_filtrados:
+        projetos_filtrados = sorted(
+            projetos,
+            key=lambda p: difflib.SequenceMatcher(None, pergunta_lower, p.get("description", "").lower()).ratio(),
+            reverse=True
+        )
+
+    projetos_ordenados = sorted(
+        projetos_filtrados,
+        key=lambda p: len(p.get("technologies", [])) + p.get("year", 0),
+        reverse=True
+    )
+    return projetos_ordenados[:5]
+
 # --- Main Endpoint (POST /chat) ---
 @app.route("/chat", methods=["POST"])
 @log_execution_time(logger, "chat_endpoint")
@@ -270,7 +302,8 @@ def chat():
                             for formacao in value:
                                 resumo.append(f"- {formacao.get('degree', '')} em {formacao.get('school', '')} ({formacao.get('year', '')})")
                         elif field == 'projects':
-                            for proj in value[:3]:
+                            projetos_relevantes = filtrar_projetos_por_pergunta(value, question)
+                            for proj in projetos_relevantes:
                                 resumo.append(f"- Projeto: {proj.get('name', '')} - {proj.get('description', '')}")
                         else:
                             resumo.append(f"- {field.replace('_', ' ').capitalize()}: {', '.join(str(x) for x in value[:5])}")
