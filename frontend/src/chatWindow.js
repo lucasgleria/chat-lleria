@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useRole } from './components/RoleContext';
 import { getApiUrl, API_CONFIG } from './config/api';
 import SuggestedQuestions from './components/SuggestedQuestions';
+import ReactMarkdown from 'react-markdown';
 
 function ChatWindow({ onBackToRoleSelect }) {
   const { selectedRole } = useRole();
@@ -306,7 +307,17 @@ function ChatWindow({ onBackToRoleSelect }) {
                     <p className="text-xs md:text-sm font-medium mb-1">
                       {msg.sender === 'You' ? 'You' : 'Assistant'}
                     </p>
-                    <p className="text-xs md:text-sm leading-relaxed whitespace-pre-wrap">{msg.text}</p>
+
+                    {/* <p className="text-xs md:text-sm leading-relaxed whitespace-pre-wrap">{msg.text}</p> */}
+                    
+                    {msg.sender === 'Bot' ? (
+                      <ReactMarkdown className="text-xs md:text-sm leading-relaxed whitespace-pre-wrap">
+                        {msg.text}
+                      </ReactMarkdown>
+                    ) : (
+                      <p className="text-xs md:text-sm leading-relaxed whitespace-pre-wrap">{msg.text}</p>
+                    )}
+
                   </div>
                   <span className="text-xs text-gray-400 mt-1 px-1">
                     {msg.timestamp}
