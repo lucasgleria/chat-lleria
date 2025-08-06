@@ -363,6 +363,7 @@ def chat():
                 if is_portuguese(question):
                     prompt_estruturado = (
                         "Responda à question do usuário usando apenas as informações abaixo, sem inventar nada. "
+                        "Sempre destaque nomes próprios, tecnologias e informações únicas usando dois asteriscos antes e depois da palavra (exemplo: **Lucas**), nunca use aspas para esse destaque.\n"
                         "Estruture sua resposta em três partes, mas NÃO utilize títulos, marcadores, separadores ou qualquer palavra como 'Introdução', 'Resposta Principal', 'Conclusão' ou variações/sinônimos no texto final. Caso utilize, use apenas em português.\n"
                         "- Comece repetindo parcialmente a question respondida, mostrando ao usuário que você entendeu a questão.\n"
                         "- Em seguida, desenvolva a resposta da questão, separando por parágrafos claros.\n"
@@ -373,6 +374,7 @@ def chat():
                 else:
                     prompt_estruturado = (
                         "Answer the user's question using only the information below, without making anything up. "
+                        "Always highlight proper names, technologies, and unique information using two asterisks before and after the word (example: **Lucas**), never use quotes for this highlight.\n"
                         "Structure your answer in three parts, but DO NOT use headings, bullet points, separators, or any words like 'Introduction', 'Main Answer', 'Conclusion' or similar/synonyms in the final text. If you use any, use only in English.\n"
                         "- Start by partially repeating the question, showing the user you understood it.\n"
                         "- Then, develop the main answer, using clear paragraphs.\n"
