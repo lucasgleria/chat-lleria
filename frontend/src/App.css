@@ -177,6 +177,27 @@
 
 /* Responsividade melhorada */
 @media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+  
+  /* Prevent horizontal scrolling */
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
+  
+  /* Make buttons easier to tap */
+  .btn-mobile {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve touch targets */
+  .touch-target {
+    padding: 8px;
+  }
+  
+
   .mobile-optimized {
     padding: 1rem;
   }
