@@ -1,36 +1,19 @@
 import json
 import os
 from typing import Dict, Optional, List
+import re
 
 class RoleHandler:
-    """
-    Classe para gerenciar configurações de roles personalizadas.
-    Responsável por carregar, validar e gerar prompts baseados em roles.
-    """
-    
     def __init__(self, roles_dir: str = None):
-        """
-        Inicializa o RoleHandler.
-        
-        Args:
-            roles_dir (str): Diretório onde estão os arquivos JSON das roles
-        """
-        # Caminho absoluto para o diretório de roles, relativo ao backend
         if roles_dir is None:
             base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
             roles_dir = os.path.join(base_dir, "data", "roles")
         self.roles_dir = roles_dir
         self.roles = self.load_roles()
         self.default_role = "recruiter"
-        self._cache = {}  # Cache para configurações carregadas
+        self._cache = {} 
     
     def load_roles(self) -> Dict:
-        """
-        Carrega todas as roles do diretório de configuração.
-        
-        Returns:
-            Dict: Dicionário com todas as roles carregadas
-        """
         roles = {}
         if os.path.exists(self.roles_dir):
             for filename in os.listdir(self.roles_dir):
@@ -40,7 +23,6 @@ class RoleHandler:
                     try:
                         with open(role_path, 'r', encoding='utf-8') as f:
                             role_config = json.load(f)
-                            # Validar schema básico
                             if self._validate_role_schema(role_config):
                                 roles[role_id] = role_config
                             else:
@@ -53,15 +35,6 @@ class RoleHandler:
         return roles
     
     def _validate_role_schema(self, role_config: Dict) -> bool:
-        """
-        Valida se a configuração da role segue o schema esperado.
-        
-        Args:
-            role_config (Dict): Configuração da role para validar
-            
-        Returns:
-            bool: True se válido, False caso contrário
-        """
         required_fields = ['id', 'name', 'description', 'icon', 'color']
         
         for field in required_fields:
@@ -69,7 +42,6 @@ class RoleHandler:
                 print(f"Campo obrigatório '{field}' não encontrado na role")
                 return False
         
-        # Validar tipos básicos
         if not isinstance(role_config.get('focus_areas'), list):
             print("focus_areas deve ser uma lista")
             return False
@@ -81,38 +53,17 @@ class RoleHandler:
         return True
     
     def get_role_config(self, role_id: str) -> Optional[Dict]:
-        """
-        Retorna configuração específica da role.
-        
-        Args:
-            role_id (str): ID da role desejada
-            
-        Returns:
-            Optional[Dict]: Configuração da role ou None se não encontrada
-        """
-        # Verificar cache primeiro
         if role_id in self._cache:
             return self._cache[role_id]
         
         role_config = self.roles.get(role_id, self.roles.get(self.default_role))
         
-        # Adicionar ao cache se encontrada
         if role_config:
             self._cache[role_id] = role_config
         
         return role_config
     
     def generate_role_prompt(self, role_id: str, base_prompt: str) -> str:
-        """
-        Gera prompt personalizado baseado na role.
-        
-        Args:
-            role_id (str): ID da role
-            base_prompt (str): Prompt base do sistema
-            
-        Returns:
-            str: Prompt personalizado para a role
-        """
         role_config = self.get_role_config(role_id)
         if not role_config:
             print(f"Warning: Role {role_id} não encontrada, usando role padrão")
@@ -120,7 +71,6 @@ class RoleHandler:
         
         modifiers = role_config.get('prompt_modifiers', {})
         
-        # Construir prompt personalizado
         personalized_prompt = base_prompt + "\n\n"
         personalized_prompt += f"CONTEXTO ESPECÍFICO PARA {role_config['name'].upper()}:\n"
         personalized_prompt += f"{modifiers.get('prefix', '')}\n\n"
@@ -140,120 +90,127 @@ class RoleHandler:
         return personalized_prompt
     
     def validate_role(self, role_id: str) -> bool:
-        """
-        Valida se a role existe.
-        
-        Args:
-            role_id (str): ID da role para validar
-            
-        Returns:
-            bool: True se a role existe, False caso contrário
-        """
         return role_id in self.roles
     
     def get_all_roles(self) -> List[Dict]:
-        """
-        Retorna lista de todas as roles disponíveis.
-        
-        Returns:
-            List[Dict]: Lista com todas as configurações de roles
-        """
         return list(self.roles.values())
     
     def get_role_examples(self, role_id: str) -> List[str]:
-        """
-        Retorna exemplos de perguntas para a role.
-        
-        Args:
-            role_id (str): ID da role
-            
-        Returns:
-            List[str]: Lista de exemplos de perguntas
-        """
         role_config = self.get_role_config(role_id)
         return role_config.get('example_questions', []) if role_config else []
     
     def get_role_by_name(self, name: str) -> Optional[Dict]:
-        """
-        Busca role pelo nome.
-        
-        Args:
-            name (str): Nome da role
-            
-        Returns:
-            Optional[Dict]: Configuração da role ou None se não encontrada
-        """
         for role in self.roles.values():
             if role.get('name', '').lower() == name.lower():
                 return role
         return None
     
     def clear_cache(self):
-        """Limpa o cache de configurações."""
         self._cache.clear()
     
     def reload_roles(self):
-        """Recarrega todas as roles do diretório."""
         self.clear_cache()
         self.roles = self.load_roles()
     
     def get_available_roles(self) -> List[str]:
-        """
-        Retorna lista de IDs das roles disponíveis.
-        
-        Returns:
-            List[str]: Lista de IDs das roles
-        """
         return list(self.roles.keys())
     
     def get_role_summary(self, role_id: str) -> Optional[Dict]:
-        """
-        Retorna um resumo da role (sem prompt_modifiers).
-        
-        Args:
-            role_id (str): ID da role
-            
-        Returns:
-            Optional[Dict]: Resumo da role ou None se não encontrada
-        """
         role_config = self.get_role_config(role_id)
         if not role_config:
             return None
         
-        # Retornar apenas campos de resumo
         summary_fields = ['id', 'name', 'description', 'icon', 'color', 'focus_areas', 'tone']
         return {field: role_config.get(field) for field in summary_fields if field in role_config}
     
     def identify_relevant_fields(self, question: str, role_id: str) -> list:
-        """
-        Analisa a pergunta do usuário e a role para identificar os campos relevantes do currículo.
-        Retorna uma lista de chaves do JSON que devem ser buscadas.
-        """
-        # Mapeamento simples por palavras-chave e role
+        context_patterns = {
+            'academic_background': [r'formou.*em', r'graduou.*em', r'fez.*faculdade', r'estudou.*na'],
+            'professional_experience': [r'trabalhou.*na', r'atuou.*como', r'experiência.*com', r'empresa.*onde'],
+            'projects': [r'projeto.*chamado', r'projeto.*envolvendo', r'desenvolveu.*um', r'criou.*um'],
+            'skills': [r'conhecimento.*em', r'habilidade.*com', r'domina.*', r'experiência.*com'],
+            'certifications': [r'certificado.*em', r'certificação.*de', r'curso.*sobre'],
+            'soft_skills': [r'habilidade.*comportamental', r'comunicação.*com', r'trabalho.*equipe'],
+            'intelligent_responses': [r'conquista.*importante', r'resultado.*alcançado', r'aprendizado.*com']
+        }
+        
         keywords_map = {
             'academic_background': ['formação', 'formacao', 'academic', 'educação', 'education', 'graduação', 'graduacao', 'universidade', 'college', 'school', 'curso', 'diploma'],
             'professional_experience': ['experiência', 'experiencia', 'trabalho', 'emprego', 'cargo', 'empresa', 'profissional', 'job', 'work', 'role', 'position', 'company'],
-            'projects': ['projeto', 'project', 'portfolio', 'case', 'desenvolvimento', 'aplicação', 'app', 'sistema'],
+            'projects': ['projeto', 'project', 'portfolio', 'case study', 'desenvolvimento de projeto', 'projeto de sistema', 'projeto desenvolvido'],
             'skills': ['habilidade', 'skill', 'competência', 'competencia', 'tecnologia', 'tecnologias', 'stack', 'linguagem', 'framework', 'ferramenta'],
             'certifications': ['certificado', 'certificação', 'certification', 'course', 'curso', 'licença', 'licenca'],
             'soft_skills': ['soft skill', 'comportamental', 'liderança', 'lideranca', 'comunicação', 'comunicacao', 'trabalho em equipe', 'teamwork', 'colaboração', 'collaboration'],
             'intelligent_responses': ['conquista', 'achievement', 'impacto', 'impact', 'resolução', 'solução', 'problem', 'solution', 'aprendizado', 'learning', 'adaptação', 'adaptability', 'progressão', 'progression', 'evolução', 'growth', 'mentoria', 'mentorship']
         }
+        
         # Prioridade por role
         role_priority = {
             'recruiter': ['professional_experience', 'soft_skills', 'certifications', 'intelligent_responses', 'academic_background'],
-            'developer': ['skills', 'projects', 'intelligent_responses', 'professional_experience'],
-            'client': ['projects', 'intelligent_responses', 'professional_experience'],
-            'student': ['academic_background', 'intelligent_responses', 'projects', 'skills']
+            'developer': ['skills', 'professional_experience', 'projects', 'intelligent_responses'],
+            'client': ['professional_experience', 'projects', 'intelligent_responses'],
+            'student': ['academic_background', 'skills', 'projects', 'intelligent_responses']
         }
+        
         found_fields = set()
         q_lower = question.lower()
-        # Busca por palavras-chave
-        for field, keywords in keywords_map.items():
-            for kw in keywords:
-                if kw in q_lower:
+        
+        # 1. Verificar padrões contextuais (maior prioridade)
+        context_matches = {}
+        for field, patterns in context_patterns.items():
+            for pattern in patterns:
+                if re.search(pattern, q_lower):
                     found_fields.add(field)
-        # Se não encontrou nada, usa prioridade da role
+                    context_matches[field] = True
+                    break
+        
+        # 2. Se não encontrou padrões contextuais, verificar keywords com word boundaries
+        if not found_fields:
+            for field, keywords in keywords_map.items():
+                for kw in keywords:
+                    # Usar regex para corresponder apenas a palavras inteiras
+                    pattern = r'\b' + re.escape(kw) + r'\b'
+                    if re.search(pattern, q_lower):
+                        found_fields.add(field)
+                        break
+        
+        # 3. Se ainda não encontrou campos, usar prioridade da role
         if not found_fields and role_id in role_priority:
             found_fields.update(role_priority[role_id])
-        return list(found_fields) 
+        
+        # Limitar o número de campos para não sobrecarregar o modelo
+        if len(found_fields) > 3:
+            # Priorizar campos que corresponderam a padrões contextuais
+            priority_list = []
+            
+            # Primeiro adicionar campos com correspondência contextual
+            for field in context_matches:
+                if field in found_fields:
+                    priority_list.append(field)
+            
+            # Depois adicionar outros campos de acordo com a prioridade da role
+            role_priority_order = role_priority.get(role_id, list(keywords_map.keys()))
+            for field in role_priority_order:
+                if field in found_fields and field not in priority_list:
+                    priority_list.append(field)
+                    if len(priority_list) >= 3:
+                        break
+            
+            # Se ainda não temos 3 campos, adicionar os restantes
+            for field in found_fields:
+                if field not in priority_list:
+                    priority_list.append(field)
+                    if len(priority_list) >= 3:
+                        break
+            
+            found_fields = set(priority_list[:3])
+        
+        # Logging para depuração
+        import logging
+        logger = logging.getLogger(__name__)
+        logger.info(f"Question: {question}")
+        logger.info(f"Found fields: {found_fields}")
+        if not found_fields and role_id in role_priority:
+            logger.info(f"Using fallback for role {role_id}: {role_priority[role_id]}")
+        
+        return list(found_fields)
