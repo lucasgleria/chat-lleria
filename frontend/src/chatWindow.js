@@ -13,6 +13,30 @@ function ChatWindow({ onBackToRoleSelect }) {
   const messagesEndRef = useRef(null);
   const textareaRef = useRef(null);
   const [suggestedQuestions, setSuggestedQuestions] = useState([]);
+  
+  // Role limitations mapping - defines what each role is not optimized for
+  const roleLimitations = {
+    recruiter: {
+      limitedFields: ['projects', 'skills'],
+      suggestedRole: 'developer',
+      message: 'For questions about projects or technical skills, try switching to the Developer role.'
+    },
+    developer: {
+      limitedFields: ['soft_skills', 'certifications'],
+      suggestedRole: 'recruiter',
+      message: 'For questions about soft skills or certifications, try switching to the Recruiter role.'
+    },
+    client: {
+      limitedFields: ['skills', 'academic_background'],
+      suggestedRole: 'developer',
+      message: 'For technical details about projects or skills, try switching to the Developer role.'
+    },
+    student: {
+      limitedFields: ['professional_experience', 'certifications'],
+      suggestedRole: 'recruiter',
+      message: 'For career guidance and professional experience, try switching to the Recruiter role.'
+    }
+  };
 
   // Effect to scroll to the bottom whenever messages change
   useEffect(() => {
@@ -74,7 +98,6 @@ function ChatWindow({ onBackToRoleSelect }) {
   const handleSendMessage = async () => {
     if (message.trim()) {
       const userMessageText = message.trim();
-
       // Add the user's message to the state immediately
       setMessages((prevMessages) => [
         ...prevMessages,
@@ -89,32 +112,25 @@ function ChatWindow({ onBackToRoleSelect }) {
         },
       ]);
       setMessage('');
-
       setLoading(true);
-
       try {
         const conversationHistory = messages.map(msg => ({
           role: msg.sender === 'You' ? 'user' : 'model',
           parts: [{ text: msg.text }],
         }));
-
         const currentRequestHistory = [...conversationHistory, { role: 'user', parts: [{ text: userMessageText }] }];
-
         const requestData = {
           question: userMessageText,
           history: currentRequestHistory
         };
-
         if (selectedRole) {
           requestData.role = selectedRole.id;
         }
-
         const response = await axios.post(getApiUrl(API_CONFIG.ENDPOINTS.CHAT), requestData, {
           headers: {
             'Content-Type': 'application/json',
           }
         });
-
         if (response && response.data && response.data.answer) {
           setMessages((prevMessages) => [
             ...prevMessages,
@@ -147,7 +163,6 @@ function ChatWindow({ onBackToRoleSelect }) {
       } catch (error) {
         console.error('Error sending message:', error);
         let errorMessage = 'Unable to connect to server.';
-
         if (error.response) {
           console.error('Server response error:', error.response.data);
           console.error('Status:', error.response.status);
@@ -163,7 +178,6 @@ function ChatWindow({ onBackToRoleSelect }) {
           console.error('Error setting up request:', error.message);
           errorMessage = `An unexpected error occurred: ${error.message}.`;
         }
-
         setMessages((prevMessages) => [
           ...prevMessages,
           {
@@ -232,7 +246,7 @@ function ChatWindow({ onBackToRoleSelect }) {
           )}
         </div>
       </div>
-
+      
       {/* Main chat container */}
       <div className="flex-1 max-w-4xl mx-auto w-full px-4 py-4">
         <div className="bg-white rounded-xl shadow-lg border border-gray-200 flex flex-col h-[calc(100vh-200px)] overflow-hidden">
@@ -264,7 +278,33 @@ function ChatWindow({ onBackToRoleSelect }) {
               </button>
             </div>
           )}
-
+          
+          {/* Role limitation notice */}
+          {selectedRole && roleLimitations[selectedRole.id] && (
+            <div className="mx-4 mt-4 p-3 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg shadow-sm transition-all duration-300 animate-fadeIn">
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <svg className="h-5 w-5 text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div className="ml-3 flex-1">
+                  <p className="text-sm text-blue-700">
+                    {roleLimitations[selectedRole.id].message}
+                  </p>
+                  <div className="mt-2">
+                    <button
+                      onClick={onBackToRoleSelect}
+                      className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-full text-blue-700 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 transform hover:scale-105"
+                    >
+                      Switch to {roleLimitations[selectedRole.id].suggestedRole} role
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+          
           {/* Chat messages display area - altura fixa */}
           <div className="flex-1 p-4 overflow-y-auto space-y-4 scroll-smooth min-h-[400px]">
             {messages.length === 0 && (
@@ -307,8 +347,6 @@ function ChatWindow({ onBackToRoleSelect }) {
                     <p className="text-xs md:text-sm font-medium mb-1">
                       {msg.sender === 'You' ? 'You' : 'Assistant'}
                     </p>
-
-                    {/* <p className="text-xs md:text-sm leading-relaxed whitespace-pre-wrap">{msg.text}</p> */}
                     
                     {msg.sender === 'Bot' ? (
                       <ReactMarkdown className="text-xs md:text-sm leading-relaxed whitespace-pre-wrap">
@@ -317,7 +355,6 @@ function ChatWindow({ onBackToRoleSelect }) {
                     ) : (
                       <p className="text-xs md:text-sm leading-relaxed whitespace-pre-wrap">{msg.text}</p>
                     )}
-
                   </div>
                   <span className="text-xs text-gray-400 mt-1 px-1">
                     {msg.timestamp}
@@ -351,7 +388,7 @@ function ChatWindow({ onBackToRoleSelect }) {
             )}
             <div ref={messagesEndRef} />
           </div>
-
+          
           {/* Message input area */}
           <div className="p-4 border-t border-gray-200 bg-gray-50 flex-shrink-0">
             {/* SUGESTÕES DE PERGUNTAS */}
@@ -408,7 +445,7 @@ function ChatWindow({ onBackToRoleSelect }) {
           </div>
         </div>
       </div>
-
+      
       {/* Custom CSS for animations */}
       <style>{`
         @keyframes fadeIn {
