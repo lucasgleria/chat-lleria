@@ -15,7 +15,7 @@
       "year": "2023",
       "status": "Completed",
       "duration": "80h",
-      "description": "Complete Data Science course focusing on data analysis and machine learning.",
+      "description": "Complete Data Science course on data analysis and machine learning.",
       "certification_code": "AFDC8DC6"
     },
     {
@@ -24,8 +24,35 @@
       "year": "2023",
       "status": "Completed",
       "duration": "4h",
-      "description": "Introductory cloud computing course focusing on AWS.",
+      "description": "Introductory cloud computing course on AWS.",
       "certification_code": "03750-67718"
+    },
+    {
+      "name": "Data Science e Machine Learning com Qlik Sense",
+      "issuer": "BIX Tecnologia",
+      "year": "2025",
+      "status": "Completed",
+      "duration": "4.5h",
+      "description": "Data Science · Machine Learning · Qlik Sense",
+      "certification_code": "UC-b5f0422e-a2d4-4ab9-bba4-c094f5a71142"
+    },
+    {
+      "name": "Aceleração Microsoft AI Agent",
+      "issuer": "DIO - Powered by Microsoft",
+      "year": "2025",
+      "status": "Completed",
+      "duration": "4h",
+      "description": "Artificial Inteligence · AI Agents · Copilot - Microsoft",
+      "certification_code": "NIXZBOGG"
+    },
+    {
+      "name": "Desenvolvedor Qlisk Sense 2.0",
+      "issuer": "BIX Tecnologia",
+      "year": "2025",
+      "status": "Completed",
+      "duration": "9h",
+      "description": "Qlik Sense · Data Visualization · BI",
+      "certification_code": "UC-47694e15-7630-43a5-bfca-2753377fb03c"
     }
   ]
-} 
+}
