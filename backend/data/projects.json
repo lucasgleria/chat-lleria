@@ -1,7 +1,8 @@
 {
   "projects": [
     {
-      "name": "LibraVoice - Extension Laboratory in Agile Methodologies and SCRUM with LSTM",
+      "name": "LibraVoice",
+      "seo": "libra-voice-extension-laboratory-agile-methodologies-scrum-lstm",
       "description": "Software for sign language recognition and translation to natural language. Developed to assist people with disabilities (PWD) in communication, using advanced LSTM models and agile methodologies.",
       "year": 2023,
       "role": "Lead Developer",
@@ -34,7 +35,8 @@
       "documentation": "https://github.com/lucasgleria/LibraVoice/tree/main/docs"
     },
     {
-      "name": "lleria-medinizer - Academic collaboration for IFSP-GRU R.A.G.E. with Computer Vision",
+      "name": "lleria-medinizer",
+      "seo": "lleria-medinizer-academic-collaboration-ifsp-gru-RAGE-computer-vision",
       "description": "CRUD GUI focused on pharmaceutical area, with LSTM integration for document processing and OCR. Developed as part of an academic collaboration.",
       "year": 2022,
       "role": "Fullstack Developer",
@@ -67,7 +69,8 @@
       "documentation": "https://github.com/lucasgleria/lleria-mednizer/blob/main/README.md"
     },
     {
-      "name": "OverChat - Web Development Module Final Project",
+      "name": "OverChat",
+      "seo":"over-chat-web-development-module-final-project-social-network-business-communication",
       "description": "X social network replica application focused on business communication. Fullstack project with deployment and database integration.",
       "year": 2023,
       "role": "Frontend & Backend Developer",
@@ -100,7 +103,8 @@
       "documentation": "https://github.com/lucasgleria/over-chat/blob/main/README.md"
     },
     {
-      "name": "Linktrell - Linktree-style Application",
+      "name": "Linktrell",
+      "seo": "linktrell-linktree-style-application-javascript-nodejs-data-analysis",
       "description": "Aplicativo estilo Linktree desenvolvido em JavaScript e Node.js, com foco em análise e visualização de dados.",
       "year": 2022,
       "role": "Fullstack Developer",
@@ -133,7 +137,8 @@
       "documentation": "https://github.com/lucasgleria/Linktrell/blob/main/README.md"
     },
     {
-      "name": "Microservices Structure - Docker and Python Microservices Architecture",
+      "name": "Microservices Structure",
+      "seo": "microservices-structure-docker-python-fastapi-react",
       "description": "Base structure for microservices development with Docker and Python, frontend integration with Node.js and React. Support for data analysis and monitoring.",
       "year": 2024,
       "role": "Arquitetura e DevOps",
@@ -169,7 +174,8 @@
       "documentation": "https://github.com/lucasgleria/microservices-structure/blob/main/README.md"
     },
     {
-      "name": "Signature Recognizer - Neural Network Signature Verification System",
+      "name": "Signature Recognizer",
+      "seo": "signature-recognizer-neural-network-signature-verification-system-triplet-loss",
       "description": "Implementation of a signature similarity verification system using neural networks and Triplet Loss, focused on embeddings, biometric evaluation and the CEDAR dataset.",
       "year": 2024,
       "role": "ML Engineer",
@@ -204,7 +210,8 @@
       "documentation": "https://github.com/lucasgleria/signature-recognizer/blob/main/README.md"
     },
     {
-      "name": "URL Shortener - Desktop Link Shortening Application",
+      "name": "URL Shortener",
+      "seo": "desktop-url-shortener-application-python-pyqt6-flask-mongodb",
       "description": "A simple and efficient desktop application for shortening URLs, with history and data persistence in MongoDB, and a Flask redirect server.",
       "year": 2023,
       "role": "Fullstack Developer",
@@ -239,7 +246,8 @@
       "documentation": "https://github.com/lucasgleria/encurtador-simples/blob/main/README.md"
     },
     {
-      "name": "Virtual Agenda - Task Management System",
+      "name": "Virtual Agenda",
+      "seo": "virtual-agenda-task-management-system-python-tkinter-sqlite",
       "description": "Complete task, event and scheduling management system developed in Python with Tkinter GUI. Advanced notification features, statistical dashboard and priority management.",
       "year": 2023,
       "role": "Fullstack Developer",
@@ -275,7 +283,8 @@
       "documentation": "https://github.com/lucasgleria/agenda-virtual/blob/main/README.md"
     },
     {
-      "name": "BlogApp - Full-Stack Blog Application",
+      "name": "BlogApp",
+      "seo": "blogapp-fullstack-blog-application-nodejs-express-mongodb",
       "description": "Complete web application simulating a blog system with viewing and management functionalities for posts and categories. Developed with Node.js, Express and MongoDB, deployed on Railway.",
       "year": 2023,
       "role": "Fullstack Developer",
@@ -311,6 +320,7 @@
     },
     {
       "name": "Java Inventory Management System",
+      "seo": "java-inventory-management-system-cli-gui-java-swing-jdbc-mysql",
       "description": "Java application for inventory management with CLI and GUI versions. Academic extension project demonstrating Object-Oriented Programming principles and SOLID architecture.",
       "year": 2022,
       "role": "Java Developer",
@@ -345,7 +355,8 @@
       "documentation": "https://github.com/lucasgleria/projeto-de-extensao/blob/main/README.md"
     },
     {
-      "name": "FinancialApp - Digital Banking Application",
+      "name": "FinancialApp",
+      "seo": "financialapp-digital-banking-application-python-django-sqlite",
       "description": "Digital banking application in website format for portfolio demonstration. Features include account management, expense tracking, financial planning and transaction history.",
       "year": 2023,
       "role": "Fullstack Developer",
@@ -381,7 +392,8 @@
       "documentation": "https://github.com/lucasgleria/financialapp/blob/main/README.md"
     },
     {
-      "name": "Musicaller.ia - Music Course Website",
+      "name": "Musicaller.ia",
+      "seo": "musicaller-ia-music-course-website-nodejs-express-mongodb",
       "description": "Music course website application developed in collaboration with Matheus Ramos Silva. Features include course display, events, contact forms and user authentication.",
       "year": 2023,
       "role": "Fullstack Developer",
@@ -416,7 +428,8 @@
       "documentation": "https://github.com/lucasgleria/musicaller-ia/blob/main/README.md"
     },
     {
-      "name": "FlappyZap - WhatsApp-themed Flappy Bird Game",
+      "name": "FlappyZap",
+      "seo": "flappyzap-whatsapp-themed-flappy-bird-game-python-pygame",
       "description": "A Flappy Bird parody game using WhatsApp logo, developed as an educational project to demonstrate pygame library usage for simple game creation in Python.",
       "year": 2022,
       "role": "Game Developer",
@@ -451,7 +464,8 @@
       "documentation": "https://github.com/lucasgleria/FlappyZap/blob/main/README.md"
     },
     {
-      "name": "Seamese Networks Algorithm - Image Similarity Search System",
+      "name": "Seamese Networks Algorithm",
+      "seo": "seamese-networks-algorithm-image-similarity-search-system-neural-networks-triplet-loss",
       "description": "Implementation of an image similarity search system using neural networks and Triplet Loss, focused on embeddings and visual analysis on the MNIST dataset.",
       "year": 2024,
       "role": "ML Engineer",
@@ -486,7 +500,8 @@
       "documentation": "https://github.com/lucasgleria/seamese-network-algorithm/blob/main/README.md"
     },
     {
-      "name": "Structures'nAlgorithms - Data Structures and Algorithms Collection",
+      "name": "Structures'nAlgorithms",
+      "seo": "structures-n-algorithms-data-structures-algorithms-python-educational-content",
       "description": "Collection of practical challenges focused on fundamental data structures and algorithms for beginner developers.",
       "year": 2022,
       "role": "Content Creator",
@@ -521,19 +536,20 @@
       "documentation": "https://github.com/lucasgleria/Structures-nAlgorithms/blob/main/README.md"
     },
     {
-      "name": "chat-lleria - Intelligent Chatbot with Gemini API and Role System",
+      "name": "chat-lleria",
+      "seo": "chat-lleria-intelligent-chatbot-gemini-api-role-system",
       "description": "AI-powered chatbot using Google Gemini 1.5 Flash API with a sophisticated role system for personalized resume interactions. Features 4 different user profiles (Recruiter, Developer, Client, Student) with customized responses.",
       "year": 2025,
       "role": "Fullstack Developer",
-      "status": "Em andamento",
+      "status": "In Progress",
       "team": ["Lucas Leria"],
       "technologies": ["Python 3.11", "Flask", "React 18", "Google Gemini API", "Tailwind CSS", "Axios", "JSON", "REST APIs"],
       "features": [
-        "Chatbot inteligente com Gemini API",
-        "Sistema de perfis personalizados",
-        "Interface em tempo real com histórico",
-        "Design responsivo e animações",
-        "API RESTful com prompts customizados"
+        "Intelligent chatbot with Gemini API",
+        "Personalized profile system",
+        "Real-time interface with history",
+        "Responsive design and animations",
+        "RESTful API with custom prompts"
       ],
       "highlights": [
         "Advanced AI integration with Google Gemini 1.5 Flash API for intelligent conversations",
@@ -544,18 +560,123 @@
         "RESTful API architecture with role-based prompt customization and validation"
       ],
       "challenges": [
-        "Integração com API Gemini",
-        "Gerenciamento de contexto de conversas",
-        "Customização de prompts por perfil"
+        "Integration with Gemini API",
+        "Conversation context management",
+        "Prompt customization by profile"
       ],
       "results": [
-        "Chatbot funcional para demonstração de currículo",
-        "Documentação publicada",
-        "Utilização prevista para portfólio"
+        "Chatbot functional for resume demonstration",
+        "Documentation published",
+        "Planned use for portfolio"
       ],
       "link": "https://github.com/lucasgleria/Gemini-ChatBot",
       "demo": "",
       "documentation": "https://github.com/lucasgleria/Gemini-ChatBot/blob/main/README.md"
+    },
+    {
+      "name": "Mystical Number Castle",
+      "seo": "mystical-number-castle-interactive-guessing-game-vuejs",
+      "description": "An interactive web game where the player challenges a genie in a mystical castle, trying to guess the secret number. This project is a collaborative evolution of a classic C-based CLI game, bringing a modern and responsive graphical interface with new features.",
+      "year": 2024,
+      "role": "Full-stack Developer (Collaboration)",
+      "status": "Concluded",
+      "team": [
+        "Lucas Leria",
+        "Ana Monteiro",
+        "Johnathan Carvalho"
+      ],
+      "technologies": [
+        "Node.js",
+        "Vue.js 3",
+        "Vite",
+        "Pinia",
+        "JavaScript (ES6+)",
+        "SCSS",
+        "Netlify",
+        "GSAP"
+      ],
+      "features": [
+        "Interactive guessing game",
+        "Multiple difficulty levels (Easy, Medium, Hard)",
+        "Leaderboard to track performance",
+        "Visual feedback with animations and custom sprites",
+        "Responsive design for all devices",
+        "Custom themes and fonts",
+        "Keyboard navigation and accessibility"
+      ],
+      "highlights": [
+        "Collaborative project evolving a classic CLI game into a modern web experience.",
+        "Full-stack development with Vue.js 3 and Vite for a fast, component-based frontend.",
+        "User experience focused with custom animations, sprites, and responsive design.",
+        "Implementation of a centralized state management with Pinia for scalability.",
+        "Clean and modular code structure for easy maintenance and future contributions.",
+        "Optimized performance and simple deployment with Netlify."
+      ],
+      "challenges": [
+        "Migrating from a CLI-based project to a modern web application",
+        "Optimizing assets (images, sprites) for performance",
+        "Ensuring a fluid and responsive experience across different devices"
+      ],
+      "results": [
+        "Functional and deployed game for all audiences",
+        "Published documentation",
+        "Demonstrates expertise in modern frontend development and collaboration"
+      ],
+      "link": "https://github.com/AnaMonteirodev/mystical-number-castle",
+      "demo": "https://mysticalnumbercastle.netlify.app/",
+      "documentation": "https://github.com/AnaMonteirodev/mystical-number-castle/blob/main/README.md"
+    },
+    {
+      "name": "The Forca",
+      "seo": "the-forca-hangman-game-web-modern-fastapi-vanilla-javascript-tailwind-css",
+      "description": "A modern and interactive reimagining of the classic Hangman game, available to play in your browser. This collaborative project combines a Python (FastAPI) backend with a Vanilla JavaScript, Tailwind CSS, and SCSS frontend for a fluid and engaging experience.",
+      "year": 2024,
+      "role": "Full-stack Developer (Collaboration)",
+      "status": "Concluded",
+      "team": [
+        "Lucas Leria",
+        "Ana Monteiro"
+      ],
+      "technologies": [
+        "Python 3.9+",
+        "FastAPI",
+        "Vanilla JavaScript",
+        "Tailwind CSS",
+        "SCSS",
+        "HTML5",
+        "CSS3",
+        "npm",
+        "uvicorn"
+      ],
+      "features": [
+        "Difficulty selection (Easy, Medium, Hard)",
+        "Interactive virtual keyboard",
+        "Progressive hangman drawing for immersive feedback",
+        "Visual and sound feedback",
+        "Local ranking to monitor performance",
+        "Fully responsive and accessible interface"
+      ],
+      "highlights": [
+        "Collaborative project to modernize a classic command-line game into a full-stack web application.",
+        "Developed a RESTful API backend using FastAPI for clean separation of concerns.",
+        "Frontend built with Vanilla JavaScript, showcasing a deep understanding of core web technologies.",
+        "Implemented a modern, responsive design using Tailwind CSS and SCSS for a visually appealing user experience.",
+        "Focus on user experience with progressive feedback and an interactive virtual keyboard.",
+        "Clean, modular architecture with clear separation between frontend and backend components."
+      ],
+      "challenges": [
+        "Migrating a CLI project to a web-based, full-stack architecture",
+        "Ensuring seamless communication between the Python backend and the JavaScript frontend",
+        "Managing real-time visual updates based on game state without a complex framework"
+      ],
+      "results": [
+        "Fully functional and deployed web game",
+        "Clear project documentation for easy contribution and understanding",
+        "Demonstration of full-stack development skills and collaborative project management"
+      ],
+      "link": "https://github.com/AnaMonteirodev/The_Forca",
+      "demo": "https://the-forca.vercel.app/",
+      "documentation": "https://github.com/AnaMonteirodev/The_Forca/blob/main/README.md"
     }
   ]
 }

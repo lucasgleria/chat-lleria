@@ -53,6 +53,15 @@
       "duration": "9h",
       "description": "Qlik Sense · Data Visualization · BI",
       "certification_code": "UC-47694e15-7630-43a5-bfca-2753377fb03c"
+    },
+    {
+      "name": "Banco de Dados 1: Fundamentals",
+      "issuer": "AprendaMais MEC",
+      "year": "2025",
+      "status": "Completed",
+      "duration": "20h",
+      "description": "Banco de dados · Banco de dados relacional · NoSql",
+      "certification_code": "689132ad-94b0-494a-9a15-04eaac1f03f2"
     }
   ]
 }
